@@ -1,0 +1,287 @@
+[
+  {
+    "id": "ORD-001",
+    "instruccion": "Ordene de mayor a menor nivel de conciencia (de la alteración más leve a la más grave):",
+    "elementos": [
+      "Coma",
+      "Somnolencia, letargia o sopor",
+      "Obnubilación",
+      "Estupor"
+    ],
+    "orden_correcto": [
+      2,
+      1,
+      3,
+      0
+    ],
+    "explicacion_orden": [
+      "Responde y obedece órdenes, pero con lentitud y estímulos más fuertes: es el primer escalón.",
+      "Se duerme apenas se lo deja de estimular: ya no se sostiene despierto solo.",
+      "Solo reacciona ligeramente con estímulos muy potentes y no se comunica de forma comprensible.",
+      "No despierta ni responde voluntariamente; solo quedan funciones vegetativas."
+    ],
+    "justificacion": "El nivel de conciencia desciende de forma gradual: cada paso necesita estímulos más intensos para obtener menos respuesta.",
+    "tema": "Conciencia"
+  },
+  {
+    "id": "ORD-002",
+    "instruccion": "Ordene las fases de la respuesta sexual:",
+    "elementos": [
+      "Meseta",
+      "Deseo",
+      "Excitación",
+      "Orgasmo",
+      "Resolución"
+    ],
+    "orden_correcto": [
+      1,
+      2,
+      0,
+      3,
+      4
+    ],
+    "explicacion_orden": [
+      "Primero aparece el interés y las fantasías sexuales (de ahí las alteraciones del deseo).",
+      "Luego viene la activación corporal (erección, lubricación): aquí se ubican los trastornos eréctil y de la excitación.",
+      "La excitación se mantiene en un nivel alto y estable antes del clímax.",
+      "Es el punto máximo de placer; aquí se ubican las eyaculaciones prematura y retardada.",
+      "El cuerpo vuelve gradualmente a su estado de reposo."
+    ],
+    "justificacion": "Cada alteración sexual se clasifica según la fase en la que falla: deseo, excitación u orgasmo.",
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "ORD-003",
+    "instruccion": "Ordene de menor a mayor elevación del ánimo:",
+    "elementos": [
+      "Euforia",
+      "Alegría",
+      "Manía",
+      "Eutimia",
+      "Hipomanía"
+    ],
+    "orden_correcto": [
+      3,
+      1,
+      0,
+      4,
+      2
+    ],
+    "explicacion_orden": [
+      "Ánimo normal y estable: es el punto de partida.",
+      "Felicidad proporcionada y con un motivo claro.",
+      "Alegría excesiva y sin causa que la explique.",
+      "Ánimo elevado con satisfacción desproporcionada, pero todavía organizado.",
+      "Exaltación extrema con hiperactividad y desorganización: es el nivel más alto."
+    ],
+    "justificacion": "Lo que aumenta de un escalón a otro es la desproporción entre el ánimo y lo que pasa, junto con la pérdida de organización.",
+    "tema": "Afectividad"
+  },
+  {
+    "id": "ORD-004",
+    "instruccion": "Ordene de menor a mayor cantidad de atención:",
+    "elementos": [
+      "Atención normal",
+      "Hiperprosexia o hiperconcentración",
+      "Aprosexia",
+      "Hipoprosexia"
+    ],
+    "orden_correcto": [
+      2,
+      3,
+      0,
+      1
+    ],
+    "explicacion_orden": [
+      "Ausencia total de atención.",
+      "Atención disminuida: cuesta concentrarse, pero no está ausente.",
+      "Capacidad de atender y cambiar de foco según lo que se necesita.",
+      "Atención excesivamente fija en una sola cosa."
+    ],
+    "justificacion": "El prefijo ayuda: a- = ausencia, hipo- = disminución, hiper- = exceso.",
+    "tema": "Atención"
+  },
+  {
+    "id": "ORD-005",
+    "instruccion": "Ordene de menor a mayor sensibilidad al dolor:",
+    "elementos": [
+      "Analgesia",
+      "Sensibilidad normal",
+      "Hiperalgesia",
+      "Hipoalgesia"
+    ],
+    "orden_correcto": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "explicacion_orden": [
+      "No hay ninguna sensación de dolor.",
+      "El dolor se siente, pero mucho menos de lo esperable.",
+      "El dolor es proporcional al estímulo.",
+      "Un estímulo leve produce un dolor desproporcionado."
+    ],
+    "justificacion": "Mismo patrón de prefijos: a-/an- = ausencia, hipo- = disminución, hiper- = aumento.",
+    "tema": "Percepción"
+  },
+  {
+    "id": "ORD-006",
+    "instruccion": "Ordene de menor a mayor voluntad o iniciativa:",
+    "elementos": [
+      "Voluntad normal",
+      "Hipobulia",
+      "Hiperbulia",
+      "Abulia"
+    ],
+    "orden_correcto": [
+      3,
+      1,
+      0,
+      2
+    ],
+    "explicacion_orden": [
+      "No hay iniciativa: no empieza nada.",
+      "Poca voluntad: cuesta comenzar, pero con esfuerzo cumple.",
+      "Iniciativa acorde a lo que la situación necesita.",
+      "Exceso de iniciativa: muchos proyectos y decisiones rápidas."
+    ],
+    "justificacion": "Se parte de la ausencia total (abulia) y se llega al exceso (hiperbulia).",
+    "tema": "Conducta"
+  },
+  {
+    "id": "ORD-007",
+    "instruccion": "Ordene las tres etapas del proceso de memoria, desde que se vive algo hasta que se recuerda:",
+    "elementos": [
+      "Evocación",
+      "Conservación",
+      "Fijación"
+    ],
+    "orden_correcto": [
+      2,
+      1,
+      0
+    ],
+    "explicacion_orden": [
+      "El recuerdo se forma. Si falla: hipomnesia de fijación (anterógrada) o amnesia de fijación.",
+      "El recuerdo se mantiene almacenado. Si falla: amnesia de conservación.",
+      "El recuerdo se recupera cuando se necesita. Si falla: hipomnesia o amnesia de evocación."
+    ],
+    "justificacion": "Saber en qué etapa falla la memoria permite elegir el término correcto.",
+    "tema": "Memoria"
+  },
+  {
+    "id": "ORD-008",
+    "instruccion": "Ordene los tipos de insomnio según el momento de la noche en que aparece el problema:",
+    "elementos": [
+      "Insomnio medio o intermitente",
+      "Insomnio tardío o matinal",
+      "Insomnio inicial o vespertino"
+    ],
+    "orden_correcto": [
+      2,
+      0,
+      1
+    ],
+    "explicacion_orden": [
+      "Aparece al acostarse: cuesta quedarse dormido.",
+      "Aparece durante la noche: se despierta varias veces, pero vuelve a dormir.",
+      "Aparece al final: despierta de madrugada y ya no puede volver a dormir."
+    ],
+    "justificacion": "Si combina varios momentos se llama mixto; si no duerme nada en toda la noche, total.",
+    "tema": "Sueño"
+  },
+  {
+    "id": "ORD-009",
+    "instruccion": "Ordene de menor a mayor sensibilidad táctil:",
+    "elementos": [
+      "Sensibilidad normal",
+      "Anestesia",
+      "Hiperestesia",
+      "Hipoestesia"
+    ],
+    "orden_correcto": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "explicacion_orden": [
+      "No siente nada en la zona.",
+      "Siente el estímulo, pero muy atenuado.",
+      "Percibe el estímulo con la intensidad esperada.",
+      "Percibe los estímulos demasiado intensos."
+    ],
+    "justificacion": "Mismo patrón de prefijos: an- = ausencia, hipo- = disminución, hiper- = aumento.",
+    "tema": "Percepción"
+  },
+  {
+    "id": "ORD-010",
+    "instruccion": "Ordene los tipos de desorientación según el orden en que suelen aparecer al empeorar el cuadro (primero, la que antes se altera):",
+    "elementos": [
+      "Desorientación autopsíquica o en persona",
+      "Desorientación alopsíquica en espacio",
+      "Desorientación alopsíquica en tiempo"
+    ],
+    "orden_correcto": [
+      2,
+      1,
+      0
+    ],
+    "explicacion_orden": [
+      "Suele ser la primera en fallar: se pierden fecha y momento del día.",
+      "Después falla el lugar: no reconoce dónde está.",
+      "Es la última y la más grave: ya no sabe quién es ni reconoce a los suyos."
+    ],
+    "justificacion": "En general, la orientación en persona es la más resistente y la que se pierde al final.",
+    "tema": "Orientación"
+  },
+  {
+    "id": "ORD-011",
+    "instruccion": "Ordene de menor a mayor actividad motora:",
+    "elementos": [
+      "Inquietud",
+      "Retardo o retraso psicomotor",
+      "Actividad motora normal",
+      "Agitación",
+      "Acinesia o aquinesia"
+    ],
+    "orden_correcto": [
+      4,
+      1,
+      2,
+      0,
+      3
+    ],
+    "explicacion_orden": [
+      "No inicia el movimiento o casi no se mueve.",
+      "Se mueve, pero todo es lento.",
+      "Movimientos acordes a la situación.",
+      "Movimientos pequeños por ansiedad, con control conservado.",
+      "Inquietud intensa, caminar rápido, imposibilidad de permanecer sentado."
+    ],
+    "justificacion": "De un extremo al otro: ausencia, lentitud, normalidad, aumento leve y aumento intenso.",
+    "tema": "Conducta motora"
+  },
+  {
+    "id": "ORD-012",
+    "instruccion": "Ordene de menor a mayor extensión corporal de la distonía:",
+    "elementos": [
+      "Distonía generalizada",
+      "Distonía segmentaria",
+      "Distonía focal"
+    ],
+    "orden_correcto": [
+      2,
+      1,
+      0
+    ],
+    "explicacion_orden": [
+      "Afecta una sola zona (por ejemplo, los dedos de una mano).",
+      "Afecta dos o más zonas vecinas (por ejemplo, cuello y hombro).",
+      "Afecta tronco y varias extremidades."
+    ],
+    "justificacion": "Lo que cambia es cuánto del cuerpo está comprometido.",
+    "tema": "Conducta motora"
+  }
+]

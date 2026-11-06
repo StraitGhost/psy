@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "63335812978",
+    "project_id": "psyapp-a5af7",
+    "storage_bucket": "psyapp-a5af7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63335812978:android:35899407b9391108dd97eb",
+        "android_client_info": {
+          "package_name": "com.example.psy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5hH6wn85LDeaK4pLsPn_86cmpO_Oz4JY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
