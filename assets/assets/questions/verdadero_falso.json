@@ -1,0 +1,282 @@
+[
+  {
+    "id": "VF-001",
+    "afirmacion": "Hipervigilancia: Mayor sensibilidad sensorial, aumento motor e intensidad emocional; búsqueda constante de posibles amenazas.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Hipervigilancia»: estado de alerta aumentado en el que la persona busca constantemente posibles amenazas. Se reconoce por: reacción exagerada ante estímulos pequeños y rastreo constante del ambiente en busca de peligro.",
+    "tema": "Conciencia"
+  },
+  {
+    "id": "VF-002",
+    "afirmacion": "Obnubilación: Primer estadio de disminución del nivel de conciencia; requiere estímulos externos de cierta intensidad.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Obnubilación»: primer grado de descenso de la conciencia: responde, pero necesita estímulos más intensos. Se reconoce por: responde y obedece órdenes sencillas, aunque con lentitud y solo ante estímulos más fuertes.",
+    "tema": "Conciencia"
+  },
+  {
+    "id": "VF-003",
+    "afirmacion": "Confusión mental o estado confusional se define como: Pérdida de conciencia, sensibilidad y motilidad voluntaria; se conservan las funciones vegetativas.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Coma»: pérdida de conciencia, sensibilidad y movimiento voluntario, con funciones vegetativas conservadas. «Confusión mental o estado confusional», en cambio, es alteración cognitiva con concepción desordenada de la realidad, desorientación y diálogo incomprensible; se reconoce por: discurso incoherente, desorientación y falta de comprensión del entorno (no es solo lentitud ni sueño).",
+    "tema": "Conciencia"
+  },
+  {
+    "id": "VF-004",
+    "afirmacion": "Delirium se define como: Estrechamiento de conciencia, amnesia lacunar posterior, conductas automáticas y explosiones emocionales.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Estado crepuscular»: estrechamiento de la conciencia con conductas automáticas y amnesia posterior. «Delirium», en cambio, es cuadro agudo con ilusiones y alucinaciones (visuales, auditivas, táctiles) y alteración de la conciencia; se reconoce por: alucinaciones vividas como reales, de inicio agudo, con miedo y en un contexto tóxico u orgánico.",
+    "tema": "Conciencia"
+  },
+  {
+    "id": "VF-005",
+    "afirmacion": "Automatismos: Acciones involuntarias realizadas en ausencia de conciencia, con posible recuerdo posterior parcial o confuso.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Automatismos»: acciones involuntarias realizadas sin conciencia, con recuerdo posterior parcial o confuso. Se reconoce por: movimientos con apariencia de finalidad pero no voluntarios, y con recuerdo mínimo.",
+    "tema": "Conciencia"
+  },
+  {
+    "id": "VF-006",
+    "afirmacion": "Desorientación alopsíquica en espacio: No reconocer el lugar, ciudad, provincia o país donde se encuentra.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Desorientación alopsíquica en espacio»: no reconocer el lugar, la ciudad o el país donde se encuentra. Se reconoce por: no sabe dónde está, aunque sí podría saber quién es.",
+    "tema": "Orientación"
+  },
+  {
+    "id": "VF-007",
+    "afirmacion": "Aprosexia: Reducción máxima o ausencia total de atención.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Aprosexia»: ausencia total o casi total de atención. Se reconoce por: no atiende a ningún estímulo.",
+    "tema": "Atención"
+  },
+  {
+    "id": "VF-008",
+    "afirmacion": "Pseudoaprosexias se define como: Desviaciones de la atención de apariencia involuntaria, con aumento de la atención espontánea e incremento psicomotriz.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Paraprosexias»: desviaciones de la atención, de apariencia involuntaria, con aumento de la actividad psicomotriz. «Pseudoaprosexias», en cambio, es aparente falta de atención (parece aprosexia) cuando en realidad la atención está dirigida al medio externo; se reconoce por: parece desatenta, pero sigue con atención lo que ocurre afuera.",
+    "tema": "Atención"
+  },
+  {
+    "id": "VF-009",
+    "afirmacion": "Distractibilidad se define como: Agotamiento de la atención, con escaso rendimiento y abundancia de errores.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Fatigabilidad de la atención»: agotamiento progresivo de la atención, con menor rendimiento y más errores. «Distractibilidad», en cambio, es inestabilidad atencional: cuesta sostener la atención en un tema por la intromisión de otros estímulos o pensamientos; se reconoce por: pierde el hilo por estímulos o pensamientos irrelevantes.",
+    "tema": "Atención"
+  },
+  {
+    "id": "VF-010",
+    "afirmacion": "Perplejidad de la atención: Incapacidad para sintetizar el contenido atendido y comprender acciones y circunstancias.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Perplejidad de la atención»: incapacidad para sintetizar lo atendido y comprender acciones y circunstancias. Se reconoce por: percibe lo que pasa pero no logra entenderlo.",
+    "tema": "Atención"
+  },
+  {
+    "id": "VF-011",
+    "afirmacion": "Hipomnesia de evocación o retrógrada: Incapacidad para recordar el pasado o recuperar información almacenada anteriormente.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Hipomnesia de evocación o retrógrada»: disminución de la capacidad de recordar el pasado o recuperar lo ya almacenado. Se reconoce por: cuesta recordar hechos antiguos (el pasado).",
+    "tema": "Memoria"
+  },
+  {
+    "id": "VF-012",
+    "afirmacion": "Amnesia global se define como: Pérdida de recuerdos delimitada en el tiempo.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Amnesia lacunar»: pérdida de recuerdos limitada a un período concreto de tiempo. «Amnesia global», en cambio, es pérdida de todos o casi todos los recuerdos del pasado; se reconoce por: se pierde el pasado completo.",
+    "tema": "Memoria"
+  },
+  {
+    "id": "VF-013",
+    "afirmacion": "Amnesia selectiva episódica se define como: Pérdida de conocimientos o ciertos tipos de conocimientos.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Amnesia selectiva semántica»: pérdida de conocimientos o de ciertos tipos de conocimiento. «Amnesia selectiva episódica», en cambio, es olvido de un acontecimiento específico de la vida; se reconoce por: olvida un episodio puntual.",
+    "tema": "Memoria"
+  },
+  {
+    "id": "VF-014",
+    "afirmacion": "Amnesia de evocación se define como: Sensación de haber perdido la memoria sin pérdida objetiva.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Pseudoamnesia»: sensación de haber perdido la memoria sin pérdida objetiva. «Amnesia de evocación», en cambio, es dificultad para traer a la conciencia un recuerdo que no se ha perdido; se reconoce por: el recuerdo existe, pero no se logra recuperar en el momento.",
+    "tema": "Memoria"
+  },
+  {
+    "id": "VF-015",
+    "afirmacion": "Pseudohipermnesias: Evocación repetitiva de recuerdos, por ejemplo relacionados con la patología del paciente.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Pseudohipermnesias»: evocación repetitiva de recuerdos, por ejemplo ligados a la patología del paciente. Se reconoce por: siempre vuelve al mismo recuerdo, de forma repetitiva.",
+    "tema": "Memoria"
+  },
+  {
+    "id": "VF-016",
+    "afirmacion": "Paramnesias: Deformidad de los recuerdos.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Paramnesias»: deformidad de los recuerdos. Se reconoce por: el recuerdo existe pero está distorsionado.",
+    "tema": "Memoria"
+  },
+  {
+    "id": "VF-017",
+    "afirmacion": "Alucinosis se define como: La persona no percibe un estímulo que sí existe.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Alucinación negativa»: no percibir un estímulo que sí existe. «Alucinosis», en cambio, es alucinación en la que la persona es consciente de que lo que percibe no existe; se reconoce por: ve o escucha algo irreal y lo reconoce como irreal.",
+    "tema": "Percepción"
+  },
+  {
+    "id": "VF-018",
+    "afirmacion": "Alucinación liliputiense se define como: Los objetos se perciben enormes o más grandes de lo normal.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Alucinación guliveriana»: alucinaciones de seres o cosas gigantes. «Alucinación liliputiense», en cambio, es alucinaciones de seres o cosas diminutas; se reconoce por: las figuras son pequeñísimas.",
+    "tema": "Percepción"
+  },
+  {
+    "id": "VF-019",
+    "afirmacion": "Pensamientos intrusos se define como: Pensamientos sobre lesionarse físicamente o matarse.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Ideación autolítica o suicida»: pensamientos de hacerse daño o de quitarse la vida. «Pensamientos intrusos», en cambio, es ideas repetitivas y no deseadas que irrumpen en la mente y son difíciles de controlar; se reconoce por: ideas que aparecen sin quererlas y no se pueden controlar.",
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "VF-020",
+    "afirmacion": "Idea fija: Fenómeno real y lógico que aparece persistentemente en la conciencia contra la voluntad.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Idea fija»: idea lógica y real que se impone de forma persistente en la conciencia contra la voluntad de la persona. Se reconoce por: idea razonable de la que no puede librarse.",
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "VF-021",
+    "afirmacion": "Idea hipocondríaca: Molestias corporales interpretadas como posibles signos de enfermedad.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Idea hipocondríaca»: interpretación de molestias corporales como posibles signos de enfermedad. Se reconoce por: molestias del cuerpo leídas como señal de enfermedad.",
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "VF-022",
+    "afirmacion": "Delirio de influencia se define como: Exaltación de cualidades personales; puede creerse gran personaje o inventor famoso.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Delirio de grandeza»: creencia delirante de tener cualidades, poder o una identidad extraordinarios. «Delirio de influencia», en cambio, es creencia delirante de que una fuerza externa controla el propio pensamiento o la conducta; se reconoce por: siente que una fuerza externa lo controla.",
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "VF-023",
+    "afirmacion": "Delirio de referencia se define como: Creencia delirante de que la pareja engaña al sujeto.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Delirio celotípico»: creencia delirante de que la pareja es infiel. «Delirio de referencia», en cambio, es creencia delirante de que otras personas hablan, se ríen o se burlan de uno; se reconoce por: interpreta lo que hacen o dicen otros como dirigido a él.",
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "VF-024",
+    "afirmacion": "Delirio de autorreproche se define como: Sensación de estar muerto o de haber dejado de existir; puede extenderse a personas o cosas.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Delirio nihilista»: creencia delirante de estar muerto o haber dejado de existir, que puede extenderse a otras personas o cosas. «Delirio de autorreproche», en cambio, es creencia delirante de haber cometido una falta grave inexistente, con culpa y arrepentimiento; se reconoce por: se acusa de una culpa que no existe.",
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "VF-025",
+    "afirmacion": "Disomnias: Categoría relacionada con duración, intensidad y cantidad del sueño.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Disomnias»: alteraciones de la cantidad, la calidad o el horario del sueño (insomnio, hipersomnia, alteraciones del ritmo). Se reconoce por: el problema es cuánto, cuándo o qué tan bien se duerme.",
+    "tema": "Sueño"
+  },
+  {
+    "id": "VF-026",
+    "afirmacion": "Pica: Ingestión de sustancias no apropiadas para la alimentación, como cal, tierra, arena o plastilina.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Pica»: ingestión persistente de sustancias que no son alimentos. Se reconoce por: come cosas que no son comida (tierra, papel, arena).",
+    "tema": "Apetito e ingesta"
+  },
+  {
+    "id": "VF-027",
+    "afirmacion": "Anafrodisia se define como: Marcada disminución del apetito sexual y escasez de fantasías.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Hiposexualidad o hipoerotismo»: disminución marcada del apetito sexual y de las fantasías. «Anafrodisia», en cambio, es pérdida del deseo sexual; se reconoce por: el deseo desapareció por completo.",
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "VF-028",
+    "afirmacion": "Aversión al sexo se define como: Aumento de la libido y de la actividad sexual.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Hipersexualidad o hipererotismo»: aumento del deseo sexual y de la actividad sexual. «Aversión al sexo», en cambio, es asco, temor o ansiedad ante la posibilidad de tener relaciones sexuales; se reconoce por: rechazo y miedo al sexo, no solo falta de deseo.",
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "VF-029",
+    "afirmacion": "Trastorno eréctil en el hombre se define como: Incapacidad persistente o recurrente para mantener la lubricación vaginal propia de la excitación.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Trastorno de la excitación sexual en mujeres»: dificultad persistente para alcanzar o mantener la excitación sexual en la mujer. «Trastorno eréctil en el hombre», en cambio, es dificultad persistente para obtener o mantener la erección; se reconoce por: no consigue o no mantiene la erección.",
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "VF-030",
+    "afirmacion": "Eyaculación retardada: Ausencia de eyaculación o presencia retardada después de la penetración o actividad sexual.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Eyaculación retardada»: demora importante o ausencia de eyaculación. Se reconoce por: tarda demasiado o no logra eyacular.",
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "VF-031",
+    "afirmacion": "Vaginismo: Espasmos involuntarios en el tercio externo de la vagina; la penetración puede provocar dolor.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Vaginismo»: contracción involuntaria de la musculatura vaginal que impide o dificulta la penetración. Se reconoce por: espasmos involuntarios que bloquean la penetración.",
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "VF-032",
+    "afirmacion": "Síndrome de obnubilación se define como: Paciente agitado, sudoroso y tembloroso; orientación fluctuante, alucinaciones sobre todo visuales y táctiles, ansiedad y terror.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Síndrome de delirium»: cuadro agudo con agitación, orientación fluctuante, alucinaciones visuales y táctiles, ansiedad y terror. «Síndrome de obnubilación», en cambio, es cuadro de vigilia baja: paciente tranquilo y lento, con atención y memoria disminuidas; se reconoce por: tranquilo, lento, poco vigilante, con atención y memoria disminuidas.",
+    "tema": "Síndromes"
+  },
+  {
+    "id": "VF-033",
+    "afirmacion": "Síndrome oniroide se define como: Nivel de vigilia muy bajo, amnesia total al concluir el cuadro, desorientación total sin fluctuaciones, alucinaciones visuales terroríficas y conducta agresiva o fugitiva.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Síndrome de estado crepuscular»: cuadro con vigilia muy baja, desorientación total, alucinaciones terroríficas, conducta agresiva o de huida y amnesia al terminar. «Síndrome oniroide», en cambio, es cuadro de actitud contemplativa e inmóvil con alucinaciones visuales en forma de escenas, generalmente sin angustia; se reconoce por: contempla inmóvil escenas alucinatorias, sin angustia.",
+    "tema": "Síndromes"
+  },
+  {
+    "id": "VF-034",
+    "afirmacion": "Síndromes cerebrales orgánicos crónicos: Alteraciones de vigilia o sensopercepciones ausentes o despreciables; sobresalen afectación intelectual y del carácter.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Síndromes cerebrales orgánicos crónicos»: cuadros por daño cerebral donde la vigilia y la percepción casi no se alteran, y sobresalen el deterioro intelectual y los cambios del carácter. Se reconoce por: deterioro intelectual y del carácter con vigilia conservada.",
+    "tema": "Síndromes"
+  },
+  {
+    "id": "VF-035",
+    "afirmacion": "Síndrome demencial: Deterioro de capacidades intelectuales y desorganización de la personalidad, dentro de los síndromes orgánicos crónicos.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Síndrome demencial»: deterioro de las capacidades intelectuales con desorganización de la personalidad. Se reconoce por: deterioro progresivo de memoria, orientación y autocuidado en un adulto mayor.",
+    "tema": "Síndromes"
+  },
+  {
+    "id": "VF-036",
+    "afirmacion": "Síndrome apatoabúlico: Predominan apatía y abulia, con pérdida de la motivación y de la iniciativa para actuar.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Síndrome apatoabúlico»: predominio de apatía y abulia, con alteración de la motivación y la actividad. Se reconoce por: indiferencia total y falta de iniciativa, sin tristeza ni alegría.",
+    "tema": "Síndromes"
+  },
+  {
+    "id": "VF-037",
+    "afirmacion": "Síndrome maníaco se define como: Aspecto descuidado, atención hiperconcentrada, memoria disminuida, hipotimia, ansiedad, hipobulia, hipoquinesia, insomnio y anorexia.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Síndrome depresivo»: cuadro de tristeza con descuido personal, lentitud, ansiedad, insomnio y falta de apetito. «Síndrome maníaco», en cambio, es cuadro de ánimo exaltado con pensamiento acelerado, fuga de ideas, hiperactividad e hipersociabilidad; se reconoce por: ánimo exaltado, ideas aceleradas e hiperactividad social.",
+    "tema": "Síndromes"
+  },
+  {
+    "id": "VF-038",
+    "afirmacion": "Síndrome afectivo ansioso se define como: Inmovilidad y mutismo con grado variable de claridad de conciencia; puede ser histriónico, situacional, depresivo, catatónico u orgánico.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición pertenece a «Síndrome estuporoso»: inmovilidad y mutismo con grado variable de claridad de conciencia. «Síndrome afectivo ansioso», en cambio, es conjunto de angustia, inquietud, pensamiento acelerado, insomnio y síntomas vegetativos; se reconoce por: angustia, sudoración, pensamientos acelerados y temor a que pase algo malo.",
+    "tema": "Síndromes"
+  },
+  {
+    "id": "VF-039",
+    "afirmacion": "Síndrome hipocondríaco: Preocupación excesiva por la salud, temor constante a la muerte y autoobservación continua de funciones corporales.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Síndrome hipocondríaco»: preocupación excesiva por la salud con autoobservación constante, sin causa orgánica que lo explique. Se reconoce por: convencimiento de estar enfermo con exámenes normales y vigilancia del cuerpo.",
+    "tema": "Síndromes"
+  },
+  {
+    "id": "VF-040",
+    "afirmacion": "Síndrome psicopático: Patrones inadaptativos de comportamiento, dificultades en control de impulsos, seguridad personal, autovaloración y relaciones.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Síndrome psicopático»: patrón inadaptativo de conducta con impulsividad, baja tolerancia a la frustración y conflictos en las relaciones. Se reconoce por: impulsividad, gratificación inmediata y relaciones conflictivas.",
+    "tema": "Síndromes"
+  }
+]

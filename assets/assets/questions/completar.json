@@ -1,0 +1,439 @@
+[
+  {
+    "id": "COM-001",
+    "oracion": "La descripción «Mayor sensibilidad sensorial, aumento motor e intensidad emocional; búsqueda constante de posibles amenazas.» corresponde a ________.",
+    "respuesta_correcta": "Hipervigilancia",
+    "justificacion": "La respuesta es «Hipervigilancia»: estado de alerta aumentado en el que la persona busca constantemente posibles amenazas. Se reconoce por: reacción exagerada ante estímulos pequeños y rastreo constante del ambiente en busca de peligro.",
+    "no_confundir_con": [
+      "«Hiperfrenia»: elevación máxima del nivel de conciencia, con percepción exagerada de todo el entorno.",
+      "«Obnubilación»: primer grado de descenso de la conciencia: responde, pero necesita estímulos más intensos."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "COM-002",
+    "oracion": "La descripción «Primer estadio de disminución del nivel de conciencia; requiere estímulos externos de cierta intensidad.» corresponde a ________.",
+    "respuesta_correcta": "Obnubilación",
+    "justificacion": "La respuesta es «Obnubilación»: primer grado de descenso de la conciencia: responde, pero necesita estímulos más intensos. Se reconoce por: responde y obedece órdenes sencillas, aunque con lentitud y solo ante estímulos más fuertes.",
+    "no_confundir_con": [
+      "«Hiperfrenia»: elevación máxima del nivel de conciencia, con percepción exagerada de todo el entorno.",
+      "«Somnolencia, letargia o sopor»: estado en el que la persona se mantiene despierta solo mientras recibe estímulos y se duerme al faltar estimulación."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "COM-003",
+    "oracion": "La descripción «Afectación cognitiva, concepción desordenada de la realidad, desorientación total y diálogo incomprensible.» corresponde a ________.",
+    "respuesta_correcta": "Confusión mental o estado confusional",
+    "justificacion": "La respuesta es «Confusión mental o estado confusional»: alteración cognitiva con concepción desordenada de la realidad, desorientación y diálogo incomprensible. Se reconoce por: discurso incoherente, desorientación y falta de comprensión del entorno (no es solo lentitud ni sueño).",
+    "no_confundir_con": [
+      "«Estupor»: falta casi total de reacción al ambiente; solo se logra un ligero estado de alerta con estímulos muy potentes.",
+      "«Coma»: pérdida de conciencia, sensibilidad y movimiento voluntario, con funciones vegetativas conservadas."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "COM-004",
+    "oracion": "La descripción «Curso agudo con alteraciones sensoperceptuales, especialmente ilusiones y alucinaciones visuales, auditivas y táctiles.» corresponde a ________.",
+    "respuesta_correcta": "Delirium",
+    "justificacion": "La respuesta es «Delirium»: cuadro agudo con ilusiones y alucinaciones (visuales, auditivas, táctiles) y alteración de la conciencia. Se reconoce por: alucinaciones vividas como reales, de inicio agudo, con miedo y en un contexto tóxico u orgánico.",
+    "no_confundir_con": [
+      "«Estado crepuscular»: estrechamiento de la conciencia con conductas automáticas y amnesia posterior.",
+      "«Estados oniroides»: vivencias alucinatorias en forma de escenas, mezcla de realidad y fantasía, sobre todo visuales."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "COM-005",
+    "oracion": "La descripción «Acciones involuntarias realizadas en ausencia de conciencia, con posible recuerdo posterior parcial o confuso.» corresponde a ________.",
+    "respuesta_correcta": "Automatismos",
+    "justificacion": "La respuesta es «Automatismos»: acciones involuntarias realizadas sin conciencia, con recuerdo posterior parcial o confuso. Se reconoce por: movimientos con apariencia de finalidad pero no voluntarios, y con recuerdo mínimo.",
+    "no_confundir_con": [
+      "«Estados oniroides»: vivencias alucinatorias en forma de escenas, mezcla de realidad y fantasía, sobre todo visuales.",
+      "«Estado crepuscular»: estrechamiento de la conciencia con conductas automáticas y amnesia posterior."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "COM-006",
+    "oracion": "La descripción «No reconocer el lugar, ciudad, provincia o país donde se encuentra.» corresponde a ________.",
+    "respuesta_correcta": "Desorientación alopsíquica en espacio",
+    "justificacion": "La respuesta es «Desorientación alopsíquica en espacio»: no reconocer el lugar, la ciudad o el país donde se encuentra. Se reconoce por: no sabe dónde está, aunque sí podría saber quién es.",
+    "no_confundir_con": [
+      "«Desorientación alopsíquica en tiempo»: no reconocer la hora, el día, el mes o el año (a veces ni día ni noche).",
+      "«Desorientación autopsíquica o en persona»: no saber quién es uno mismo ni reconocer a personas conocidas."
+    ],
+    "tema": "Orientación"
+  },
+  {
+    "id": "COM-007",
+    "oracion": "La descripción «Reducción máxima o ausencia total de atención.» corresponde a ________.",
+    "respuesta_correcta": "Aprosexia",
+    "justificacion": "La respuesta es «Aprosexia»: ausencia total o casi total de atención. Se reconoce por: no atiende a ningún estímulo.",
+    "no_confundir_con": [
+      "«Hipoprosexia»: disminución de la capacidad de enfocar y mantener la concentración.",
+      "«Hiperprosexia o hiperconcentración»: focalización excesiva de la atención en un solo estímulo o tarea."
+    ],
+    "tema": "Atención"
+  },
+  {
+    "id": "COM-008",
+    "oracion": "La descripción «Parece existir aprosexia, pero la atención está focalizada en el medio externo.» corresponde a ________.",
+    "respuesta_correcta": "Pseudoaprosexias",
+    "justificacion": "La respuesta es «Pseudoaprosexias»: aparente falta de atención (parece aprosexia) cuando en realidad la atención está dirigida al medio externo. Se reconoce por: parece desatenta, pero sigue con atención lo que ocurre afuera.",
+    "no_confundir_con": [
+      "«Hiperprosexia o hiperconcentración»: focalización excesiva de la atención en un solo estímulo o tarea.",
+      "«Paraprosexias»: desviaciones de la atención, de apariencia involuntaria, con aumento de la actividad psicomotriz."
+    ],
+    "tema": "Atención"
+  },
+  {
+    "id": "COM-009",
+    "oracion": "La descripción «Inestabilidad atencional; dificultad para mantener atención en un estímulo, tema o vivencia.» corresponde a ________.",
+    "respuesta_correcta": "Distractibilidad",
+    "justificacion": "La respuesta es «Distractibilidad»: inestabilidad atencional: cuesta sostener la atención en un tema por la intromisión de otros estímulos o pensamientos. Se reconoce por: pierde el hilo por estímulos o pensamientos irrelevantes.",
+    "no_confundir_con": [
+      "«Paraprosexias»: desviaciones de la atención, de apariencia involuntaria, con aumento de la actividad psicomotriz.",
+      "«Fatigabilidad de la atención»: agotamiento progresivo de la atención, con menor rendimiento y más errores."
+    ],
+    "tema": "Atención"
+  },
+  {
+    "id": "COM-010",
+    "oracion": "La descripción «Incapacidad para sintetizar el contenido atendido y comprender acciones y circunstancias.» corresponde a ________.",
+    "respuesta_correcta": "Perplejidad de la atención",
+    "justificacion": "La respuesta es «Perplejidad de la atención»: incapacidad para sintetizar lo atendido y comprender acciones y circunstancias. Se reconoce por: percibe lo que pasa pero no logra entenderlo.",
+    "no_confundir_con": [
+      "«Apatía de la atención»: falta marcada de atención e interés por los acontecimientos del medio.",
+      "«Sesgos atencionales»: tendencia a atender de forma selectiva a estímulos ligados a un temor o preocupación."
+    ],
+    "tema": "Atención"
+  },
+  {
+    "id": "COM-011",
+    "oracion": "La descripción «Incapacidad para recordar el pasado o recuperar información almacenada anteriormente.» corresponde a ________.",
+    "respuesta_correcta": "Hipomnesia de evocación o retrógrada",
+    "justificacion": "La respuesta es «Hipomnesia de evocación o retrógrada»: disminución de la capacidad de recordar el pasado o recuperar lo ya almacenado. Se reconoce por: cuesta recordar hechos antiguos (el pasado).",
+    "no_confundir_con": [
+      "«Hipomnesia de fijación o anterógrada»: disminución de la memoria para hechos recientes (cuesta fijar lo nuevo).",
+      "«Amnesia de fijación»: incapacidad total para consolidar recuerdos nuevos."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "COM-012",
+    "oracion": "La descripción «Pérdida de todos los recuerdos del pasado.» corresponde a ________.",
+    "respuesta_correcta": "Amnesia global",
+    "justificacion": "La respuesta es «Amnesia global»: pérdida de todos o casi todos los recuerdos del pasado. Se reconoce por: se pierde el pasado completo.",
+    "no_confundir_con": [
+      "«Amnesia de conservación»: pérdida de recuerdos que ya estaban guardados.",
+      "«Amnesia lacunar»: pérdida de recuerdos limitada a un período concreto de tiempo."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "COM-013",
+    "oracion": "La descripción «Olvido de un acontecimiento específico de la vida.» corresponde a ________.",
+    "respuesta_correcta": "Amnesia selectiva episódica",
+    "justificacion": "La respuesta es «Amnesia selectiva episódica»: olvido de un acontecimiento específico de la vida. Se reconoce por: olvida un episodio puntual.",
+    "no_confundir_con": [
+      "«Amnesia lacunar»: pérdida de recuerdos limitada a un período concreto de tiempo.",
+      "«Amnesia selectiva semántica»: pérdida de conocimientos o de ciertos tipos de conocimiento."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "COM-014",
+    "oracion": "La descripción «El recuerdo no se pierde, pero es muy difícil traerlo a la memoria.» corresponde a ________.",
+    "respuesta_correcta": "Amnesia de evocación",
+    "justificacion": "La respuesta es «Amnesia de evocación»: dificultad para traer a la conciencia un recuerdo que no se ha perdido. Se reconoce por: el recuerdo existe, pero no se logra recuperar en el momento.",
+    "no_confundir_con": [
+      "«Amnesia selectiva semántica»: pérdida de conocimientos o de ciertos tipos de conocimiento.",
+      "«Pseudoamnesia»: sensación de haber perdido la memoria sin pérdida objetiva."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "COM-015",
+    "oracion": "La descripción «Evocación repetitiva de recuerdos, por ejemplo relacionados con la patología del paciente.» corresponde a ________.",
+    "respuesta_correcta": "Pseudohipermnesias",
+    "justificacion": "La respuesta es «Pseudohipermnesias»: evocación repetitiva de recuerdos, por ejemplo ligados a la patología del paciente. Se reconoce por: siempre vuelve al mismo recuerdo, de forma repetitiva.",
+    "no_confundir_con": [
+      "«Hipermnesia»: aumento exagerado de los recuerdos.",
+      "«Ecmnesia»: sensación de estar en el pasado, con pérdida de la orientación en el presente."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "COM-016",
+    "oracion": "La descripción «Deformidad de los recuerdos.» corresponde a ________.",
+    "respuesta_correcta": "Paramnesias",
+    "justificacion": "La respuesta es «Paramnesias»: deformidad de los recuerdos. Se reconoce por: el recuerdo existe pero está distorsionado.",
+    "no_confundir_con": [
+      "«Delirio ecmésico»: revivir un recuerdo del pasado como si fuera presente, con gran implicación emocional.",
+      "«Confabulaciones»: relato de hechos inexistentes que rellenan huecos de memoria, creídos como verdaderos."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "COM-017",
+    "oracion": "La descripción «La persona es consciente de que lo que percibe no existe.» corresponde a ________.",
+    "respuesta_correcta": "Alucinosis",
+    "justificacion": "La respuesta es «Alucinosis»: alucinación en la que la persona es consciente de que lo que percibe no existe. Se reconoce por: ve o escucha algo irreal y lo reconoce como irreal.",
+    "no_confundir_con": [
+      "«Pseudoalucinación»: percepción anómala vivida en el espacio interno, sin la 'corporeidad' de una percepción real.",
+      "«Alucinación negativa»: no percibir un estímulo que sí existe."
+    ],
+    "tema": "Percepción"
+  },
+  {
+    "id": "COM-018",
+    "oracion": "La descripción «Los objetos se perciben diminutos o más pequeños de lo normal.» corresponde a ________.",
+    "respuesta_correcta": "Alucinación liliputiense",
+    "justificacion": "La respuesta es «Alucinación liliputiense»: alucinaciones de seres o cosas diminutas. Se reconoce por: las figuras son pequeñísimas.",
+    "no_confundir_con": [
+      "«Zoopsias»: alucinaciones visuales de animales.",
+      "«Alucinaciones guliverianas»: alucinaciones de seres o cosas gigantes."
+    ],
+    "tema": "Percepción"
+  },
+  {
+    "id": "COM-019",
+    "oracion": "La descripción «Ideas repetitivas, intrusivas, no deseadas, no intencionadas y difíciles de controlar.» corresponde a ________.",
+    "respuesta_correcta": "Pensamientos intrusos",
+    "justificacion": "La respuesta es «Pensamientos intrusos»: ideas repetitivas y no deseadas que irrumpen en la mente y son difíciles de controlar. Se reconoce por: ideas que aparecen sin quererlas y no se pueden controlar.",
+    "no_confundir_con": [
+      "«Delirio de negación»: creencia delirante de que todo alrededor está muerto, vacío o no existe, incluso el tiempo y uno mismo.",
+      "«Hiposexualidad o hipoerotismo»: disminución marcada del apetito sexual y de las fantasías."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "COM-020",
+    "oracion": "La descripción «Fenómeno real y lógico que aparece persistentemente en la conciencia contra la voluntad.» corresponde a ________.",
+    "respuesta_correcta": "Idea fija",
+    "justificacion": "La respuesta es «Idea fija»: idea lógica y real que se impone de forma persistente en la conciencia contra la voluntad de la persona. Se reconoce por: idea razonable de la que no puede librarse.",
+    "no_confundir_con": [
+      "«Pica»: ingestión persistente de sustancias que no son alimentos.",
+      "«Trastorno eréctil en el hombre»: dificultad persistente para obtener o mantener la erección."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "COM-021",
+    "oracion": "La descripción «Molestias corporales interpretadas como posibles signos de enfermedad.» corresponde a ________.",
+    "respuesta_correcta": "Idea hipocondríaca",
+    "justificacion": "La respuesta es «Idea hipocondríaca»: interpretación de molestias corporales como posibles signos de enfermedad. Se reconoce por: molestias del cuerpo leídas como señal de enfermedad.",
+    "no_confundir_con": [
+      "«Coprofagia»: deseo o conducta de ingerir heces.",
+      "«Eyaculación prematura»: eyaculación antes de lo deseado, con poco control."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "COM-022",
+    "oracion": "La descripción «Creencia de una fuerza externa imaginaria que controla el pensamiento.» corresponde a ________.",
+    "respuesta_correcta": "Delirio de influencia",
+    "justificacion": "La respuesta es «Delirio de influencia»: creencia delirante de que una fuerza externa controla el propio pensamiento o la conducta. Se reconoce por: siente que una fuerza externa lo controla.",
+    "no_confundir_con": [
+      "«Vaginismo»: contracción involuntaria de la musculatura vaginal que impide o dificulta la penetración.",
+      "«Aversión al sexo»: asco, temor o ansiedad ante la posibilidad de tener relaciones sexuales."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "COM-023",
+    "oracion": "La descripción «Creencia de que otras personas hablan, se ríen o se burlan del paciente.» corresponde a ________.",
+    "respuesta_correcta": "Delirio de referencia",
+    "justificacion": "La respuesta es «Delirio de referencia»: creencia delirante de que otras personas hablan, se ríen o se burlan de uno. Se reconoce por: interpreta lo que hacen o dicen otros como dirigido a él.",
+    "no_confundir_con": [],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "COM-024",
+    "oracion": "La descripción «Creencia de haber cometido un delito o falta grave inexistente, con culpa y arrepentimiento.» corresponde a ________.",
+    "respuesta_correcta": "Delirio de autorreproche",
+    "justificacion": "La respuesta es «Delirio de autorreproche»: creencia delirante de haber cometido una falta grave inexistente, con culpa y arrepentimiento. Se reconoce por: se acusa de una culpa que no existe.",
+    "no_confundir_con": [
+      "«Síndrome de delirium»: cuadro agudo con agitación, orientación fluctuante, alucinaciones visuales y táctiles, ansiedad y terror.",
+      "«Eyaculación prematura»: eyaculación antes de lo deseado, con poco control."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "COM-025",
+    "oracion": "La descripción «Categoría relacionada con duración, intensidad y cantidad del sueño.» corresponde a ________.",
+    "respuesta_correcta": "Disomnias",
+    "justificacion": "La respuesta es «Disomnias»: alteraciones de la cantidad, la calidad o el horario del sueño (insomnio, hipersomnia, alteraciones del ritmo). Se reconoce por: el problema es cuánto, cuándo o qué tan bien se duerme.",
+    "no_confundir_con": [
+      "«Aversión al sexo»: asco, temor o ansiedad ante la posibilidad de tener relaciones sexuales.",
+      "«Vaginismo»: contracción involuntaria de la musculatura vaginal que impide o dificulta la penetración."
+    ],
+    "tema": "Sueño"
+  },
+  {
+    "id": "COM-026",
+    "oracion": "La descripción «Ingestión de sustancias no apropiadas para la alimentación, como cal, tierra, arena o plastilina.» corresponde a ________.",
+    "respuesta_correcta": "Pica",
+    "justificacion": "La respuesta es «Pica»: ingestión persistente de sustancias que no son alimentos. Se reconoce por: come cosas que no son comida (tierra, papel, arena).",
+    "no_confundir_con": [
+      "«Rumiación alimentaria»: regurgitar el alimento, volver a masticarlo y tragarlo de nuevo.",
+      "«Malacia»: hábito de combinar sabores que habitualmente no se combinan."
+    ],
+    "tema": "Apetito e ingesta"
+  },
+  {
+    "id": "COM-027",
+    "oracion": "La descripción «Pérdida del deseo sexual.» corresponde a ________.",
+    "respuesta_correcta": "Anafrodisia",
+    "justificacion": "La respuesta es «Anafrodisia»: pérdida del deseo sexual. Se reconoce por: el deseo desapareció por completo.",
+    "no_confundir_con": [
+      "«Hiposexualidad o hipoerotismo»: disminución marcada del apetito sexual y de las fantasías.",
+      "«Aversión al sexo»: asco, temor o ansiedad ante la posibilidad de tener relaciones sexuales."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "COM-028",
+    "oracion": "La descripción «Sensación de asco, temor o ansiedad ante la posibilidad de tener relaciones sexuales.» corresponde a ________.",
+    "respuesta_correcta": "Aversión al sexo",
+    "justificacion": "La respuesta es «Aversión al sexo»: asco, temor o ansiedad ante la posibilidad de tener relaciones sexuales. Se reconoce por: rechazo y miedo al sexo, no solo falta de deseo.",
+    "no_confundir_con": [
+      "«Hiposexualidad o hipoerotismo»: disminución marcada del apetito sexual y de las fantasías.",
+      "«Hipersexualidad o hipererotismo»: aumento del deseo sexual y de la actividad sexual."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "COM-029",
+    "oracion": "La descripción «Inhabilitación persistente o recurrente para obtener o mantener una erección.» corresponde a ________.",
+    "respuesta_correcta": "Trastorno eréctil en el hombre",
+    "justificacion": "La respuesta es «Trastorno eréctil en el hombre»: dificultad persistente para obtener o mantener la erección. Se reconoce por: no consigue o no mantiene la erección.",
+    "no_confundir_con": [
+      "«Trastorno de la excitación sexual en mujeres»: dificultad persistente para alcanzar o mantener la excitación sexual en la mujer.",
+      "«Eyaculación prematura»: eyaculación antes de lo deseado, con poco control."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "COM-030",
+    "oracion": "La descripción «Ausencia de eyaculación o presencia retardada después de la penetración o actividad sexual.» corresponde a ________.",
+    "respuesta_correcta": "Eyaculación retardada",
+    "justificacion": "La respuesta es «Eyaculación retardada»: demora importante o ausencia de eyaculación. Se reconoce por: tarda demasiado o no logra eyacular.",
+    "no_confundir_con": [
+      "«Eyaculación prematura»: eyaculación antes de lo deseado, con poco control.",
+      "«Dispareunia»: dolor genital durante la actividad sexual."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "COM-031",
+    "oracion": "La descripción «Espasmos involuntarios en el tercio externo de la vagina; la penetración puede provocar dolor.» corresponde a ________.",
+    "respuesta_correcta": "Vaginismo",
+    "justificacion": "La respuesta es «Vaginismo»: contracción involuntaria de la musculatura vaginal que impide o dificulta la penetración. Se reconoce por: espasmos involuntarios que bloquean la penetración.",
+    "no_confundir_con": [
+      "«Dispareunia»: dolor genital durante la actividad sexual.",
+      "«Eyaculación retardada»: demora importante o ausencia de eyaculación."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "COM-032",
+    "oracion": "La descripción «Enfermo tranquilo, hipomímico; vigilia baja, atención distráctil, memoria disminuida, orientación grosera, abulia e hipoquinesia.» corresponde a ________.",
+    "respuesta_correcta": "Síndrome de obnubilación",
+    "justificacion": "La respuesta es «Síndrome de obnubilación»: cuadro de vigilia baja: paciente tranquilo y lento, con atención y memoria disminuidas. Se reconoce por: tranquilo, lento, poco vigilante, con atención y memoria disminuidas.",
+    "no_confundir_con": [
+      "«Hiperfrenia»: elevación máxima del nivel de conciencia, con percepción exagerada de todo el entorno.",
+      "«Síndrome demencial»: deterioro de las capacidades intelectuales con desorganización de la personalidad."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "COM-033",
+    "oracion": "La descripción «Actitud contemplativa e hipomimia; alucinaciones visuales escénicas, generalmente no angustiosas, con conducta contemplativa e inmóvil.» corresponde a ________.",
+    "respuesta_correcta": "Síndrome oniroide",
+    "justificacion": "La respuesta es «Síndrome oniroide»: cuadro de actitud contemplativa e inmóvil con alucinaciones visuales en forma de escenas, generalmente sin angustia. Se reconoce por: contempla inmóvil escenas alucinatorias, sin angustia.",
+    "no_confundir_con": [
+      "«Síndrome hipercinético»: aumento excesivo de la actividad motora y agitación psicomotora.",
+      "«Síndrome apatoabúlico»: predominio de apatía y abulia, con alteración de la motivación y la actividad."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "COM-034",
+    "oracion": "La descripción «Alteraciones de vigilia o sensopercepciones ausentes o despreciables; sobresalen afectación intelectual y del carácter.» corresponde a ________.",
+    "respuesta_correcta": "Síndromes cerebrales orgánicos crónicos",
+    "justificacion": "La respuesta es «Síndromes cerebrales orgánicos crónicos»: cuadros por daño cerebral donde la vigilia y la percepción casi no se alteran, y sobresalen el deterioro intelectual y los cambios del carácter. Se reconoce por: deterioro intelectual y del carácter con vigilia conservada.",
+    "no_confundir_con": [
+      "«Síndrome maníaco»: cuadro de ánimo exaltado con pensamiento acelerado, fuga de ideas, hiperactividad e hipersociabilidad.",
+      "«Coma»: pérdida de conciencia, sensibilidad y movimiento voluntario, con funciones vegetativas conservadas."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "COM-035",
+    "oracion": "La descripción «Deterioro de capacidades intelectuales y desorganización de la personalidad, dentro de los síndromes orgánicos crónicos.» corresponde a ________.",
+    "respuesta_correcta": "Síndrome demencial",
+    "justificacion": "La respuesta es «Síndrome demencial»: deterioro de las capacidades intelectuales con desorganización de la personalidad. Se reconoce por: deterioro progresivo de memoria, orientación y autocuidado en un adulto mayor.",
+    "no_confundir_con": [
+      "«Síndrome oligofrénico»: capacidades intelectuales muy disminuidas, pensamiento concreto y respuestas afectivas infantiles.",
+      "«Síndrome amnésico-confabulatorio»: alteración de la memoria reciente acompañada de confabulaciones."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "COM-036",
+    "oracion": "La descripción «Predominan apatía y abulia, con pérdida de la motivación y de la iniciativa para actuar.» corresponde a ________.",
+    "respuesta_correcta": "Síndrome apatoabúlico",
+    "justificacion": "La respuesta es «Síndrome apatoabúlico»: predominio de apatía y abulia, con alteración de la motivación y la actividad. Se reconoce por: indiferencia total y falta de iniciativa, sin tristeza ni alegría.",
+    "no_confundir_con": [
+      "«Síndrome amnésico-confabulatorio»: alteración de la memoria reciente acompañada de confabulaciones.",
+      "«Síndrome demencial»: deterioro de las capacidades intelectuales con desorganización de la personalidad."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "COM-037",
+    "oracion": "La descripción «Vigilia algo aumentada, atención hipervigilante, pensamiento acelerado, fuga de ideas, hipertimia, labilidad, hiperbulia e hipersociabilidad.» corresponde a ________.",
+    "respuesta_correcta": "Síndrome maníaco",
+    "justificacion": "La respuesta es «Síndrome maníaco»: cuadro de ánimo exaltado con pensamiento acelerado, fuga de ideas, hiperactividad e hipersociabilidad. Se reconoce por: ánimo exaltado, ideas aceleradas e hiperactividad social.",
+    "no_confundir_con": [
+      "«Síndrome psicopático»: patrón inadaptativo de conducta con impulsividad, baja tolerancia a la frustración y conflictos en las relaciones.",
+      "«Desorientación autopsíquica o en persona»: no saber quién es uno mismo ni reconocer a personas conocidas."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "COM-038",
+    "oracion": "La descripción «Atención discretamente hipervigilante, ansiedad, irritabilidad, pensamiento acelerado, hiperbulia, insomnio vespertino y manifestaciones vegetativas.» corresponde a ________.",
+    "respuesta_correcta": "Síndrome afectivo ansioso",
+    "justificacion": "La respuesta es «Síndrome afectivo ansioso»: conjunto de angustia, inquietud, pensamiento acelerado, insomnio y síntomas vegetativos. Se reconoce por: angustia, sudoración, pensamientos acelerados y temor a que pase algo malo.",
+    "no_confundir_con": [
+      "«Síndrome psicopático»: patrón inadaptativo de conducta con impulsividad, baja tolerancia a la frustración y conflictos en las relaciones.",
+      "«Síndrome hipocondríaco»: preocupación excesiva por la salud con autoobservación constante, sin causa orgánica que lo explique."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "COM-039",
+    "oracion": "La descripción «Preocupación excesiva por la salud, temor constante a la muerte y autoobservación continua de funciones corporales.» corresponde a ________.",
+    "respuesta_correcta": "Síndrome hipocondríaco",
+    "justificacion": "La respuesta es «Síndrome hipocondríaco»: preocupación excesiva por la salud con autoobservación constante, sin causa orgánica que lo explique. Se reconoce por: convencimiento de estar enfermo con exámenes normales y vigilancia del cuerpo.",
+    "no_confundir_con": [
+      "«Síndrome afectivo ansioso»: conjunto de angustia, inquietud, pensamiento acelerado, insomnio y síntomas vegetativos.",
+      "«Síndrome psicopático»: patrón inadaptativo de conducta con impulsividad, baja tolerancia a la frustración y conflictos en las relaciones."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "COM-040",
+    "oracion": "La descripción «Patrones inadaptativos de comportamiento, dificultades en control de impulsos, seguridad personal, autovaloración y relaciones.» corresponde a ________.",
+    "respuesta_correcta": "Síndrome psicopático",
+    "justificacion": "La respuesta es «Síndrome psicopático»: patrón inadaptativo de conducta con impulsividad, baja tolerancia a la frustración y conflictos en las relaciones. Se reconoce por: impulsividad, gratificación inmediata y relaciones conflictivas.",
+    "no_confundir_con": [
+      "«Síndrome esquizofrénico»: conjunto de síntomas con aislamiento, descuido, bloqueo del pensamiento, alucinaciones, incongruencia afectiva y pérdida de iniciativa.",
+      "«Síndrome afectivo ansioso»: conjunto de angustia, inquietud, pensamiento acelerado, insomnio y síntomas vegetativos."
+    ],
+    "tema": "Síndromes"
+  }
+]

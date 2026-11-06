@@ -1,0 +1,1522 @@
+[
+  {
+    "id": "MC-001",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Mayor sensibilidad sensorial, aumento motor e intensidad emocional; búsqueda constante de posibles amenazas.",
+    "opciones": [
+      "Hipervigilancia",
+      "Delirium",
+      "Aprosexia",
+      "Apatía de la atención"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Hipervigilancia»: estado de alerta aumentado en el que la persona busca constantemente posibles amenazas. Se reconoce por: reacción exagerada ante estímulos pequeños y rastreo constante del ambiente en busca de peligro.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Hipervigilancia»: estado de alerta aumentado en el que la persona busca constantemente posibles amenazas. La descripción apunta a: reacción exagerada ante estímulos pequeños y rastreo constante del ambiente en busca de peligro.",
+      "✘ No es «Delirium»: cuadro agudo con ilusiones y alucinaciones (visuales, auditivas, táctiles) y alteración de la conciencia. La descripción habla de reacción exagerada ante estímulos pequeños y rastreo constante del ambiente en busca de peligro, y eso corresponde a «Hipervigilancia».",
+      "✘ No es «Aprosexia»: ausencia total o casi total de atención. La descripción habla de reacción exagerada ante estímulos pequeños y rastreo constante del ambiente en busca de peligro, y eso corresponde a «Hipervigilancia».",
+      "✘ No es «Apatía de la atención»: falta marcada de atención e interés por los acontecimientos del medio. La descripción habla de reacción exagerada ante estímulos pequeños y rastreo constante del ambiente en busca de peligro, y eso corresponde a «Hipervigilancia»."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "MC-002",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Estado de hipervigilancia máxima; consciencia exagerada.",
+    "opciones": [
+      "Hiperfrenia",
+      "Hipoprosexia",
+      "Estado crepuscular",
+      "Perplejidad de la atención"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Hiperfrenia»: elevación máxima del nivel de conciencia, con percepción exagerada de todo el entorno. Se reconoce por: nivel de alerta llevado al máximo y de forma generalizada, no solo ante posibles amenazas.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Hiperfrenia»: elevación máxima del nivel de conciencia, con percepción exagerada de todo el entorno. La descripción apunta a: nivel de alerta llevado al máximo y de forma generalizada, no solo ante posibles amenazas.",
+      "✘ No es «Hipoprosexia»: disminución de la capacidad de enfocar y mantener la concentración. La descripción habla de nivel de alerta llevado al máximo y de forma generalizada, no solo ante posibles amenazas, y eso corresponde a «Hiperfrenia».",
+      "✘ No es «Estado crepuscular»: estrechamiento de la conciencia con conductas automáticas y amnesia posterior. La descripción habla de nivel de alerta llevado al máximo y de forma generalizada, no solo ante posibles amenazas, y eso corresponde a «Hiperfrenia».",
+      "✘ No es «Perplejidad de la atención»: incapacidad para sintetizar lo atendido y comprender acciones y circunstancias. La descripción habla de nivel de alerta llevado al máximo y de forma generalizada, no solo ante posibles amenazas, y eso corresponde a «Hiperfrenia»."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "MC-003",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Primer estadio de disminución del nivel de conciencia; requiere estímulos externos de cierta intensidad.",
+    "opciones": [
+      "Hipomnesia de fijación o anterógrada",
+      "Obnubilación",
+      "Estados oniroides",
+      "Hiperprosexia o hiperconcentración"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Obnubilación»: primer grado de descenso de la conciencia: responde, pero necesita estímulos más intensos. Se reconoce por: responde y obedece órdenes sencillas, aunque con lentitud y solo ante estímulos más fuertes.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Hipomnesia de fijación o anterógrada»: disminución de la memoria para hechos recientes (cuesta fijar lo nuevo). La descripción habla de responde y obedece órdenes sencillas, aunque con lentitud y solo ante estímulos más fuertes, y eso corresponde a «Obnubilación».",
+      "✔ Correcto. «Obnubilación»: primer grado de descenso de la conciencia: responde, pero necesita estímulos más intensos. La descripción apunta a: responde y obedece órdenes sencillas, aunque con lentitud y solo ante estímulos más fuertes.",
+      "✘ No es «Estados oniroides»: vivencias alucinatorias en forma de escenas, mezcla de realidad y fantasía, sobre todo visuales. La descripción habla de responde y obedece órdenes sencillas, aunque con lentitud y solo ante estímulos más fuertes, y eso corresponde a «Obnubilación».",
+      "✘ No es «Hiperprosexia o hiperconcentración»: focalización excesiva de la atención en un solo estímulo o tarea. La descripción habla de responde y obedece órdenes sencillas, aunque con lentitud y solo ante estímulos más fuertes, y eso corresponde a «Obnubilación»."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "MC-004",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Falta de reacción y atención al ambiente; solo alcanza ligero estado de alerta mediante estímulos muy potentes.",
+    "opciones": [
+      "Amnesia de fijación",
+      "Paraprosexias",
+      "Estupor",
+      "Desorientación alopsíquica en tiempo"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Estupor»: falta casi total de reacción al ambiente; solo se logra un ligero estado de alerta con estímulos muy potentes. Se reconoce por: hace falta un estímulo muy intenso y aun así no hay comunicación comprensible.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Amnesia de fijación»: incapacidad total para consolidar recuerdos nuevos. La descripción habla de hace falta un estímulo muy intenso y aun así no hay comunicación comprensible, y eso corresponde a «Estupor».",
+      "✘ No es «Paraprosexias»: desviaciones de la atención, de apariencia involuntaria, con aumento de la actividad psicomotriz. La descripción habla de hace falta un estímulo muy intenso y aun así no hay comunicación comprensible, y eso corresponde a «Estupor».",
+      "✔ Correcto. «Estupor»: falta casi total de reacción al ambiente; solo se logra un ligero estado de alerta con estímulos muy potentes. La descripción apunta a: hace falta un estímulo muy intenso y aun así no hay comunicación comprensible.",
+      "✘ No es «Desorientación alopsíquica en tiempo»: no reconocer la hora, el día, el mes o el año (a veces ni día ni noche). La descripción habla de hace falta un estímulo muy intenso y aun así no hay comunicación comprensible, y eso corresponde a «Estupor»."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "MC-005",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Afectación cognitiva, concepción desordenada de la realidad, desorientación total y diálogo incomprensible.",
+    "opciones": [
+      "Confusión mental o estado confusional",
+      "Amnesia de conservación",
+      "Desorientación alopsíquica en espacio",
+      "Distractibilidad"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Confusión mental o estado confusional»: alteración cognitiva con concepción desordenada de la realidad, desorientación y diálogo incomprensible. Se reconoce por: discurso incoherente, desorientación y falta de comprensión del entorno (no es solo lentitud ni sueño).",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Confusión mental o estado confusional»: alteración cognitiva con concepción desordenada de la realidad, desorientación y diálogo incomprensible. La descripción apunta a: discurso incoherente, desorientación y falta de comprensión del entorno (no es solo lentitud ni sueño).",
+      "✘ No es «Amnesia de conservación»: pérdida de recuerdos que ya estaban guardados. La descripción habla de discurso incoherente, desorientación y falta de comprensión del entorno (no es solo lentitud ni sueño), y eso corresponde a «Confusión mental o estado confusional».",
+      "✘ No es «Desorientación alopsíquica en espacio»: no reconocer el lugar, la ciudad o el país donde se encuentra. La descripción habla de discurso incoherente, desorientación y falta de comprensión del entorno (no es solo lentitud ni sueño), y eso corresponde a «Confusión mental o estado confusional».",
+      "✘ No es «Distractibilidad»: inestabilidad atencional: cuesta sostener la atención en un tema por la intromisión de otros estímulos o pensamientos. La descripción habla de discurso incoherente, desorientación y falta de comprensión del entorno (no es solo lentitud ni sueño), y eso corresponde a «Confusión mental o estado confusional»."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "MC-006",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Pérdida de conciencia, sensibilidad y motilidad voluntaria; se conservan las funciones vegetativas.",
+    "opciones": [
+      "Coma",
+      "Fatigabilidad de la atención",
+      "Desorientación autopsíquica o en persona",
+      "Amnesia global"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Coma»: pérdida de conciencia, sensibilidad y movimiento voluntario, con funciones vegetativas conservadas. Se reconoce por: no hay despertar ni respuesta voluntaria ante ningún estímulo.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Coma»: pérdida de conciencia, sensibilidad y movimiento voluntario, con funciones vegetativas conservadas. La descripción apunta a: no hay despertar ni respuesta voluntaria ante ningún estímulo.",
+      "✘ No es «Fatigabilidad de la atención»: agotamiento progresivo de la atención, con menor rendimiento y más errores. La descripción habla de no hay despertar ni respuesta voluntaria ante ningún estímulo, y eso corresponde a «Coma».",
+      "✘ No es «Desorientación autopsíquica o en persona»: no saber quién es uno mismo ni reconocer a personas conocidas. La descripción habla de no hay despertar ni respuesta voluntaria ante ningún estímulo, y eso corresponde a «Coma».",
+      "✘ No es «Amnesia global»: pérdida de todos o casi todos los recuerdos del pasado. La descripción habla de no hay despertar ni respuesta voluntaria ante ningún estímulo, y eso corresponde a «Coma»."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "MC-007",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Curso agudo con alteraciones sensoperceptuales, especialmente ilusiones y alucinaciones visuales, auditivas y táctiles.",
+    "opciones": [
+      "Apatía de la atención",
+      "Amnesia lacunar",
+      "Delirium",
+      "Aprosexia"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Delirium»: cuadro agudo con ilusiones y alucinaciones (visuales, auditivas, táctiles) y alteración de la conciencia. Se reconoce por: alucinaciones vividas como reales, de inicio agudo, con miedo y en un contexto tóxico u orgánico.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Apatía de la atención»: falta marcada de atención e interés por los acontecimientos del medio. La descripción habla de alucinaciones vividas como reales, de inicio agudo, con miedo y en un contexto tóxico u orgánico, y eso corresponde a «Delirium».",
+      "✘ No es «Amnesia lacunar»: pérdida de recuerdos limitada a un período concreto de tiempo. La descripción habla de alucinaciones vividas como reales, de inicio agudo, con miedo y en un contexto tóxico u orgánico, y eso corresponde a «Delirium».",
+      "✔ Correcto. «Delirium»: cuadro agudo con ilusiones y alucinaciones (visuales, auditivas, táctiles) y alteración de la conciencia. La descripción apunta a: alucinaciones vividas como reales, de inicio agudo, con miedo y en un contexto tóxico u orgánico.",
+      "✘ No es «Aprosexia»: ausencia total o casi total de atención. La descripción habla de alucinaciones vividas como reales, de inicio agudo, con miedo y en un contexto tóxico u orgánico, y eso corresponde a «Delirium»."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "MC-008",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Estrechamiento de conciencia, amnesia lacunar posterior, conductas automáticas y explosiones emocionales.",
+    "opciones": [
+      "Hipoprosexia",
+      "Amnesia selectiva episódica",
+      "Perplejidad de la atención",
+      "Estado crepuscular"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Estado crepuscular»: estrechamiento de la conciencia con conductas automáticas y amnesia posterior. Se reconoce por: conducta automática y cambio de comportamiento, seguidos de amnesia del episodio.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Hipoprosexia»: disminución de la capacidad de enfocar y mantener la concentración. La descripción habla de conducta automática y cambio de comportamiento, seguidos de amnesia del episodio, y eso corresponde a «Estado crepuscular».",
+      "✘ No es «Amnesia selectiva episódica»: olvido de un acontecimiento específico de la vida. La descripción habla de conducta automática y cambio de comportamiento, seguidos de amnesia del episodio, y eso corresponde a «Estado crepuscular».",
+      "✘ No es «Perplejidad de la atención»: incapacidad para sintetizar lo atendido y comprender acciones y circunstancias. La descripción habla de conducta automática y cambio de comportamiento, seguidos de amnesia del episodio, y eso corresponde a «Estado crepuscular».",
+      "✔ Correcto. «Estado crepuscular»: estrechamiento de la conciencia con conductas automáticas y amnesia posterior. La descripción apunta a: conducta automática y cambio de comportamiento, seguidos de amnesia del episodio."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "MC-009",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Acciones involuntarias realizadas en ausencia de conciencia, con posible recuerdo posterior parcial o confuso.",
+    "opciones": [
+      "Automatismos",
+      "Hipomnesia de evocación o retrógrada",
+      "Amnesia de evocación",
+      "Pseudoaprosexias"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Automatismos»: acciones involuntarias realizadas sin conciencia, con recuerdo posterior parcial o confuso. Se reconoce por: movimientos con apariencia de finalidad pero no voluntarios, y con recuerdo mínimo.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Automatismos»: acciones involuntarias realizadas sin conciencia, con recuerdo posterior parcial o confuso. La descripción apunta a: movimientos con apariencia de finalidad pero no voluntarios, y con recuerdo mínimo.",
+      "✘ No es «Hipomnesia de evocación o retrógrada»: disminución de la capacidad de recordar el pasado o recuperar lo ya almacenado. La descripción habla de movimientos con apariencia de finalidad pero no voluntarios, y con recuerdo mínimo, y eso corresponde a «Automatismos».",
+      "✘ No es «Amnesia de evocación»: dificultad para traer a la conciencia un recuerdo que no se ha perdido. La descripción habla de movimientos con apariencia de finalidad pero no voluntarios, y con recuerdo mínimo, y eso corresponde a «Automatismos».",
+      "✘ No es «Pseudoaprosexias»: aparente falta de atención (parece aprosexia) cuando en realidad la atención está dirigida al medio externo. La descripción habla de movimientos con apariencia de finalidad pero no voluntarios, y con recuerdo mínimo, y eso corresponde a «Automatismos»."
+    ],
+    "tema": "Conciencia"
+  },
+  {
+    "id": "MC-010",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? No reconocer hora, día, mes o año; a veces no diferenciar día y noche.",
+    "opciones": [
+      "Pseudoamnesia",
+      "Amnesia de fijación",
+      "Desorientación alopsíquica en tiempo",
+      "Paraprosexias"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Desorientación alopsíquica en tiempo»: no reconocer la hora, el día, el mes o el año (a veces ni día ni noche). Se reconoce por: falla en fechas y en el momento del día.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Pseudoamnesia»: sensación de haber perdido la memoria sin pérdida objetiva. La descripción habla de falla en fechas y en el momento del día, y eso corresponde a «Desorientación alopsíquica en tiempo».",
+      "✘ No es «Amnesia de fijación»: incapacidad total para consolidar recuerdos nuevos. La descripción habla de falla en fechas y en el momento del día, y eso corresponde a «Desorientación alopsíquica en tiempo».",
+      "✔ Correcto. «Desorientación alopsíquica en tiempo»: no reconocer la hora, el día, el mes o el año (a veces ni día ni noche). La descripción apunta a: falla en fechas y en el momento del día.",
+      "✘ No es «Paraprosexias»: desviaciones de la atención, de apariencia involuntaria, con aumento de la actividad psicomotriz. La descripción habla de falla en fechas y en el momento del día, y eso corresponde a «Desorientación alopsíquica en tiempo»."
+    ],
+    "tema": "Orientación"
+  },
+  {
+    "id": "MC-011",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? No reconocer el lugar, ciudad, provincia o país donde se encuentra.",
+    "opciones": [
+      "Distractibilidad",
+      "Hipermnesia",
+      "Desorientación alopsíquica en espacio",
+      "Amnesia de conservación"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Desorientación alopsíquica en espacio»: no reconocer el lugar, la ciudad o el país donde se encuentra. Se reconoce por: no sabe dónde está, aunque sí podría saber quién es.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Distractibilidad»: inestabilidad atencional: cuesta sostener la atención en un tema por la intromisión de otros estímulos o pensamientos. La descripción habla de no sabe dónde está, aunque sí podría saber quién es, y eso corresponde a «Desorientación alopsíquica en espacio».",
+      "✘ No es «Hipermnesia»: aumento exagerado de los recuerdos. La descripción habla de no sabe dónde está, aunque sí podría saber quién es, y eso corresponde a «Desorientación alopsíquica en espacio».",
+      "✔ Correcto. «Desorientación alopsíquica en espacio»: no reconocer el lugar, la ciudad o el país donde se encuentra. La descripción apunta a: no sabe dónde está, aunque sí podría saber quién es.",
+      "✘ No es «Amnesia de conservación»: pérdida de recuerdos que ya estaban guardados. La descripción habla de no sabe dónde está, aunque sí podría saber quién es, y eso corresponde a «Desorientación alopsíquica en espacio»."
+    ],
+    "tema": "Orientación"
+  },
+  {
+    "id": "MC-012",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? No identificar quién es, de dónde viene, a dónde se dirige o quiénes son personas conocidas.",
+    "opciones": [
+      "Fatigabilidad de la atención",
+      "Desorientación autopsíquica o en persona",
+      "Amnesia global",
+      "Pseudohipermnesias"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Desorientación autopsíquica o en persona»: no saber quién es uno mismo ni reconocer a personas conocidas. Se reconoce por: falla en la propia identidad y en reconocer a los allegados.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Fatigabilidad de la atención»: agotamiento progresivo de la atención, con menor rendimiento y más errores. La descripción habla de falla en la propia identidad y en reconocer a los allegados, y eso corresponde a «Desorientación autopsíquica o en persona».",
+      "✔ Correcto. «Desorientación autopsíquica o en persona»: no saber quién es uno mismo ni reconocer a personas conocidas. La descripción apunta a: falla en la propia identidad y en reconocer a los allegados.",
+      "✘ No es «Amnesia global»: pérdida de todos o casi todos los recuerdos del pasado. La descripción habla de falla en la propia identidad y en reconocer a los allegados, y eso corresponde a «Desorientación autopsíquica o en persona».",
+      "✘ No es «Pseudohipermnesias»: evocación repetitiva de recuerdos, por ejemplo ligados a la patología del paciente. La descripción habla de falla en la propia identidad y en reconocer a los allegados, y eso corresponde a «Desorientación autopsíquica o en persona»."
+    ],
+    "tema": "Orientación"
+  },
+  {
+    "id": "MC-013",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Reducción máxima o ausencia total de atención.",
+    "opciones": [
+      "Apatía de la atención",
+      "Amnesia lacunar",
+      "Aprosexia",
+      "Ecmnesia"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Aprosexia»: ausencia total o casi total de atención. Se reconoce por: no atiende a ningún estímulo.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Apatía de la atención»: falta marcada de atención e interés por los acontecimientos del medio. La descripción habla de no atiende a ningún estímulo, y eso corresponde a «Aprosexia».",
+      "✘ No es «Amnesia lacunar»: pérdida de recuerdos limitada a un período concreto de tiempo. La descripción habla de no atiende a ningún estímulo, y eso corresponde a «Aprosexia».",
+      "✔ Correcto. «Aprosexia»: ausencia total o casi total de atención. La descripción apunta a: no atiende a ningún estímulo.",
+      "✘ No es «Ecmnesia»: sensación de estar en el pasado, con pérdida de la orientación en el presente. La descripción habla de no atiende a ningún estímulo, y eso corresponde a «Aprosexia»."
+    ],
+    "tema": "Atención"
+  },
+  {
+    "id": "MC-014",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Disminución de la capacidad para enfocar, concentrarse y orientarse hacia un objeto.",
+    "opciones": [
+      "Paramnesias",
+      "Hipoprosexia",
+      "Amnesia selectiva episódica",
+      "Perplejidad de la atención"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Hipoprosexia»: disminución de la capacidad de enfocar y mantener la concentración. Se reconoce por: puede atender, pero con mucha dificultad para concentrarse.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Paramnesias»: deformidad de los recuerdos. La descripción habla de puede atender, pero con mucha dificultad para concentrarse, y eso corresponde a «Hipoprosexia».",
+      "✔ Correcto. «Hipoprosexia»: disminución de la capacidad de enfocar y mantener la concentración. La descripción apunta a: puede atender, pero con mucha dificultad para concentrarse.",
+      "✘ No es «Amnesia selectiva episódica»: olvido de un acontecimiento específico de la vida. La descripción habla de puede atender, pero con mucha dificultad para concentrarse, y eso corresponde a «Hipoprosexia».",
+      "✘ No es «Perplejidad de la atención»: incapacidad para sintetizar lo atendido y comprender acciones y circunstancias. La descripción habla de puede atender, pero con mucha dificultad para concentrarse, y eso corresponde a «Hipoprosexia»."
+    ],
+    "tema": "Atención"
+  },
+  {
+    "id": "MC-015",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Parece existir aprosexia, pero la atención está focalizada en el medio externo.",
+    "opciones": [
+      "Hipomnesia de evocación o retrógrada",
+      "Pseudoalucinación",
+      "Amnesia de evocación",
+      "Pseudoaprosexias"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Pseudoaprosexias»: aparente falta de atención (parece aprosexia) cuando en realidad la atención está dirigida al medio externo. Se reconoce por: parece desatenta, pero sigue con atención lo que ocurre afuera.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Hipomnesia de evocación o retrógrada»: disminución de la capacidad de recordar el pasado o recuperar lo ya almacenado. La descripción habla de parece desatenta, pero sigue con atención lo que ocurre afuera, y eso corresponde a «Pseudoaprosexias».",
+      "✘ No es «Pseudoalucinación»: percepción anómala vivida en el espacio interno, sin la 'corporeidad' de una percepción real. La descripción habla de parece desatenta, pero sigue con atención lo que ocurre afuera, y eso corresponde a «Pseudoaprosexias».",
+      "✘ No es «Amnesia de evocación»: dificultad para traer a la conciencia un recuerdo que no se ha perdido. La descripción habla de parece desatenta, pero sigue con atención lo que ocurre afuera, y eso corresponde a «Pseudoaprosexias».",
+      "✔ Correcto. «Pseudoaprosexias»: aparente falta de atención (parece aprosexia) cuando en realidad la atención está dirigida al medio externo. La descripción apunta a: parece desatenta, pero sigue con atención lo que ocurre afuera."
+    ],
+    "tema": "Atención"
+  },
+  {
+    "id": "MC-016",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Desviaciones de la atención de apariencia involuntaria, con aumento de la atención espontánea e incremento psicomotriz.",
+    "opciones": [
+      "Alucinosis",
+      "Pseudoamnesia",
+      "Amnesia de fijación",
+      "Paraprosexias"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Paraprosexias»: desviaciones de la atención, de apariencia involuntaria, con aumento de la actividad psicomotriz. Se reconoce por: atención que salta a todo estímulo, acompañada de aumento de la actividad motora.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Alucinosis»: alucinación en la que la persona es consciente de que lo que percibe no existe. La descripción habla de atención que salta a todo estímulo, acompañada de aumento de la actividad motora, y eso corresponde a «Paraprosexias».",
+      "✘ No es «Pseudoamnesia»: sensación de haber perdido la memoria sin pérdida objetiva. La descripción habla de atención que salta a todo estímulo, acompañada de aumento de la actividad motora, y eso corresponde a «Paraprosexias».",
+      "✘ No es «Amnesia de fijación»: incapacidad total para consolidar recuerdos nuevos. La descripción habla de atención que salta a todo estímulo, acompañada de aumento de la actividad motora, y eso corresponde a «Paraprosexias».",
+      "✔ Correcto. «Paraprosexias»: desviaciones de la atención, de apariencia involuntaria, con aumento de la actividad psicomotriz. La descripción apunta a: atención que salta a todo estímulo, acompañada de aumento de la actividad motora."
+    ],
+    "tema": "Atención"
+  },
+  {
+    "id": "MC-017",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Inestabilidad atencional; dificultad para mantener atención en un estímulo, tema o vivencia.",
+    "opciones": [
+      "Amnesia de conservación",
+      "Distractibilidad",
+      "Alucinación negativa",
+      "Hipermnesia"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Distractibilidad»: inestabilidad atencional: cuesta sostener la atención en un tema por la intromisión de otros estímulos o pensamientos. Se reconoce por: pierde el hilo por estímulos o pensamientos irrelevantes.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Amnesia de conservación»: pérdida de recuerdos que ya estaban guardados. La descripción habla de pierde el hilo por estímulos o pensamientos irrelevantes, y eso corresponde a «Distractibilidad».",
+      "✔ Correcto. «Distractibilidad»: inestabilidad atencional: cuesta sostener la atención en un tema por la intromisión de otros estímulos o pensamientos. La descripción apunta a: pierde el hilo por estímulos o pensamientos irrelevantes.",
+      "✘ No es «Alucinación negativa»: no percibir un estímulo que sí existe. La descripción habla de pierde el hilo por estímulos o pensamientos irrelevantes, y eso corresponde a «Distractibilidad».",
+      "✘ No es «Hipermnesia»: aumento exagerado de los recuerdos. La descripción habla de pierde el hilo por estímulos o pensamientos irrelevantes, y eso corresponde a «Distractibilidad»."
+    ],
+    "tema": "Atención"
+  },
+  {
+    "id": "MC-018",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Agotamiento de la atención, con escaso rendimiento y abundancia de errores.",
+    "opciones": [
+      "Pseudohipermnesias",
+      "Alucinación liliputiense",
+      "Amnesia global",
+      "Fatigabilidad de la atención"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Fatigabilidad de la atención»: agotamiento progresivo de la atención, con menor rendimiento y más errores. Se reconoce por: el rendimiento cae a medida que pasa el tiempo.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Pseudohipermnesias»: evocación repetitiva de recuerdos, por ejemplo ligados a la patología del paciente. La descripción habla de el rendimiento cae a medida que pasa el tiempo, y eso corresponde a «Fatigabilidad de la atención».",
+      "✘ No es «Alucinación liliputiense»: alucinaciones de seres o cosas diminutas. La descripción habla de el rendimiento cae a medida que pasa el tiempo, y eso corresponde a «Fatigabilidad de la atención».",
+      "✘ No es «Amnesia global»: pérdida de todos o casi todos los recuerdos del pasado. La descripción habla de el rendimiento cae a medida que pasa el tiempo, y eso corresponde a «Fatigabilidad de la atención».",
+      "✔ Correcto. «Fatigabilidad de la atención»: agotamiento progresivo de la atención, con menor rendimiento y más errores. La descripción apunta a: el rendimiento cae a medida que pasa el tiempo."
+    ],
+    "tema": "Atención"
+  },
+  {
+    "id": "MC-019",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Considerable falta de atención e interés por acontecimientos del medio.",
+    "opciones": [
+      "Amnesia lacunar",
+      "Ecmnesia",
+      "Alucinación guliveriana",
+      "Apatía de la atención"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Apatía de la atención»: falta marcada de atención e interés por los acontecimientos del medio. Se reconoce por: indiferencia incluso ante estímulos atractivos.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Amnesia lacunar»: pérdida de recuerdos limitada a un período concreto de tiempo. La descripción habla de indiferencia incluso ante estímulos atractivos, y eso corresponde a «Apatía de la atención».",
+      "✘ No es «Ecmnesia»: sensación de estar en el pasado, con pérdida de la orientación en el presente. La descripción habla de indiferencia incluso ante estímulos atractivos, y eso corresponde a «Apatía de la atención».",
+      "✘ No es «Alucinación guliveriana»: alucinaciones de seres o cosas gigantes. La descripción habla de indiferencia incluso ante estímulos atractivos, y eso corresponde a «Apatía de la atención».",
+      "✔ Correcto. «Apatía de la atención»: falta marcada de atención e interés por los acontecimientos del medio. La descripción apunta a: indiferencia incluso ante estímulos atractivos."
+    ],
+    "tema": "Atención"
+  },
+  {
+    "id": "MC-020",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Deficiencia de memoria referida a hechos ocurridos recientemente.",
+    "opciones": [
+      "Amnesia selectiva semántica",
+      "Hipomnesia de fijación o anterógrada",
+      "Ideación autolítica o suicida",
+      "Ilusión"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Hipomnesia de fijación o anterógrada»: disminución de la memoria para hechos recientes (cuesta fijar lo nuevo). Se reconoce por: olvida lo ocurrido hace minutos o poco tiempo.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Amnesia selectiva semántica»: pérdida de conocimientos o de ciertos tipos de conocimiento. La descripción habla de olvida lo ocurrido hace minutos o poco tiempo, y eso corresponde a «Hipomnesia de fijación o anterógrada».",
+      "✔ Correcto. «Hipomnesia de fijación o anterógrada»: disminución de la memoria para hechos recientes (cuesta fijar lo nuevo). La descripción apunta a: olvida lo ocurrido hace minutos o poco tiempo.",
+      "✘ No es «Ideación autolítica o suicida»: pensamientos de hacerse daño o de quitarse la vida. La descripción habla de olvida lo ocurrido hace minutos o poco tiempo, y eso corresponde a «Hipomnesia de fijación o anterógrada».",
+      "✘ No es «Ilusión»: percepción errónea de un objeto real presente en el campo sensorial. La descripción habla de olvida lo ocurrido hace minutos o poco tiempo, y eso corresponde a «Hipomnesia de fijación o anterógrada»."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "MC-021",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Incapacidad para recordar el pasado o recuperar información almacenada anteriormente.",
+    "opciones": [
+      "Idea sobrevalorada",
+      "Amnesia de evocación",
+      "Hipomnesia de evocación o retrógrada",
+      "Pseudoalucinación"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Hipomnesia de evocación o retrógrada»: disminución de la capacidad de recordar el pasado o recuperar lo ya almacenado. Se reconoce por: cuesta recordar hechos antiguos (el pasado).",
+    "retroalimentacion_opciones": [
+      "✘ No es «Idea sobrevalorada»: idea a la que se da una importancia desmedida, pero que sigue siendo comprensible y no es delirante. La descripción habla de cuesta recordar hechos antiguos (el pasado), y eso corresponde a «Hipomnesia de evocación o retrógrada».",
+      "✘ No es «Amnesia de evocación»: dificultad para traer a la conciencia un recuerdo que no se ha perdido. La descripción habla de cuesta recordar hechos antiguos (el pasado), y eso corresponde a «Hipomnesia de evocación o retrógrada».",
+      "✔ Correcto. «Hipomnesia de evocación o retrógrada»: disminución de la capacidad de recordar el pasado o recuperar lo ya almacenado. La descripción apunta a: cuesta recordar hechos antiguos (el pasado).",
+      "✘ No es «Pseudoalucinación»: percepción anómala vivida en el espacio interno, sin la 'corporeidad' de una percepción real. La descripción habla de cuesta recordar hechos antiguos (el pasado), y eso corresponde a «Hipomnesia de evocación o retrógrada»."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "MC-022",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Incapacidad para consolidar nuevos recuerdos.",
+    "opciones": [
+      "Pseudoamnesia",
+      "Idea fija",
+      "Amnesia de fijación",
+      "Alucinosis"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Amnesia de fijación»: incapacidad total para consolidar recuerdos nuevos. Se reconoce por: no forma recuerdos nuevos (lo que vive se pierde enseguida).",
+    "retroalimentacion_opciones": [
+      "✘ No es «Pseudoamnesia»: sensación de haber perdido la memoria sin pérdida objetiva. La descripción habla de no forma recuerdos nuevos (lo que vive se pierde enseguida), y eso corresponde a «Amnesia de fijación».",
+      "✘ No es «Idea fija»: idea lógica y real que se impone de forma persistente en la conciencia contra la voluntad de la persona. La descripción habla de no forma recuerdos nuevos (lo que vive se pierde enseguida), y eso corresponde a «Amnesia de fijación».",
+      "✔ Correcto. «Amnesia de fijación»: incapacidad total para consolidar recuerdos nuevos. La descripción apunta a: no forma recuerdos nuevos (lo que vive se pierde enseguida).",
+      "✘ No es «Alucinosis»: alucinación en la que la persona es consciente de que lo que percibe no existe. La descripción habla de no forma recuerdos nuevos (lo que vive se pierde enseguida), y eso corresponde a «Amnesia de fijación»."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "MC-023",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Pérdida de recuerdos que ya estaban almacenados.",
+    "opciones": [
+      "Hipermnesia",
+      "Idea fóbica",
+      "Alucinación negativa",
+      "Amnesia de conservación"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Amnesia de conservación»: pérdida de recuerdos que ya estaban guardados. Se reconoce por: desaparecen recuerdos que sí habían sido fijados.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Hipermnesia»: aumento exagerado de los recuerdos. La descripción habla de desaparecen recuerdos que sí habían sido fijados, y eso corresponde a «Amnesia de conservación».",
+      "✘ No es «Idea fóbica»: miedo que la persona reconoce como infundado pero que no logra apartar. La descripción habla de desaparecen recuerdos que sí habían sido fijados, y eso corresponde a «Amnesia de conservación».",
+      "✘ No es «Alucinación negativa»: no percibir un estímulo que sí existe. La descripción habla de desaparecen recuerdos que sí habían sido fijados, y eso corresponde a «Amnesia de conservación».",
+      "✔ Correcto. «Amnesia de conservación»: pérdida de recuerdos que ya estaban guardados. La descripción apunta a: desaparecen recuerdos que sí habían sido fijados."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "MC-024",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Pérdida de todos los recuerdos del pasado.",
+    "opciones": [
+      "Alucinación liliputiense",
+      "Amnesia global",
+      "Pseudohipermnesias",
+      "Idea hipocondríaca"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Amnesia global»: pérdida de todos o casi todos los recuerdos del pasado. Se reconoce por: se pierde el pasado completo.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Alucinación liliputiense»: alucinaciones de seres o cosas diminutas. La descripción habla de se pierde el pasado completo, y eso corresponde a «Amnesia global».",
+      "✔ Correcto. «Amnesia global»: pérdida de todos o casi todos los recuerdos del pasado. La descripción apunta a: se pierde el pasado completo.",
+      "✘ No es «Pseudohipermnesias»: evocación repetitiva de recuerdos, por ejemplo ligados a la patología del paciente. La descripción habla de se pierde el pasado completo, y eso corresponde a «Amnesia global».",
+      "✘ No es «Idea hipocondríaca»: interpretación de molestias corporales como posibles signos de enfermedad. La descripción habla de se pierde el pasado completo, y eso corresponde a «Amnesia global»."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "MC-025",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Olvido de un acontecimiento específico de la vida.",
+    "opciones": [
+      "Paramnesias",
+      "Amnesia selectiva episódica",
+      "Pensamientos intrusos",
+      "Delirio de persecución"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Amnesia selectiva episódica»: olvido de un acontecimiento específico de la vida. Se reconoce por: olvida un episodio puntual.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Paramnesias»: deformidad de los recuerdos. La descripción habla de olvida un episodio puntual, y eso corresponde a «Amnesia selectiva episódica».",
+      "✔ Correcto. «Amnesia selectiva episódica»: olvido de un acontecimiento específico de la vida. La descripción apunta a: olvida un episodio puntual.",
+      "✘ No es «Pensamientos intrusos»: ideas repetitivas y no deseadas que irrumpen en la mente y son difíciles de controlar. La descripción habla de olvida un episodio puntual, y eso corresponde a «Amnesia selectiva episódica».",
+      "✘ No es «Delirio de persecución»: creencia delirante de ser vigilado, seguido o perseguido. La descripción habla de olvida un episodio puntual, y eso corresponde a «Amnesia selectiva episódica»."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "MC-026",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Pérdida de conocimientos o ciertos tipos de conocimientos.",
+    "opciones": [
+      "Ideación autolítica o suicida",
+      "Amnesia selectiva semántica",
+      "Ilusión",
+      "Delirio de influencia"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Amnesia selectiva semántica»: pérdida de conocimientos o de ciertos tipos de conocimiento. Se reconoce por: pierde saberes, no un episodio de su vida.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Ideación autolítica o suicida»: pensamientos de hacerse daño o de quitarse la vida. La descripción habla de pierde saberes, no un episodio de su vida, y eso corresponde a «Amnesia selectiva semántica».",
+      "✔ Correcto. «Amnesia selectiva semántica»: pérdida de conocimientos o de ciertos tipos de conocimiento. La descripción apunta a: pierde saberes, no un episodio de su vida.",
+      "✘ No es «Ilusión»: percepción errónea de un objeto real presente en el campo sensorial. La descripción habla de pierde saberes, no un episodio de su vida, y eso corresponde a «Amnesia selectiva semántica».",
+      "✘ No es «Delirio de influencia»: creencia delirante de que una fuerza externa controla el propio pensamiento o la conducta. La descripción habla de pierde saberes, no un episodio de su vida, y eso corresponde a «Amnesia selectiva semántica»."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "MC-027",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? El recuerdo no se pierde, pero es muy difícil traerlo a la memoria.",
+    "opciones": [
+      "Idea sobrevalorada",
+      "Pseudoalucinación",
+      "Delirio de grandeza",
+      "Amnesia de evocación"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Amnesia de evocación»: dificultad para traer a la conciencia un recuerdo que no se ha perdido. Se reconoce por: el recuerdo existe, pero no se logra recuperar en el momento.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Idea sobrevalorada»: idea a la que se da una importancia desmedida, pero que sigue siendo comprensible y no es delirante. La descripción habla de el recuerdo existe, pero no se logra recuperar en el momento, y eso corresponde a «Amnesia de evocación».",
+      "✘ No es «Pseudoalucinación»: percepción anómala vivida en el espacio interno, sin la 'corporeidad' de una percepción real. La descripción habla de el recuerdo existe, pero no se logra recuperar en el momento, y eso corresponde a «Amnesia de evocación».",
+      "✘ No es «Delirio de grandeza»: creencia delirante de tener cualidades, poder o una identidad extraordinarios. La descripción habla de el recuerdo existe, pero no se logra recuperar en el momento, y eso corresponde a «Amnesia de evocación».",
+      "✔ Correcto. «Amnesia de evocación»: dificultad para traer a la conciencia un recuerdo que no se ha perdido. La descripción apunta a: el recuerdo existe, pero no se logra recuperar en el momento."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "MC-028",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Sensación de haber perdido la memoria sin pérdida objetiva.",
+    "opciones": [
+      "Idea fija",
+      "Delirio de referencia",
+      "Alucinosis",
+      "Pseudoamnesia"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Pseudoamnesia»: sensación de haber perdido la memoria sin pérdida objetiva. Se reconoce por: dice que olvida, pero las pruebas muestran memoria conservada.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Idea fija»: idea lógica y real que se impone de forma persistente en la conciencia contra la voluntad de la persona. La descripción habla de dice que olvida, pero las pruebas muestran memoria conservada, y eso corresponde a «Pseudoamnesia».",
+      "✘ No es «Delirio de referencia»: creencia delirante de que otras personas hablan, se ríen o se burlan de uno. La descripción habla de dice que olvida, pero las pruebas muestran memoria conservada, y eso corresponde a «Pseudoamnesia».",
+      "✘ No es «Alucinosis»: alucinación en la que la persona es consciente de que lo que percibe no existe. La descripción habla de dice que olvida, pero las pruebas muestran memoria conservada, y eso corresponde a «Pseudoamnesia».",
+      "✔ Correcto. «Pseudoamnesia»: sensación de haber perdido la memoria sin pérdida objetiva. La descripción apunta a: dice que olvida, pero las pruebas muestran memoria conservada."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "MC-029",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Aumento exagerado de los recuerdos.",
+    "opciones": [
+      "Alucinación negativa",
+      "Hipermnesia",
+      "Idea fóbica",
+      "Delirio celotípico"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Hipermnesia»: aumento exagerado de los recuerdos. Se reconoce por: recuerdo excesivamente detallado y abundante.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Alucinación negativa»: no percibir un estímulo que sí existe. La descripción habla de recuerdo excesivamente detallado y abundante, y eso corresponde a «Hipermnesia».",
+      "✔ Correcto. «Hipermnesia»: aumento exagerado de los recuerdos. La descripción apunta a: recuerdo excesivamente detallado y abundante.",
+      "✘ No es «Idea fóbica»: miedo que la persona reconoce como infundado pero que no logra apartar. La descripción habla de recuerdo excesivamente detallado y abundante, y eso corresponde a «Hipermnesia».",
+      "✘ No es «Delirio celotípico»: creencia delirante de que la pareja es infiel. La descripción habla de recuerdo excesivamente detallado y abundante, y eso corresponde a «Hipermnesia»."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "MC-030",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Sensación de estar en el pasado y revivir vivencias con gran implicación emocional.",
+    "opciones": [
+      "Idea delirante",
+      "Delirio nihilista",
+      "Alucinación guliveriana",
+      "Ecmnesia"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Ecmnesia»: sensación de estar en el pasado, con pérdida de la orientación en el presente. Se reconoce por: vive 'como si' estuviera en otra época de su vida.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Idea delirante»: creencia falsa, ilógica y rígida, sostenida con total convicción, que no se corrige con argumentos. La descripción habla de vive 'como si' estuviera en otra época de su vida, y eso corresponde a «Ecmnesia».",
+      "✘ No es «Delirio nihilista»: creencia delirante de estar muerto o haber dejado de existir, que puede extenderse a otras personas o cosas. La descripción habla de vive 'como si' estuviera en otra época de su vida, y eso corresponde a «Ecmnesia».",
+      "✘ No es «Alucinación guliveriana»: alucinaciones de seres o cosas gigantes. La descripción habla de vive 'como si' estuviera en otra época de su vida, y eso corresponde a «Ecmnesia».",
+      "✔ Correcto. «Ecmnesia»: sensación de estar en el pasado, con pérdida de la orientación en el presente. La descripción apunta a: vive 'como si' estuviera en otra época de su vida."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "MC-031",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Deformidad de los recuerdos.",
+    "opciones": [
+      "Delirio de negación",
+      "Pensamientos intrusos",
+      "Paramnesias",
+      "Delirio de persecución"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Paramnesias»: deformidad de los recuerdos. Se reconoce por: el recuerdo existe pero está distorsionado.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Delirio de negación»: creencia delirante de que todo alrededor está muerto, vacío o no existe, incluso el tiempo y uno mismo. La descripción habla de el recuerdo existe pero está distorsionado, y eso corresponde a «Paramnesias».",
+      "✘ No es «Pensamientos intrusos»: ideas repetitivas y no deseadas que irrumpen en la mente y son difíciles de controlar. La descripción habla de el recuerdo existe pero está distorsionado, y eso corresponde a «Paramnesias».",
+      "✔ Correcto. «Paramnesias»: deformidad de los recuerdos. La descripción apunta a: el recuerdo existe pero está distorsionado.",
+      "✘ No es «Delirio de persecución»: creencia delirante de ser vigilado, seguido o perseguido. La descripción habla de el recuerdo existe pero está distorsionado, y eso corresponde a «Paramnesias»."
+    ],
+    "tema": "Memoria"
+  },
+  {
+    "id": "MC-032",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Percepción errónea de un objeto que se encuentra dentro del campo sensorial.",
+    "opciones": [
+      "Disomnias",
+      "Ideación autolítica o suicida",
+      "Ilusión",
+      "Delirio de influencia"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Ilusión»: percepción errónea de un objeto real presente en el campo sensorial. Se reconoce por: hay un objeto real (la rama) mal interpretado.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Disomnias»: alteraciones de la cantidad, la calidad o el horario del sueño (insomnio, hipersomnia, alteraciones del ritmo). La descripción habla de hay un objeto real (la rama) mal interpretado, y eso corresponde a «Ilusión».",
+      "✘ No es «Ideación autolítica o suicida»: pensamientos de hacerse daño o de quitarse la vida. La descripción habla de hay un objeto real (la rama) mal interpretado, y eso corresponde a «Ilusión».",
+      "✔ Correcto. «Ilusión»: percepción errónea de un objeto real presente en el campo sensorial. La descripción apunta a: hay un objeto real (la rama) mal interpretado.",
+      "✘ No es «Delirio de influencia»: creencia delirante de que una fuerza externa controla el propio pensamiento o la conducta. La descripción habla de hay un objeto real (la rama) mal interpretado, y eso corresponde a «Ilusión»."
+    ],
+    "tema": "Percepción"
+  },
+  {
+    "id": "MC-033",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Percepción errónea situada fuera del campo perceptual del sujeto.",
+    "opciones": [
+      "Parasomnias",
+      "Delirio de grandeza",
+      "Idea sobrevalorada",
+      "Pseudoalucinación"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Pseudoalucinación»: percepción anómala vivida en el espacio interno, sin la 'corporeidad' de una percepción real. Se reconoce por: la voz se vive dentro de la mente, no en el mundo exterior.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Parasomnias»: fenómenos o conductas anormales que ocurren durante el sueño (pesadillas, terrores nocturnos, sonambulismo). La descripción habla de la voz se vive dentro de la mente, no en el mundo exterior, y eso corresponde a «Pseudoalucinación».",
+      "✘ No es «Delirio de grandeza»: creencia delirante de tener cualidades, poder o una identidad extraordinarios. La descripción habla de la voz se vive dentro de la mente, no en el mundo exterior, y eso corresponde a «Pseudoalucinación».",
+      "✘ No es «Idea sobrevalorada»: idea a la que se da una importancia desmedida, pero que sigue siendo comprensible y no es delirante. La descripción habla de la voz se vive dentro de la mente, no en el mundo exterior, y eso corresponde a «Pseudoalucinación».",
+      "✔ Correcto. «Pseudoalucinación»: percepción anómala vivida en el espacio interno, sin la 'corporeidad' de una percepción real. La descripción apunta a: la voz se vive dentro de la mente, no en el mundo exterior."
+    ],
+    "tema": "Percepción"
+  },
+  {
+    "id": "MC-034",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? La persona es consciente de que lo que percibe no existe.",
+    "opciones": [
+      "Alucinosis",
+      "Delirio de referencia",
+      "Idea fija",
+      "Pica"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Alucinosis»: alucinación en la que la persona es consciente de que lo que percibe no existe. Se reconoce por: ve o escucha algo irreal y lo reconoce como irreal.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Alucinosis»: alucinación en la que la persona es consciente de que lo que percibe no existe. La descripción apunta a: ve o escucha algo irreal y lo reconoce como irreal.",
+      "✘ No es «Delirio de referencia»: creencia delirante de que otras personas hablan, se ríen o se burlan de uno. La descripción habla de ve o escucha algo irreal y lo reconoce como irreal, y eso corresponde a «Alucinosis».",
+      "✘ No es «Idea fija»: idea lógica y real que se impone de forma persistente en la conciencia contra la voluntad de la persona. La descripción habla de ve o escucha algo irreal y lo reconoce como irreal, y eso corresponde a «Alucinosis».",
+      "✘ No es «Pica»: ingestión persistente de sustancias que no son alimentos. La descripción habla de ve o escucha algo irreal y lo reconoce como irreal, y eso corresponde a «Alucinosis»."
+    ],
+    "tema": "Percepción"
+  },
+  {
+    "id": "MC-035",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? La persona no percibe un estímulo que sí existe.",
+    "opciones": [
+      "Malacia",
+      "Alucinación negativa",
+      "Delirio celotípico",
+      "Idea fóbica"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Alucinación negativa»: no percibir un estímulo que sí existe. Se reconoce por: el objeto está ahí y la persona no lo percibe.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Malacia»: hábito de combinar sabores que habitualmente no se combinan. La descripción habla de el objeto está ahí y la persona no lo percibe, y eso corresponde a «Alucinación negativa».",
+      "✔ Correcto. «Alucinación negativa»: no percibir un estímulo que sí existe. La descripción apunta a: el objeto está ahí y la persona no lo percibe.",
+      "✘ No es «Delirio celotípico»: creencia delirante de que la pareja es infiel. La descripción habla de el objeto está ahí y la persona no lo percibe, y eso corresponde a «Alucinación negativa».",
+      "✘ No es «Idea fóbica»: miedo que la persona reconoce como infundado pero que no logra apartar. La descripción habla de el objeto está ahí y la persona no lo percibe, y eso corresponde a «Alucinación negativa»."
+    ],
+    "tema": "Percepción"
+  },
+  {
+    "id": "MC-036",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Los objetos se perciben enormes o más grandes de lo normal.",
+    "opciones": [
+      "Alucinación guliveriana",
+      "Delirio nihilista",
+      "Anafrodisia",
+      "Idea delirante"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Alucinación guliveriana»: alucinaciones de seres o cosas gigantes. Se reconoce por: la figura es enorme.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Alucinación guliveriana»: alucinaciones de seres o cosas gigantes. La descripción apunta a: la figura es enorme.",
+      "✘ No es «Delirio nihilista»: creencia delirante de estar muerto o haber dejado de existir, que puede extenderse a otras personas o cosas. La descripción habla de la figura es enorme, y eso corresponde a «Alucinación guliveriana».",
+      "✘ No es «Anafrodisia»: pérdida del deseo sexual. La descripción habla de la figura es enorme, y eso corresponde a «Alucinación guliveriana».",
+      "✘ No es «Idea delirante»: creencia falsa, ilógica y rígida, sostenida con total convicción, que no se corrige con argumentos. La descripción habla de la figura es enorme, y eso corresponde a «Alucinación guliveriana»."
+    ],
+    "tema": "Percepción"
+  },
+  {
+    "id": "MC-037",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Ideas repetitivas, intrusivas, no deseadas, no intencionadas y difíciles de controlar.",
+    "opciones": [
+      "Pensamientos intrusos",
+      "Delirio de negación",
+      "Hiposexualidad o hipoerotismo",
+      "Delirio de persecución"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Pensamientos intrusos»: ideas repetitivas y no deseadas que irrumpen en la mente y son difíciles de controlar. Se reconoce por: ideas que aparecen sin quererlas y no se pueden controlar.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Pensamientos intrusos»: ideas repetitivas y no deseadas que irrumpen en la mente y son difíciles de controlar. La descripción apunta a: ideas que aparecen sin quererlas y no se pueden controlar.",
+      "✘ No es «Delirio de negación»: creencia delirante de que todo alrededor está muerto, vacío o no existe, incluso el tiempo y uno mismo. La descripción habla de ideas que aparecen sin quererlas y no se pueden controlar, y eso corresponde a «Pensamientos intrusos».",
+      "✘ No es «Hiposexualidad o hipoerotismo»: disminución marcada del apetito sexual y de las fantasías. La descripción habla de ideas que aparecen sin quererlas y no se pueden controlar, y eso corresponde a «Pensamientos intrusos».",
+      "✘ No es «Delirio de persecución»: creencia delirante de ser vigilado, seguido o perseguido. La descripción habla de ideas que aparecen sin quererlas y no se pueden controlar, y eso corresponde a «Pensamientos intrusos»."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-038",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Pensamientos sobre lesionarse físicamente o matarse.",
+    "opciones": [
+      "Delirio de influencia",
+      "Disomnias",
+      "Aversión al sexo",
+      "Ideación autolítica o suicida"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Ideación autolítica o suicida»: pensamientos de hacerse daño o de quitarse la vida. Se reconoce por: los pensamientos se dirigen a la propia muerte o a lesionarse; siempre exige evaluar el riesgo.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Delirio de influencia»: creencia delirante de que una fuerza externa controla el propio pensamiento o la conducta. La descripción habla de los pensamientos se dirigen a la propia muerte o a lesionarse; siempre exige evaluar el riesgo, y eso corresponde a «Ideación autolítica o suicida».",
+      "✘ No es «Disomnias»: alteraciones de la cantidad, la calidad o el horario del sueño (insomnio, hipersomnia, alteraciones del ritmo). La descripción habla de los pensamientos se dirigen a la propia muerte o a lesionarse; siempre exige evaluar el riesgo, y eso corresponde a «Ideación autolítica o suicida».",
+      "✘ No es «Aversión al sexo»: asco, temor o ansiedad ante la posibilidad de tener relaciones sexuales. La descripción habla de los pensamientos se dirigen a la propia muerte o a lesionarse; siempre exige evaluar el riesgo, y eso corresponde a «Ideación autolítica o suicida».",
+      "✔ Correcto. «Ideación autolítica o suicida»: pensamientos de hacerse daño o de quitarse la vida. La descripción apunta a: los pensamientos se dirigen a la propia muerte o a lesionarse; siempre exige evaluar el riesgo."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-039",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Exceso de valoración o importancia de un asunto que realmente no la tiene.",
+    "opciones": [
+      "Hipersexualidad o hipererotismo",
+      "Parasomnias",
+      "Delirio de grandeza",
+      "Idea sobrevalorada"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Idea sobrevalorada»: idea a la que se da una importancia desmedida, pero que sigue siendo comprensible y no es delirante. Se reconoce por: le da demasiado peso a un asunto, aunque la idea no es absurda.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Hipersexualidad o hipererotismo»: aumento del deseo sexual y de la actividad sexual. La descripción habla de le da demasiado peso a un asunto, aunque la idea no es absurda, y eso corresponde a «Idea sobrevalorada».",
+      "✘ No es «Parasomnias»: fenómenos o conductas anormales que ocurren durante el sueño (pesadillas, terrores nocturnos, sonambulismo). La descripción habla de le da demasiado peso a un asunto, aunque la idea no es absurda, y eso corresponde a «Idea sobrevalorada».",
+      "✘ No es «Delirio de grandeza»: creencia delirante de tener cualidades, poder o una identidad extraordinarios. La descripción habla de le da demasiado peso a un asunto, aunque la idea no es absurda, y eso corresponde a «Idea sobrevalorada».",
+      "✔ Correcto. «Idea sobrevalorada»: idea a la que se da una importancia desmedida, pero que sigue siendo comprensible y no es delirante. La descripción apunta a: le da demasiado peso a un asunto, aunque la idea no es absurda."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-040",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Fenómeno real y lógico que aparece persistentemente en la conciencia contra la voluntad.",
+    "opciones": [
+      "Pica",
+      "Trastorno eréctil en el hombre",
+      "Delirio de referencia",
+      "Idea fija"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Idea fija»: idea lógica y real que se impone de forma persistente en la conciencia contra la voluntad de la persona. Se reconoce por: idea razonable de la que no puede librarse.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Pica»: ingestión persistente de sustancias que no son alimentos. La descripción habla de idea razonable de la que no puede librarse, y eso corresponde a «Idea fija».",
+      "✘ No es «Trastorno eréctil en el hombre»: dificultad persistente para obtener o mantener la erección. La descripción habla de idea razonable de la que no puede librarse, y eso corresponde a «Idea fija».",
+      "✘ No es «Delirio de referencia»: creencia delirante de que otras personas hablan, se ríen o se burlan de uno. La descripción habla de idea razonable de la que no puede librarse, y eso corresponde a «Idea fija».",
+      "✔ Correcto. «Idea fija»: idea lógica y real que se impone de forma persistente en la conciencia contra la voluntad de la persona. La descripción apunta a: idea razonable de la que no puede librarse."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-041",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Molestias corporales interpretadas como posibles signos de enfermedad.",
+    "opciones": [
+      "Coprofagia",
+      "Eyaculación prematura",
+      "Idea hipocondríaca",
+      "Delirio de autorreproche"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Idea hipocondríaca»: interpretación de molestias corporales como posibles signos de enfermedad. Se reconoce por: molestias del cuerpo leídas como señal de enfermedad.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Coprofagia»: deseo o conducta de ingerir heces. La descripción habla de molestias del cuerpo leídas como señal de enfermedad, y eso corresponde a «Idea hipocondríaca».",
+      "✘ No es «Eyaculación prematura»: eyaculación antes de lo deseado, con poco control. La descripción habla de molestias del cuerpo leídas como señal de enfermedad, y eso corresponde a «Idea hipocondríaca».",
+      "✔ Correcto. «Idea hipocondríaca»: interpretación de molestias corporales como posibles signos de enfermedad. La descripción apunta a: molestias del cuerpo leídas como señal de enfermedad.",
+      "✘ No es «Delirio de autorreproche»: creencia delirante de haber cometido una falta grave inexistente, con culpa y arrepentimiento. La descripción habla de molestias del cuerpo leídas como señal de enfermedad, y eso corresponde a «Idea hipocondríaca»."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-042",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Pensamiento irreal, ilógico, morboso, pertinaz e irreductible.",
+    "opciones": [
+      "Eyaculación retardada",
+      "Idea delirante",
+      "Delirio nihilista",
+      "Anafrodisia"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Idea delirante»: creencia falsa, ilógica y rígida, sostenida con total convicción, que no se corrige con argumentos. Se reconoce por: convicción irreal e inamovible, incluso frente a la evidencia.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Eyaculación retardada»: demora importante o ausencia de eyaculación. La descripción habla de convicción irreal e inamovible, incluso frente a la evidencia, y eso corresponde a «Idea delirante».",
+      "✔ Correcto. «Idea delirante»: creencia falsa, ilógica y rígida, sostenida con total convicción, que no se corrige con argumentos. La descripción apunta a: convicción irreal e inamovible, incluso frente a la evidencia.",
+      "✘ No es «Delirio nihilista»: creencia delirante de estar muerto o haber dejado de existir, que puede extenderse a otras personas o cosas. La descripción habla de convicción irreal e inamovible, incluso frente a la evidencia, y eso corresponde a «Idea delirante».",
+      "✘ No es «Anafrodisia»: pérdida del deseo sexual. La descripción habla de convicción irreal e inamovible, incluso frente a la evidencia, y eso corresponde a «Idea delirante»."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-043",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Creencia de vigilancia, seguimiento o persecución de la persona.",
+    "opciones": [
+      "Delirio de negación",
+      "Hiposexualidad o hipoerotismo",
+      "Delirio de persecución",
+      "Dispareunia"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Delirio de persecución»: creencia delirante de ser vigilado, seguido o perseguido. Se reconoce por: cree que lo vigilan o lo persiguen.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Delirio de negación»: creencia delirante de que todo alrededor está muerto, vacío o no existe, incluso el tiempo y uno mismo. La descripción habla de cree que lo vigilan o lo persiguen, y eso corresponde a «Delirio de persecución».",
+      "✘ No es «Hiposexualidad o hipoerotismo»: disminución marcada del apetito sexual y de las fantasías. La descripción habla de cree que lo vigilan o lo persiguen, y eso corresponde a «Delirio de persecución».",
+      "✔ Correcto. «Delirio de persecución»: creencia delirante de ser vigilado, seguido o perseguido. La descripción apunta a: cree que lo vigilan o lo persiguen.",
+      "✘ No es «Dispareunia»: dolor genital durante la actividad sexual. La descripción habla de cree que lo vigilan o lo persiguen, y eso corresponde a «Delirio de persecución»."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-044",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Creencia de una fuerza externa imaginaria que controla el pensamiento.",
+    "opciones": [
+      "Vaginismo",
+      "Aversión al sexo",
+      "Delirio de influencia",
+      "Disomnias"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Delirio de influencia»: creencia delirante de que una fuerza externa controla el propio pensamiento o la conducta. Se reconoce por: siente que una fuerza externa lo controla.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Vaginismo»: contracción involuntaria de la musculatura vaginal que impide o dificulta la penetración. La descripción habla de siente que una fuerza externa lo controla, y eso corresponde a «Delirio de influencia».",
+      "✘ No es «Aversión al sexo»: asco, temor o ansiedad ante la posibilidad de tener relaciones sexuales. La descripción habla de siente que una fuerza externa lo controla, y eso corresponde a «Delirio de influencia».",
+      "✔ Correcto. «Delirio de influencia»: creencia delirante de que una fuerza externa controla el propio pensamiento o la conducta. La descripción apunta a: siente que una fuerza externa lo controla.",
+      "✘ No es «Disomnias»: alteraciones de la cantidad, la calidad o el horario del sueño (insomnio, hipersomnia, alteraciones del ritmo). La descripción habla de siente que una fuerza externa lo controla, y eso corresponde a «Delirio de influencia»."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-045",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Exaltación de cualidades personales; puede creerse gran personaje o inventor famoso.",
+    "opciones": [
+      "Delirio de grandeza",
+      "Hipersexualidad o hipererotismo",
+      "Parasomnias",
+      "Fetichismo"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Delirio de grandeza»: creencia delirante de tener cualidades, poder o una identidad extraordinarios. Se reconoce por: se cree un gran personaje o un inventor famoso.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Delirio de grandeza»: creencia delirante de tener cualidades, poder o una identidad extraordinarios. La descripción apunta a: se cree un gran personaje o un inventor famoso.",
+      "✘ No es «Hipersexualidad o hipererotismo»: aumento del deseo sexual y de la actividad sexual. La descripción habla de se cree un gran personaje o un inventor famoso, y eso corresponde a «Delirio de grandeza».",
+      "✘ No es «Parasomnias»: fenómenos o conductas anormales que ocurren durante el sueño (pesadillas, terrores nocturnos, sonambulismo). La descripción habla de se cree un gran personaje o un inventor famoso, y eso corresponde a «Delirio de grandeza».",
+      "✘ No es «Fetichismo»: excitación sexual centrada en objetos inanimados. La descripción habla de se cree un gran personaje o un inventor famoso, y eso corresponde a «Delirio de grandeza»."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-046",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Creencia delirante de que la pareja engaña al sujeto.",
+    "opciones": [
+      "Delirio celotípico",
+      "Trastorno de la excitación sexual en mujeres",
+      "Malacia",
+      "Síndrome de obnubilación"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Delirio celotípico»: creencia delirante de que la pareja es infiel. Se reconoce por: convicción de que la pareja lo engaña, sin pruebas.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Delirio celotípico»: creencia delirante de que la pareja es infiel. La descripción apunta a: convicción de que la pareja lo engaña, sin pruebas.",
+      "✘ No es «Trastorno de la excitación sexual en mujeres»: dificultad persistente para alcanzar o mantener la excitación sexual en la mujer. La descripción habla de convicción de que la pareja lo engaña, sin pruebas, y eso corresponde a «Delirio celotípico».",
+      "✘ No es «Malacia»: hábito de combinar sabores que habitualmente no se combinan. La descripción habla de convicción de que la pareja lo engaña, sin pruebas, y eso corresponde a «Delirio celotípico».",
+      "✘ No es «Síndrome de obnubilación»: cuadro de vigilia baja: paciente tranquilo y lento, con atención y memoria disminuidas. La descripción habla de convicción de que la pareja lo engaña, sin pruebas, y eso corresponde a «Delirio celotípico»."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-047",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Creencia de haber cometido un delito o falta grave inexistente, con culpa y arrepentimiento.",
+    "opciones": [
+      "Síndrome de delirium",
+      "Eyaculación prematura",
+      "Coprofagia",
+      "Delirio de autorreproche"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Delirio de autorreproche»: creencia delirante de haber cometido una falta grave inexistente, con culpa y arrepentimiento. Se reconoce por: se acusa de una culpa que no existe.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Síndrome de delirium»: cuadro agudo con agitación, orientación fluctuante, alucinaciones visuales y táctiles, ansiedad y terror. La descripción habla de se acusa de una culpa que no existe, y eso corresponde a «Delirio de autorreproche».",
+      "✘ No es «Eyaculación prematura»: eyaculación antes de lo deseado, con poco control. La descripción habla de se acusa de una culpa que no existe, y eso corresponde a «Delirio de autorreproche».",
+      "✘ No es «Coprofagia»: deseo o conducta de ingerir heces. La descripción habla de se acusa de una culpa que no existe, y eso corresponde a «Delirio de autorreproche».",
+      "✔ Correcto. «Delirio de autorreproche»: creencia delirante de haber cometido una falta grave inexistente, con culpa y arrepentimiento. La descripción apunta a: se acusa de una culpa que no existe."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-048",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Sensación de estar muerto o de haber dejado de existir; puede extenderse a personas o cosas.",
+    "opciones": [
+      "Eyaculación retardada",
+      "Anafrodisia",
+      "Síndrome oniroide",
+      "Delirio nihilista"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Delirio nihilista»: creencia delirante de estar muerto o haber dejado de existir, que puede extenderse a otras personas o cosas. Se reconoce por: dice que él (u otros) está muerto o ya no existe.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Eyaculación retardada»: demora importante o ausencia de eyaculación. La descripción habla de dice que él (u otros) está muerto o ya no existe, y eso corresponde a «Delirio nihilista».",
+      "✘ No es «Anafrodisia»: pérdida del deseo sexual. La descripción habla de dice que él (u otros) está muerto o ya no existe, y eso corresponde a «Delirio nihilista».",
+      "✘ No es «Síndrome oniroide»: cuadro de actitud contemplativa e inmóvil con alucinaciones visuales en forma de escenas, generalmente sin angustia. La descripción habla de dice que él (u otros) está muerto o ya no existe, y eso corresponde a «Delirio nihilista».",
+      "✔ Correcto. «Delirio nihilista»: creencia delirante de estar muerto o haber dejado de existir, que puede extenderse a otras personas o cosas. La descripción apunta a: dice que él (u otros) está muerto o ya no existe."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-049",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Creencia de que todo alrededor está muerto, vacío o no existe, incluso el tiempo y uno mismo.",
+    "opciones": [
+      "Hiposexualidad o hipoerotismo",
+      "Delirio de negación",
+      "Dispareunia",
+      "Estado crepuscular"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Delirio de negación»: creencia delirante de que todo alrededor está muerto, vacío o no existe, incluso el tiempo y uno mismo. Se reconoce por: niega la existencia del mundo, del tiempo y de sí mismo.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Hiposexualidad o hipoerotismo»: disminución marcada del apetito sexual y de las fantasías. La descripción habla de niega la existencia del mundo, del tiempo y de sí mismo, y eso corresponde a «Delirio de negación».",
+      "✔ Correcto. «Delirio de negación»: creencia delirante de que todo alrededor está muerto, vacío o no existe, incluso el tiempo y uno mismo. La descripción apunta a: niega la existencia del mundo, del tiempo y de sí mismo.",
+      "✘ No es «Dispareunia»: dolor genital durante la actividad sexual. La descripción habla de niega la existencia del mundo, del tiempo y de sí mismo, y eso corresponde a «Delirio de negación».",
+      "✘ No es «Estado crepuscular»: estrechamiento de la conciencia con conductas automáticas y amnesia posterior. La descripción habla de niega la existencia del mundo, del tiempo y de sí mismo, y eso corresponde a «Delirio de negación»."
+    ],
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "MC-050",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Categoría relacionada con duración, intensidad y cantidad del sueño.",
+    "opciones": [
+      "Aversión al sexo",
+      "Vaginismo",
+      "Síndrome de confusión mental",
+      "Disomnias"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Disomnias»: alteraciones de la cantidad, la calidad o el horario del sueño (insomnio, hipersomnia, alteraciones del ritmo). Se reconoce por: el problema es cuánto, cuándo o qué tan bien se duerme.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Aversión al sexo»: asco, temor o ansiedad ante la posibilidad de tener relaciones sexuales. La descripción habla de el problema es cuánto, cuándo o qué tan bien se duerme, y eso corresponde a «Disomnias».",
+      "✘ No es «Vaginismo»: contracción involuntaria de la musculatura vaginal que impide o dificulta la penetración. La descripción habla de el problema es cuánto, cuándo o qué tan bien se duerme, y eso corresponde a «Disomnias».",
+      "✘ No es «Síndrome de confusión mental»: cuadro con vigilia casi abolida, desorientación total, ilusiones visuales y agitación limitada a la cama. La descripción habla de el problema es cuánto, cuándo o qué tan bien se duerme, y eso corresponde a «Disomnias».",
+      "✔ Correcto. «Disomnias»: alteraciones de la cantidad, la calidad o el horario del sueño (insomnio, hipersomnia, alteraciones del ritmo). La descripción apunta a: el problema es cuánto, cuándo o qué tan bien se duerme."
+    ],
+    "tema": "Sueño"
+  },
+  {
+    "id": "MC-051",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Anomalías que se producen en fase REM y NO REM del sueño.",
+    "opciones": [
+      "Síndromes cerebrales orgánicos crónicos",
+      "Fetichismo",
+      "Hipersexualidad o hipererotismo",
+      "Parasomnias"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Parasomnias»: fenómenos o conductas anormales que ocurren durante el sueño (pesadillas, terrores nocturnos, sonambulismo). Se reconoce por: algo anormal ocurre mientras la persona duerme.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Síndromes cerebrales orgánicos crónicos»: cuadros por daño cerebral donde la vigilia y la percepción casi no se alteran, y sobresalen el deterioro intelectual y los cambios del carácter. La descripción habla de algo anormal ocurre mientras la persona duerme, y eso corresponde a «Parasomnias».",
+      "✘ No es «Fetichismo»: excitación sexual centrada en objetos inanimados. La descripción habla de algo anormal ocurre mientras la persona duerme, y eso corresponde a «Parasomnias».",
+      "✘ No es «Hipersexualidad o hipererotismo»: aumento del deseo sexual y de la actividad sexual. La descripción habla de algo anormal ocurre mientras la persona duerme, y eso corresponde a «Parasomnias».",
+      "✔ Correcto. «Parasomnias»: fenómenos o conductas anormales que ocurren durante el sueño (pesadillas, terrores nocturnos, sonambulismo). La descripción apunta a: algo anormal ocurre mientras la persona duerme."
+    ],
+    "tema": "Sueño"
+  },
+  {
+    "id": "MC-052",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Hábito de combinar sabores que comúnmente no combinan.",
+    "opciones": [
+      "Trastorno de la excitación sexual en mujeres",
+      "Síndrome demencial",
+      "Síndrome de obnubilación",
+      "Malacia"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Malacia»: hábito de combinar sabores que habitualmente no se combinan. Se reconoce por: mezcla sabores raros pero sí come alimentos.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Trastorno de la excitación sexual en mujeres»: dificultad persistente para alcanzar o mantener la excitación sexual en la mujer. La descripción habla de mezcla sabores raros pero sí come alimentos, y eso corresponde a «Malacia».",
+      "✘ No es «Síndrome demencial»: deterioro de las capacidades intelectuales con desorganización de la personalidad. La descripción habla de mezcla sabores raros pero sí come alimentos, y eso corresponde a «Malacia».",
+      "✘ No es «Síndrome de obnubilación»: cuadro de vigilia baja: paciente tranquilo y lento, con atención y memoria disminuidas. La descripción habla de mezcla sabores raros pero sí come alimentos, y eso corresponde a «Malacia».",
+      "✔ Correcto. «Malacia»: hábito de combinar sabores que habitualmente no se combinan. La descripción apunta a: mezcla sabores raros pero sí come alimentos."
+    ],
+    "tema": "Apetito e ingesta"
+  },
+  {
+    "id": "MC-053",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Deseo de ingerir heces fecales u otras sustancias orgánicas no apropiadas para la alimentación.",
+    "opciones": [
+      "Síndrome amnésico-confabulatorio",
+      "Eyaculación prematura",
+      "Coprofagia",
+      "Síndrome de delirium"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Coprofagia»: deseo o conducta de ingerir heces. Se reconoce por: ingiere o desea ingerir heces.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Síndrome amnésico-confabulatorio»: alteración de la memoria reciente acompañada de confabulaciones. La descripción habla de ingiere o desea ingerir heces, y eso corresponde a «Coprofagia».",
+      "✘ No es «Eyaculación prematura»: eyaculación antes de lo deseado, con poco control. La descripción habla de ingiere o desea ingerir heces, y eso corresponde a «Coprofagia».",
+      "✔ Correcto. «Coprofagia»: deseo o conducta de ingerir heces. La descripción apunta a: ingiere o desea ingerir heces.",
+      "✘ No es «Síndrome de delirium»: cuadro agudo con agitación, orientación fluctuante, alucinaciones visuales y táctiles, ansiedad y terror. La descripción habla de ingiere o desea ingerir heces, y eso corresponde a «Coprofagia»."
+    ],
+    "tema": "Apetito e ingesta"
+  },
+  {
+    "id": "MC-054",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Pérdida del deseo sexual.",
+    "opciones": [
+      "Síndrome oniroide",
+      "Síndrome apatoabúlico",
+      "Eyaculación retardada",
+      "Anafrodisia"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Anafrodisia»: pérdida del deseo sexual. Se reconoce por: el deseo desapareció por completo.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Síndrome oniroide»: cuadro de actitud contemplativa e inmóvil con alucinaciones visuales en forma de escenas, generalmente sin angustia. La descripción habla de el deseo desapareció por completo, y eso corresponde a «Anafrodisia».",
+      "✘ No es «Síndrome apatoabúlico»: predominio de apatía y abulia, con alteración de la motivación y la actividad. La descripción habla de el deseo desapareció por completo, y eso corresponde a «Anafrodisia».",
+      "✘ No es «Eyaculación retardada»: demora importante o ausencia de eyaculación. La descripción habla de el deseo desapareció por completo, y eso corresponde a «Anafrodisia».",
+      "✔ Correcto. «Anafrodisia»: pérdida del deseo sexual. La descripción apunta a: el deseo desapareció por completo."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "MC-055",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Marcada disminución del apetito sexual y escasez de fantasías.",
+    "opciones": [
+      "Hiposexualidad o hipoerotismo",
+      "Dispareunia",
+      "Estado crepuscular",
+      "Síndrome esquizofrénico"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Hiposexualidad o hipoerotismo»: disminución marcada del apetito sexual y de las fantasías. Se reconoce por: deseo muy reducido (no ausente) y pocas fantasías.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Hiposexualidad o hipoerotismo»: disminución marcada del apetito sexual y de las fantasías. La descripción apunta a: deseo muy reducido (no ausente) y pocas fantasías.",
+      "✘ No es «Dispareunia»: dolor genital durante la actividad sexual. La descripción habla de deseo muy reducido (no ausente) y pocas fantasías, y eso corresponde a «Hiposexualidad o hipoerotismo».",
+      "✘ No es «Estado crepuscular»: estrechamiento de la conciencia con conductas automáticas y amnesia posterior. La descripción habla de deseo muy reducido (no ausente) y pocas fantasías, y eso corresponde a «Hiposexualidad o hipoerotismo».",
+      "✘ No es «Síndrome esquizofrénico»: conjunto de síntomas con aislamiento, descuido, bloqueo del pensamiento, alucinaciones, incongruencia afectiva y pérdida de iniciativa. La descripción habla de deseo muy reducido (no ausente) y pocas fantasías, y eso corresponde a «Hiposexualidad o hipoerotismo»."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "MC-056",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Sensación de asco, temor o ansiedad ante la posibilidad de tener relaciones sexuales.",
+    "opciones": [
+      "Aversión al sexo",
+      "Síndrome delirante",
+      "Vaginismo",
+      "Síndrome de confusión mental"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Aversión al sexo»: asco, temor o ansiedad ante la posibilidad de tener relaciones sexuales. Se reconoce por: rechazo y miedo al sexo, no solo falta de deseo.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Aversión al sexo»: asco, temor o ansiedad ante la posibilidad de tener relaciones sexuales. La descripción apunta a: rechazo y miedo al sexo, no solo falta de deseo.",
+      "✘ No es «Síndrome delirante»: cuadro organizado alrededor de ideas delirantes. La descripción habla de rechazo y miedo al sexo, no solo falta de deseo, y eso corresponde a «Aversión al sexo».",
+      "✘ No es «Vaginismo»: contracción involuntaria de la musculatura vaginal que impide o dificulta la penetración. La descripción habla de rechazo y miedo al sexo, no solo falta de deseo, y eso corresponde a «Aversión al sexo».",
+      "✘ No es «Síndrome de confusión mental»: cuadro con vigilia casi abolida, desorientación total, ilusiones visuales y agitación limitada a la cama. La descripción habla de rechazo y miedo al sexo, no solo falta de deseo, y eso corresponde a «Aversión al sexo»."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "MC-057",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Inhabilitación persistente o recurrente para obtener o mantener una erección.",
+    "opciones": [
+      "Síndrome oligofrénico",
+      "Síndrome depresivo",
+      "Trastorno eréctil en el hombre",
+      "Síndromes cerebrales orgánicos agudos"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Trastorno eréctil en el hombre»: dificultad persistente para obtener o mantener la erección. Se reconoce por: no consigue o no mantiene la erección.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Síndrome oligofrénico»: capacidades intelectuales muy disminuidas, pensamiento concreto y respuestas afectivas infantiles. La descripción habla de no consigue o no mantiene la erección, y eso corresponde a «Trastorno eréctil en el hombre».",
+      "✘ No es «Síndrome depresivo»: cuadro de tristeza con descuido personal, lentitud, ansiedad, insomnio y falta de apetito. La descripción habla de no consigue o no mantiene la erección, y eso corresponde a «Trastorno eréctil en el hombre».",
+      "✔ Correcto. «Trastorno eréctil en el hombre»: dificultad persistente para obtener o mantener la erección. La descripción apunta a: no consigue o no mantiene la erección.",
+      "✘ No es «Síndromes cerebrales orgánicos agudos»: cuadros de inicio brusco por daño cerebral, con alteración del nivel de vigilia y de las funciones cognitivas. La descripción habla de no consigue o no mantiene la erección, y eso corresponde a «Trastorno eréctil en el hombre»."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "MC-058",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Incapacidad persistente o recurrente para mantener la lubricación vaginal propia de la excitación.",
+    "opciones": [
+      "Trastorno de la excitación sexual en mujeres",
+      "Síndrome demencial",
+      "Síndrome afectivo ansioso",
+      "Síndrome de obnubilación"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Trastorno de la excitación sexual en mujeres»: dificultad persistente para alcanzar o mantener la excitación sexual en la mujer. Se reconoce por: la dificultad está en la excitación en la mujer.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Trastorno de la excitación sexual en mujeres»: dificultad persistente para alcanzar o mantener la excitación sexual en la mujer. La descripción apunta a: la dificultad está en la excitación en la mujer.",
+      "✘ No es «Síndrome demencial»: deterioro de las capacidades intelectuales con desorganización de la personalidad. La descripción habla de la dificultad está en la excitación en la mujer, y eso corresponde a «Trastorno de la excitación sexual en mujeres».",
+      "✘ No es «Síndrome afectivo ansioso»: conjunto de angustia, inquietud, pensamiento acelerado, insomnio y síntomas vegetativos. La descripción habla de la dificultad está en la excitación en la mujer, y eso corresponde a «Trastorno de la excitación sexual en mujeres».",
+      "✘ No es «Síndrome de obnubilación»: cuadro de vigilia baja: paciente tranquilo y lento, con atención y memoria disminuidas. La descripción habla de la dificultad está en la excitación en la mujer, y eso corresponde a «Trastorno de la excitación sexual en mujeres»."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "MC-059",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Pérdida de control de los reflejos eyaculatorios, con eyaculación casi inmediata ante estímulo sexual leve.",
+    "opciones": [
+      "Eyaculación prematura",
+      "Síndrome estuporoso",
+      "Síndrome de delirium",
+      "Síndrome amnésico-confabulatorio"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Eyaculación prematura»: eyaculación antes de lo deseado, con poco control. Se reconoce por: eyacula antes de lo que quiere.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Eyaculación prematura»: eyaculación antes de lo deseado, con poco control. La descripción apunta a: eyacula antes de lo que quiere.",
+      "✘ No es «Síndrome estuporoso»: inmovilidad y mutismo con grado variable de claridad de conciencia. La descripción habla de eyacula antes de lo que quiere, y eso corresponde a «Eyaculación prematura».",
+      "✘ No es «Síndrome de delirium»: cuadro agudo con agitación, orientación fluctuante, alucinaciones visuales y táctiles, ansiedad y terror. La descripción habla de eyacula antes de lo que quiere, y eso corresponde a «Eyaculación prematura».",
+      "✘ No es «Síndrome amnésico-confabulatorio»: alteración de la memoria reciente acompañada de confabulaciones. La descripción habla de eyacula antes de lo que quiere, y eso corresponde a «Eyaculación prematura»."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "MC-060",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Ausencia de eyaculación o presencia retardada después de la penetración o actividad sexual.",
+    "opciones": [
+      "Eyaculación retardada",
+      "Síndrome apatoabúlico",
+      "Síndrome oniroide",
+      "Síndrome hipercinético"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Eyaculación retardada»: demora importante o ausencia de eyaculación. Se reconoce por: tarda demasiado o no logra eyacular.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Eyaculación retardada»: demora importante o ausencia de eyaculación. La descripción apunta a: tarda demasiado o no logra eyacular.",
+      "✘ No es «Síndrome apatoabúlico»: predominio de apatía y abulia, con alteración de la motivación y la actividad. La descripción habla de tarda demasiado o no logra eyacular, y eso corresponde a «Eyaculación retardada».",
+      "✘ No es «Síndrome oniroide»: cuadro de actitud contemplativa e inmóvil con alucinaciones visuales en forma de escenas, generalmente sin angustia. La descripción habla de tarda demasiado o no logra eyacular, y eso corresponde a «Eyaculación retardada».",
+      "✘ No es «Síndrome hipercinético»: aumento excesivo de la actividad motora y agitación psicomotora. La descripción habla de tarda demasiado o no logra eyacular, y eso corresponde a «Eyaculación retardada»."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "MC-061",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Dolor durante la respuesta sexual; se presenta en un 5% de varones y un 15% de mujeres.",
+    "opciones": [
+      "Dispareunia",
+      "Síndrome esquizofrénico",
+      "Síndrome hipocondríaco",
+      "Estado crepuscular"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Dispareunia»: dolor genital durante la actividad sexual. Se reconoce por: dolor durante el acto sexual.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Dispareunia»: dolor genital durante la actividad sexual. La descripción apunta a: dolor durante el acto sexual.",
+      "✘ No es «Síndrome esquizofrénico»: conjunto de síntomas con aislamiento, descuido, bloqueo del pensamiento, alucinaciones, incongruencia afectiva y pérdida de iniciativa. La descripción habla de dolor durante el acto sexual, y eso corresponde a «Dispareunia».",
+      "✘ No es «Síndrome hipocondríaco»: preocupación excesiva por la salud con autoobservación constante, sin causa orgánica que lo explique. La descripción habla de dolor durante el acto sexual, y eso corresponde a «Dispareunia».",
+      "✘ No es «Estado crepuscular»: estrechamiento de la conciencia con conductas automáticas y amnesia posterior. La descripción habla de dolor durante el acto sexual, y eso corresponde a «Dispareunia»."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "MC-062",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Parafilia relacionada con objetos inanimados, destacando ropa interior y zapatos.",
+    "opciones": [
+      "Síndrome psicopático",
+      "Síndromes cerebrales orgánicos crónicos",
+      "Fetichismo",
+      "Síndrome maníaco"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Fetichismo»: excitación sexual centrada en objetos inanimados. Se reconoce por: la excitación depende de un objeto.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Síndrome psicopático»: patrón inadaptativo de conducta con impulsividad, baja tolerancia a la frustración y conflictos en las relaciones. La descripción habla de la excitación depende de un objeto, y eso corresponde a «Fetichismo».",
+      "✘ No es «Síndromes cerebrales orgánicos crónicos»: cuadros por daño cerebral donde la vigilia y la percepción casi no se alteran, y sobresalen el deterioro intelectual y los cambios del carácter. La descripción habla de la excitación depende de un objeto, y eso corresponde a «Fetichismo».",
+      "✔ Correcto. «Fetichismo»: excitación sexual centrada en objetos inanimados. La descripción apunta a: la excitación depende de un objeto.",
+      "✘ No es «Síndrome maníaco»: cuadro de ánimo exaltado con pensamiento acelerado, fuga de ideas, hiperactividad e hipersociabilidad. La descripción habla de la excitación depende de un objeto, y eso corresponde a «Fetichismo»."
+    ],
+    "tema": "Sexualidad"
+  },
+  {
+    "id": "MC-063",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Comienzo generalmente brusco, trastornos de funciones de síntesis y cognoscitivas y afectación del nivel de vigilia como síntoma cardinal.",
+    "opciones": [
+      "Hipervigilancia",
+      "Síndromes cerebrales orgánicos agudos",
+      "Síndrome depresivo",
+      "Síndrome oligofrénico"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Síndromes cerebrales orgánicos agudos»: cuadros de inicio brusco por daño cerebral, con alteración del nivel de vigilia y de las funciones cognitivas. Se reconoce por: inicio brusco y vigilia alterada como síntoma central.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Hipervigilancia»: estado de alerta aumentado en el que la persona busca constantemente posibles amenazas. La descripción habla de inicio brusco y vigilia alterada como síntoma central, y eso corresponde a «Síndromes cerebrales orgánicos agudos».",
+      "✔ Correcto. «Síndromes cerebrales orgánicos agudos»: cuadros de inicio brusco por daño cerebral, con alteración del nivel de vigilia y de las funciones cognitivas. La descripción apunta a: inicio brusco y vigilia alterada como síntoma central.",
+      "✘ No es «Síndrome depresivo»: cuadro de tristeza con descuido personal, lentitud, ansiedad, insomnio y falta de apetito. La descripción habla de inicio brusco y vigilia alterada como síntoma central, y eso corresponde a «Síndromes cerebrales orgánicos agudos».",
+      "✘ No es «Síndrome oligofrénico»: capacidades intelectuales muy disminuidas, pensamiento concreto y respuestas afectivas infantiles. La descripción habla de inicio brusco y vigilia alterada como síntoma central, y eso corresponde a «Síndromes cerebrales orgánicos agudos»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-064",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Enfermo tranquilo, hipomímico; vigilia baja, atención distráctil, memoria disminuida, orientación grosera, abulia e hipoquinesia.",
+    "opciones": [
+      "Hiperfrenia",
+      "Síndrome demencial",
+      "Síndrome afectivo ansioso",
+      "Síndrome de obnubilación"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Síndrome de obnubilación»: cuadro de vigilia baja: paciente tranquilo y lento, con atención y memoria disminuidas. Se reconoce por: tranquilo, lento, poco vigilante, con atención y memoria disminuidas.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Hiperfrenia»: elevación máxima del nivel de conciencia, con percepción exagerada de todo el entorno. La descripción habla de tranquilo, lento, poco vigilante, con atención y memoria disminuidas, y eso corresponde a «Síndrome de obnubilación».",
+      "✘ No es «Síndrome demencial»: deterioro de las capacidades intelectuales con desorganización de la personalidad. La descripción habla de tranquilo, lento, poco vigilante, con atención y memoria disminuidas, y eso corresponde a «Síndrome de obnubilación».",
+      "✘ No es «Síndrome afectivo ansioso»: conjunto de angustia, inquietud, pensamiento acelerado, insomnio y síntomas vegetativos. La descripción habla de tranquilo, lento, poco vigilante, con atención y memoria disminuidas, y eso corresponde a «Síndrome de obnubilación».",
+      "✔ Correcto. «Síndrome de obnubilación»: cuadro de vigilia baja: paciente tranquilo y lento, con atención y memoria disminuidas. La descripción apunta a: tranquilo, lento, poco vigilante, con atención y memoria disminuidas."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-065",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Paciente agitado, sudoroso y tembloroso; orientación fluctuante, alucinaciones sobre todo visuales y táctiles, ansiedad y terror.",
+    "opciones": [
+      "Obnubilación",
+      "Síndrome de delirium",
+      "Síndrome estuporoso",
+      "Síndrome amnésico-confabulatorio"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Síndrome de delirium»: cuadro agudo con agitación, orientación fluctuante, alucinaciones visuales y táctiles, ansiedad y terror. Se reconoce por: agitado, sudoroso y tembloroso, con alucinaciones y terror.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Obnubilación»: primer grado de descenso de la conciencia: responde, pero necesita estímulos más intensos. La descripción habla de agitado, sudoroso y tembloroso, con alucinaciones y terror, y eso corresponde a «Síndrome de delirium».",
+      "✔ Correcto. «Síndrome de delirium»: cuadro agudo con agitación, orientación fluctuante, alucinaciones visuales y táctiles, ansiedad y terror. La descripción apunta a: agitado, sudoroso y tembloroso, con alucinaciones y terror.",
+      "✘ No es «Síndrome estuporoso»: inmovilidad y mutismo con grado variable de claridad de conciencia. La descripción habla de agitado, sudoroso y tembloroso, con alucinaciones y terror, y eso corresponde a «Síndrome de delirium».",
+      "✘ No es «Síndrome amnésico-confabulatorio»: alteración de la memoria reciente acompañada de confabulaciones. La descripción habla de agitado, sudoroso y tembloroso, con alucinaciones y terror, y eso corresponde a «Síndrome de delirium»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-066",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Actitud contemplativa e hipomimia; alucinaciones visuales escénicas, generalmente no angustiosas, con conducta contemplativa e inmóvil.",
+    "opciones": [
+      "Síndrome hipercinético",
+      "Síndrome apatoabúlico",
+      "Síndrome oniroide",
+      "Somnolencia, letargia o sopor"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Síndrome oniroide»: cuadro de actitud contemplativa e inmóvil con alucinaciones visuales en forma de escenas, generalmente sin angustia. Se reconoce por: contempla inmóvil escenas alucinatorias, sin angustia.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Síndrome hipercinético»: aumento excesivo de la actividad motora y agitación psicomotora. La descripción habla de contempla inmóvil escenas alucinatorias, sin angustia, y eso corresponde a «Síndrome oniroide».",
+      "✘ No es «Síndrome apatoabúlico»: predominio de apatía y abulia, con alteración de la motivación y la actividad. La descripción habla de contempla inmóvil escenas alucinatorias, sin angustia, y eso corresponde a «Síndrome oniroide».",
+      "✔ Correcto. «Síndrome oniroide»: cuadro de actitud contemplativa e inmóvil con alucinaciones visuales en forma de escenas, generalmente sin angustia. La descripción apunta a: contempla inmóvil escenas alucinatorias, sin angustia.",
+      "✘ No es «Somnolencia, letargia o sopor»: estado en el que la persona se mantiene despierta solo mientras recibe estímulos y se duerme al faltar estimulación. La descripción habla de contempla inmóvil escenas alucinatorias, sin angustia, y eso corresponde a «Síndrome oniroide»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-067",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Agitación limitada a la cama, movimientos carfólicos, vigilia casi abolida, memoria y comprensión abolidas, desorientación total e ilusiones visuales.",
+    "opciones": [
+      "Confusión mental o estado confusional",
+      "Síndrome de confusión mental",
+      "Síndrome asténico",
+      "Síndrome delirante"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Síndrome de confusión mental»: cuadro con vigilia casi abolida, desorientación total, ilusiones visuales y agitación limitada a la cama. Se reconoce por: movimientos en la cama, desorientación total y nada de comprensión.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Confusión mental o estado confusional»: alteración cognitiva con concepción desordenada de la realidad, desorientación y diálogo incomprensible. La descripción habla de movimientos en la cama, desorientación total y nada de comprensión, y eso corresponde a «Síndrome de confusión mental».",
+      "✔ Correcto. «Síndrome de confusión mental»: cuadro con vigilia casi abolida, desorientación total, ilusiones visuales y agitación limitada a la cama. La descripción apunta a: movimientos en la cama, desorientación total y nada de comprensión.",
+      "✘ No es «Síndrome asténico»: cuadro de agotamiento fácil, irritabilidad e intolerancia a los ruidos, con dificultades de atención y memoria. La descripción habla de movimientos en la cama, desorientación total y nada de comprensión, y eso corresponde a «Síndrome de confusión mental».",
+      "✘ No es «Síndrome delirante»: cuadro organizado alrededor de ideas delirantes. La descripción habla de movimientos en la cama, desorientación total y nada de comprensión, y eso corresponde a «Síndrome de confusión mental»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-068",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Alteraciones de vigilia o sensopercepciones ausentes o despreciables; sobresalen afectación intelectual y del carácter.",
+    "opciones": [
+      "Síndrome maníaco",
+      "Coma",
+      "Síndrome psicopático",
+      "Síndromes cerebrales orgánicos crónicos"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Síndromes cerebrales orgánicos crónicos»: cuadros por daño cerebral donde la vigilia y la percepción casi no se alteran, y sobresalen el deterioro intelectual y los cambios del carácter. Se reconoce por: deterioro intelectual y del carácter con vigilia conservada.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Síndrome maníaco»: cuadro de ánimo exaltado con pensamiento acelerado, fuga de ideas, hiperactividad e hipersociabilidad. La descripción habla de deterioro intelectual y del carácter con vigilia conservada, y eso corresponde a «Síndromes cerebrales orgánicos crónicos».",
+      "✘ No es «Coma»: pérdida de conciencia, sensibilidad y movimiento voluntario, con funciones vegetativas conservadas. La descripción habla de deterioro intelectual y del carácter con vigilia conservada, y eso corresponde a «Síndromes cerebrales orgánicos crónicos».",
+      "✘ No es «Síndrome psicopático»: patrón inadaptativo de conducta con impulsividad, baja tolerancia a la frustración y conflictos en las relaciones. La descripción habla de deterioro intelectual y del carácter con vigilia conservada, y eso corresponde a «Síndromes cerebrales orgánicos crónicos».",
+      "✔ Correcto. «Síndromes cerebrales orgánicos crónicos»: cuadros por daño cerebral donde la vigilia y la percepción casi no se alteran, y sobresalen el deterioro intelectual y los cambios del carácter. La descripción apunta a: deterioro intelectual y del carácter con vigilia conservada."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-069",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Capacidades intelectuales muy disminuidas, pensamiento concreto y respuestas afectivas infantiles.",
+    "opciones": [
+      "Síndrome oligofrénico",
+      "Síndrome depresivo",
+      "Hipervigilancia",
+      "Delirium"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Síndrome oligofrénico»: capacidades intelectuales muy disminuidas, pensamiento concreto y respuestas afectivas infantiles. Se reconoce por: déficit intelectual desde siempre, pensamiento concreto y reacciones infantiles.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Síndrome oligofrénico»: capacidades intelectuales muy disminuidas, pensamiento concreto y respuestas afectivas infantiles. La descripción apunta a: déficit intelectual desde siempre, pensamiento concreto y reacciones infantiles.",
+      "✘ No es «Síndrome depresivo»: cuadro de tristeza con descuido personal, lentitud, ansiedad, insomnio y falta de apetito. La descripción habla de déficit intelectual desde siempre, pensamiento concreto y reacciones infantiles, y eso corresponde a «Síndrome oligofrénico».",
+      "✘ No es «Hipervigilancia»: estado de alerta aumentado en el que la persona busca constantemente posibles amenazas. La descripción habla de déficit intelectual desde siempre, pensamiento concreto y reacciones infantiles, y eso corresponde a «Síndrome oligofrénico».",
+      "✘ No es «Delirium»: cuadro agudo con ilusiones y alucinaciones (visuales, auditivas, táctiles) y alteración de la conciencia. La descripción habla de déficit intelectual desde siempre, pensamiento concreto y reacciones infantiles, y eso corresponde a «Síndrome oligofrénico»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-070",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Deterioro de capacidades intelectuales y desorganización de la personalidad, dentro de los síndromes orgánicos crónicos.",
+    "opciones": [
+      "Síndrome demencial",
+      "Síndrome afectivo ansioso",
+      "Hiperfrenia",
+      "Estado crepuscular"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Síndrome demencial»: deterioro de las capacidades intelectuales con desorganización de la personalidad. Se reconoce por: deterioro progresivo de memoria, orientación y autocuidado en un adulto mayor.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Síndrome demencial»: deterioro de las capacidades intelectuales con desorganización de la personalidad. La descripción apunta a: deterioro progresivo de memoria, orientación y autocuidado en un adulto mayor.",
+      "✘ No es «Síndrome afectivo ansioso»: conjunto de angustia, inquietud, pensamiento acelerado, insomnio y síntomas vegetativos. La descripción habla de deterioro progresivo de memoria, orientación y autocuidado en un adulto mayor, y eso corresponde a «Síndrome demencial».",
+      "✘ No es «Hiperfrenia»: elevación máxima del nivel de conciencia, con percepción exagerada de todo el entorno. La descripción habla de deterioro progresivo de memoria, orientación y autocuidado en un adulto mayor, y eso corresponde a «Síndrome demencial».",
+      "✘ No es «Estado crepuscular»: estrechamiento de la conciencia con conductas automáticas y amnesia posterior. La descripción habla de deterioro progresivo de memoria, orientación y autocuidado en un adulto mayor, y eso corresponde a «Síndrome demencial»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-071",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Alteración de la memoria reciente acompañada de confabulación (relatos inventados que rellenan los vacíos de memoria).",
+    "opciones": [
+      "Obnubilación",
+      "Estados oniroides",
+      "Síndrome amnésico-confabulatorio",
+      "Síndrome estuporoso"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Síndrome amnésico-confabulatorio»: alteración de la memoria reciente acompañada de confabulaciones. Se reconoce por: olvido de lo reciente + relatos inventados que cree ciertos.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Obnubilación»: primer grado de descenso de la conciencia: responde, pero necesita estímulos más intensos. La descripción habla de olvido de lo reciente + relatos inventados que cree ciertos, y eso corresponde a «Síndrome amnésico-confabulatorio».",
+      "✘ No es «Estados oniroides»: vivencias alucinatorias en forma de escenas, mezcla de realidad y fantasía, sobre todo visuales. La descripción habla de olvido de lo reciente + relatos inventados que cree ciertos, y eso corresponde a «Síndrome amnésico-confabulatorio».",
+      "✔ Correcto. «Síndrome amnésico-confabulatorio»: alteración de la memoria reciente acompañada de confabulaciones. La descripción apunta a: olvido de lo reciente + relatos inventados que cree ciertos.",
+      "✘ No es «Síndrome estuporoso»: inmovilidad y mutismo con grado variable de claridad de conciencia. La descripción habla de olvido de lo reciente + relatos inventados que cree ciertos, y eso corresponde a «Síndrome amnésico-confabulatorio»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-072",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Predominan apatía y abulia, con pérdida de la motivación y de la iniciativa para actuar.",
+    "opciones": [
+      "Somnolencia, letargia o sopor",
+      "Síndrome apatoabúlico",
+      "Automatismos",
+      "Síndrome hipercinético"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Síndrome apatoabúlico»: predominio de apatía y abulia, con alteración de la motivación y la actividad. Se reconoce por: indiferencia total y falta de iniciativa, sin tristeza ni alegría.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Somnolencia, letargia o sopor»: estado en el que la persona se mantiene despierta solo mientras recibe estímulos y se duerme al faltar estimulación. La descripción habla de indiferencia total y falta de iniciativa, sin tristeza ni alegría, y eso corresponde a «Síndrome apatoabúlico».",
+      "✔ Correcto. «Síndrome apatoabúlico»: predominio de apatía y abulia, con alteración de la motivación y la actividad. La descripción apunta a: indiferencia total y falta de iniciativa, sin tristeza ni alegría.",
+      "✘ No es «Automatismos»: acciones involuntarias realizadas sin conciencia, con recuerdo posterior parcial o confuso. La descripción habla de indiferencia total y falta de iniciativa, sin tristeza ni alegría, y eso corresponde a «Síndrome apatoabúlico».",
+      "✘ No es «Síndrome hipercinético»: aumento excesivo de la actividad motora y agitación psicomotora. La descripción habla de indiferencia total y falta de iniciativa, sin tristeza ni alegría, y eso corresponde a «Síndrome apatoabúlico»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-073",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Se organiza alrededor de ideas delirantes, que son el eje del cuadro.",
+    "opciones": [
+      "Síndrome delirante",
+      "Confusión mental o estado confusional",
+      "Desorientación alopsíquica en espacio",
+      "Síndrome asténico"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Síndrome delirante»: cuadro organizado alrededor de ideas delirantes. Se reconoce por: las ideas delirantes son el eje del cuadro.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Síndrome delirante»: cuadro organizado alrededor de ideas delirantes. La descripción apunta a: las ideas delirantes son el eje del cuadro.",
+      "✘ No es «Confusión mental o estado confusional»: alteración cognitiva con concepción desordenada de la realidad, desorientación y diálogo incomprensible. La descripción habla de las ideas delirantes son el eje del cuadro, y eso corresponde a «Síndrome delirante».",
+      "✘ No es «Desorientación alopsíquica en espacio»: no reconocer el lugar, la ciudad o el país donde se encuentra. La descripción habla de las ideas delirantes son el eje del cuadro, y eso corresponde a «Síndrome delirante».",
+      "✘ No es «Síndrome asténico»: cuadro de agotamiento fácil, irritabilidad e intolerancia a los ruidos, con dificultades de atención y memoria. La descripción habla de las ideas delirantes son el eje del cuadro, y eso corresponde a «Síndrome delirante»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-074",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Vigilia algo aumentada, atención hipervigilante, pensamiento acelerado, fuga de ideas, hipertimia, labilidad, hiperbulia e hipersociabilidad.",
+    "opciones": [
+      "Síndrome psicopático",
+      "Síndrome maníaco",
+      "Desorientación autopsíquica o en persona",
+      "Coma"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Síndrome maníaco»: cuadro de ánimo exaltado con pensamiento acelerado, fuga de ideas, hiperactividad e hipersociabilidad. Se reconoce por: ánimo exaltado, ideas aceleradas e hiperactividad social.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Síndrome psicopático»: patrón inadaptativo de conducta con impulsividad, baja tolerancia a la frustración y conflictos en las relaciones. La descripción habla de ánimo exaltado, ideas aceleradas e hiperactividad social, y eso corresponde a «Síndrome maníaco».",
+      "✔ Correcto. «Síndrome maníaco»: cuadro de ánimo exaltado con pensamiento acelerado, fuga de ideas, hiperactividad e hipersociabilidad. La descripción apunta a: ánimo exaltado, ideas aceleradas e hiperactividad social.",
+      "✘ No es «Desorientación autopsíquica o en persona»: no saber quién es uno mismo ni reconocer a personas conocidas. La descripción habla de ánimo exaltado, ideas aceleradas e hiperactividad social, y eso corresponde a «Síndrome maníaco».",
+      "✘ No es «Coma»: pérdida de conciencia, sensibilidad y movimiento voluntario, con funciones vegetativas conservadas. La descripción habla de ánimo exaltado, ideas aceleradas e hiperactividad social, y eso corresponde a «Síndrome maníaco»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-075",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Aspecto descuidado, atención hiperconcentrada, memoria disminuida, hipotimia, ansiedad, hipobulia, hipoquinesia, insomnio y anorexia.",
+    "opciones": [
+      "Delirium",
+      "Síndrome depresivo",
+      "Hipervigilancia",
+      "Aprosexia"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Síndrome depresivo»: cuadro de tristeza con descuido personal, lentitud, ansiedad, insomnio y falta de apetito. Se reconoce por: tristeza con lentitud, descuido, insomnio y anorexia.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Delirium»: cuadro agudo con ilusiones y alucinaciones (visuales, auditivas, táctiles) y alteración de la conciencia. La descripción habla de tristeza con lentitud, descuido, insomnio y anorexia, y eso corresponde a «Síndrome depresivo».",
+      "✔ Correcto. «Síndrome depresivo»: cuadro de tristeza con descuido personal, lentitud, ansiedad, insomnio y falta de apetito. La descripción apunta a: tristeza con lentitud, descuido, insomnio y anorexia.",
+      "✘ No es «Hipervigilancia»: estado de alerta aumentado en el que la persona busca constantemente posibles amenazas. La descripción habla de tristeza con lentitud, descuido, insomnio y anorexia, y eso corresponde a «Síndrome depresivo».",
+      "✘ No es «Aprosexia»: ausencia total o casi total de atención. La descripción habla de tristeza con lentitud, descuido, insomnio y anorexia, y eso corresponde a «Síndrome depresivo»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-076",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Atención discretamente hipervigilante, ansiedad, irritabilidad, pensamiento acelerado, hiperbulia, insomnio vespertino y manifestaciones vegetativas.",
+    "opciones": [
+      "Síndrome afectivo ansioso",
+      "Estado crepuscular",
+      "Hipoprosexia",
+      "Hiperfrenia"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Síndrome afectivo ansioso»: conjunto de angustia, inquietud, pensamiento acelerado, insomnio y síntomas vegetativos. Se reconoce por: angustia, sudoración, pensamientos acelerados y temor a que pase algo malo.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Síndrome afectivo ansioso»: conjunto de angustia, inquietud, pensamiento acelerado, insomnio y síntomas vegetativos. La descripción apunta a: angustia, sudoración, pensamientos acelerados y temor a que pase algo malo.",
+      "✘ No es «Estado crepuscular»: estrechamiento de la conciencia con conductas automáticas y amnesia posterior. La descripción habla de angustia, sudoración, pensamientos acelerados y temor a que pase algo malo, y eso corresponde a «Síndrome afectivo ansioso».",
+      "✘ No es «Hipoprosexia»: disminución de la capacidad de enfocar y mantener la concentración. La descripción habla de angustia, sudoración, pensamientos acelerados y temor a que pase algo malo, y eso corresponde a «Síndrome afectivo ansioso».",
+      "✘ No es «Hiperfrenia»: elevación máxima del nivel de conciencia, con percepción exagerada de todo el entorno. La descripción habla de angustia, sudoración, pensamientos acelerados y temor a que pase algo malo, y eso corresponde a «Síndrome afectivo ansioso»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-077",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Inmovilidad y mutismo con grado variable de claridad de conciencia; puede ser histriónico, situacional, depresivo, catatónico u orgánico.",
+    "opciones": [
+      "Síndrome estuporoso",
+      "Hiperprosexia o hiperconcentración",
+      "Estados oniroides",
+      "Obnubilación"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Síndrome estuporoso»: inmovilidad y mutismo con grado variable de claridad de conciencia. Se reconoce por: inmovilidad y mutismo estando despierto.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Síndrome estuporoso»: inmovilidad y mutismo con grado variable de claridad de conciencia. La descripción apunta a: inmovilidad y mutismo estando despierto.",
+      "✘ No es «Hiperprosexia o hiperconcentración»: focalización excesiva de la atención en un solo estímulo o tarea. La descripción habla de inmovilidad y mutismo estando despierto, y eso corresponde a «Síndrome estuporoso».",
+      "✘ No es «Estados oniroides»: vivencias alucinatorias en forma de escenas, mezcla de realidad y fantasía, sobre todo visuales. La descripción habla de inmovilidad y mutismo estando despierto, y eso corresponde a «Síndrome estuporoso».",
+      "✘ No es «Obnubilación»: primer grado de descenso de la conciencia: responde, pero necesita estímulos más intensos. La descripción habla de inmovilidad y mutismo estando despierto, y eso corresponde a «Síndrome estuporoso»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-078",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Preocupación excesiva por la salud, temor constante a la muerte y autoobservación continua de funciones corporales.",
+    "opciones": [
+      "Estupor",
+      "Síndrome hipocondríaco",
+      "Desorientación alopsíquica en tiempo",
+      "Paraprosexias"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Síndrome hipocondríaco»: preocupación excesiva por la salud con autoobservación constante, sin causa orgánica que lo explique. Se reconoce por: convencimiento de estar enfermo con exámenes normales y vigilancia del cuerpo.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Estupor»: falta casi total de reacción al ambiente; solo se logra un ligero estado de alerta con estímulos muy potentes. La descripción habla de convencimiento de estar enfermo con exámenes normales y vigilancia del cuerpo, y eso corresponde a «Síndrome hipocondríaco».",
+      "✔ Correcto. «Síndrome hipocondríaco»: preocupación excesiva por la salud con autoobservación constante, sin causa orgánica que lo explique. La descripción apunta a: convencimiento de estar enfermo con exámenes normales y vigilancia del cuerpo.",
+      "✘ No es «Desorientación alopsíquica en tiempo»: no reconocer la hora, el día, el mes o el año (a veces ni día ni noche). La descripción habla de convencimiento de estar enfermo con exámenes normales y vigilancia del cuerpo, y eso corresponde a «Síndrome hipocondríaco».",
+      "✘ No es «Paraprosexias»: desviaciones de la atención, de apariencia involuntaria, con aumento de la actividad psicomotriz. La descripción habla de convencimiento de estar enfermo con exámenes normales y vigilancia del cuerpo, y eso corresponde a «Síndrome hipocondríaco»."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-079",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Agotamiento fácil, irritabilidad, disforia, intolerancia a ruidos y dificultades de atención y memoria.",
+    "opciones": [
+      "Confusión mental o estado confusional",
+      "Desorientación alopsíquica en espacio",
+      "Distractibilidad",
+      "Síndrome asténico"
+    ],
+    "respuesta_correcta": 3,
+    "justificacion": "La respuesta es «Síndrome asténico»: cuadro de agotamiento fácil, irritabilidad e intolerancia a los ruidos, con dificultades de atención y memoria. Se reconoce por: se cansa con facilidad y se irrita con los ruidos.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Confusión mental o estado confusional»: alteración cognitiva con concepción desordenada de la realidad, desorientación y diálogo incomprensible. La descripción habla de se cansa con facilidad y se irrita con los ruidos, y eso corresponde a «Síndrome asténico».",
+      "✘ No es «Desorientación alopsíquica en espacio»: no reconocer el lugar, la ciudad o el país donde se encuentra. La descripción habla de se cansa con facilidad y se irrita con los ruidos, y eso corresponde a «Síndrome asténico».",
+      "✘ No es «Distractibilidad»: inestabilidad atencional: cuesta sostener la atención en un tema por la intromisión de otros estímulos o pensamientos. La descripción habla de se cansa con facilidad y se irrita con los ruidos, y eso corresponde a «Síndrome asténico».",
+      "✔ Correcto. «Síndrome asténico»: cuadro de agotamiento fácil, irritabilidad e intolerancia a los ruidos, con dificultades de atención y memoria. La descripción apunta a: se cansa con facilidad y se irrita con los ruidos."
+    ],
+    "tema": "Síndromes"
+  },
+  {
+    "id": "MC-080",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Patrones inadaptativos de comportamiento, dificultades en control de impulsos, seguridad personal, autovaloración y relaciones.",
+    "opciones": [
+      "Coma",
+      "Síndrome psicopático",
+      "Fatigabilidad de la atención",
+      "Desorientación autopsíquica o en persona"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Síndrome psicopático»: patrón inadaptativo de conducta con impulsividad, baja tolerancia a la frustración y conflictos en las relaciones. Se reconoce por: impulsividad, gratificación inmediata y relaciones conflictivas.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Coma»: pérdida de conciencia, sensibilidad y movimiento voluntario, con funciones vegetativas conservadas. La descripción habla de impulsividad, gratificación inmediata y relaciones conflictivas, y eso corresponde a «Síndrome psicopático».",
+      "✔ Correcto. «Síndrome psicopático»: patrón inadaptativo de conducta con impulsividad, baja tolerancia a la frustración y conflictos en las relaciones. La descripción apunta a: impulsividad, gratificación inmediata y relaciones conflictivas.",
+      "✘ No es «Fatigabilidad de la atención»: agotamiento progresivo de la atención, con menor rendimiento y más errores. La descripción habla de impulsividad, gratificación inmediata y relaciones conflictivas, y eso corresponde a «Síndrome psicopático».",
+      "✘ No es «Desorientación autopsíquica o en persona»: no saber quién es uno mismo ni reconocer a personas conocidas. La descripción habla de impulsividad, gratificación inmediata y relaciones conflictivas, y eso corresponde a «Síndrome psicopático»."
+    ],
+    "tema": "Síndromes"
+  }
+]

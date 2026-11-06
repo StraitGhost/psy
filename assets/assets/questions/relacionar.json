@@ -1,0 +1,626 @@
+[
+  {
+    "id": "REL-001",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Hipervigilancia",
+      "Hiperfrenia",
+      "Obnubilación"
+    ],
+    "columna_b": [
+      "Primer estadio de disminución del nivel de conciencia; requiere estímulos externos de cierta intensidad.",
+      "Mayor sensibilidad sensorial, aumento motor e intensidad emocional; búsqueda constante de posibles amenazas.",
+      "Estado de hipervigilancia máxima; consciencia exagerada."
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "explicacion_pares": [
+      "«Hipervigilancia»: estado de alerta aumentado en el que la persona busca constantemente posibles amenazas. Se reconoce por: reacción exagerada ante estímulos pequeños y rastreo constante del ambiente en busca de peligro.",
+      "«Hiperfrenia»: elevación máxima del nivel de conciencia, con percepción exagerada de todo el entorno. Se reconoce por: nivel de alerta llevado al máximo y de forma generalizada, no solo ante posibles amenazas.",
+      "«Obnubilación»: primer grado de descenso de la conciencia: responde, pero necesita estímulos más intensos. Se reconoce por: responde y obedece órdenes sencillas, aunque con lentitud y solo ante estímulos más fuertes."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Conciencia"
+  },
+  {
+    "id": "REL-002",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Somnolencia, letargia o sopor",
+      "Estupor",
+      "Confusión mental o estado confusional"
+    ],
+    "columna_b": [
+      "Afectación cognitiva, concepción desordenada de la realidad, desorientación total y diálogo incomprensible.",
+      "Paciente despierto que queda dormido si se queda sin estimulación sensorial.",
+      "Falta de reacción y atención al ambiente; solo alcanza ligero estado de alerta mediante estímulos muy potentes."
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "explicacion_pares": [
+      "«Somnolencia, letargia o sopor»: estado en el que la persona se mantiene despierta solo mientras recibe estímulos y se duerme al faltar estimulación. Se reconoce por: se vuelve a dormir en cuanto se deja de estimularlo.",
+      "«Estupor»: falta casi total de reacción al ambiente; solo se logra un ligero estado de alerta con estímulos muy potentes. Se reconoce por: hace falta un estímulo muy intenso y aun así no hay comunicación comprensible.",
+      "«Confusión mental o estado confusional»: alteración cognitiva con concepción desordenada de la realidad, desorientación y diálogo incomprensible. Se reconoce por: discurso incoherente, desorientación y falta de comprensión del entorno (no es solo lentitud ni sueño)."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Conciencia"
+  },
+  {
+    "id": "REL-003",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Coma",
+      "Delirium",
+      "Estado crepuscular"
+    ],
+    "columna_b": [
+      "Curso agudo con alteraciones sensoperceptuales, especialmente ilusiones y alucinaciones visuales, auditivas y táctiles.",
+      "Estrechamiento de conciencia, amnesia lacunar posterior, conductas automáticas y explosiones emocionales.",
+      "Pérdida de conciencia, sensibilidad y motilidad voluntaria; se conservan las funciones vegetativas."
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "explicacion_pares": [
+      "«Coma»: pérdida de conciencia, sensibilidad y movimiento voluntario, con funciones vegetativas conservadas. Se reconoce por: no hay despertar ni respuesta voluntaria ante ningún estímulo.",
+      "«Delirium»: cuadro agudo con ilusiones y alucinaciones (visuales, auditivas, táctiles) y alteración de la conciencia. Se reconoce por: alucinaciones vividas como reales, de inicio agudo, con miedo y en un contexto tóxico u orgánico.",
+      "«Estado crepuscular»: estrechamiento de la conciencia con conductas automáticas y amnesia posterior. Se reconoce por: conducta automática y cambio de comportamiento, seguidos de amnesia del episodio."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Conciencia"
+  },
+  {
+    "id": "REL-004",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Estados oniroides",
+      "Automatismos",
+      "Desorientación alopsíquica en tiempo"
+    ],
+    "columna_b": [
+      "No reconocer hora, día, mes o año; a veces no diferenciar día y noche.",
+      "Vivencias alucinatorias escénicas, mezcla de realidad y fantasía, con predominio visual y auditivo.",
+      "Acciones involuntarias realizadas en ausencia de conciencia, con posible recuerdo posterior parcial o confuso."
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "explicacion_pares": [
+      "«Estados oniroides»: vivencias alucinatorias en forma de escenas, mezcla de realidad y fantasía, sobre todo visuales. Se reconoce por: una escena completa, parecida a un sueño, vivida estando despierto.",
+      "«Automatismos»: acciones involuntarias realizadas sin conciencia, con recuerdo posterior parcial o confuso. Se reconoce por: movimientos con apariencia de finalidad pero no voluntarios, y con recuerdo mínimo.",
+      "«Desorientación alopsíquica en tiempo»: no reconocer la hora, el día, el mes o el año (a veces ni día ni noche). Se reconoce por: falla en fechas y en el momento del día."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Conciencia"
+  },
+  {
+    "id": "REL-005",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Desorientación alopsíquica en espacio",
+      "Desorientación autopsíquica o en persona",
+      "Aprosexia"
+    ],
+    "columna_b": [
+      "No identificar quién es, de dónde viene, a dónde se dirige o quiénes son personas conocidas.",
+      "No reconocer el lugar, ciudad, provincia o país donde se encuentra.",
+      "Reducción máxima o ausencia total de atención."
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "explicacion_pares": [
+      "«Desorientación alopsíquica en espacio»: no reconocer el lugar, la ciudad o el país donde se encuentra. Se reconoce por: no sabe dónde está, aunque sí podría saber quién es.",
+      "«Desorientación autopsíquica o en persona»: no saber quién es uno mismo ni reconocer a personas conocidas. Se reconoce por: falla en la propia identidad y en reconocer a los allegados.",
+      "«Aprosexia»: ausencia total o casi total de atención. Se reconoce por: no atiende a ningún estímulo."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Orientación"
+  },
+  {
+    "id": "REL-006",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Hipoprosexia",
+      "Hiperprosexia o hiperconcentración",
+      "Pseudoaprosexias"
+    ],
+    "columna_b": [
+      "Focalización excesiva y transitoria de la atención sobre un estímulo, tema o vivencia.",
+      "Parece existir aprosexia, pero la atención está focalizada en el medio externo.",
+      "Disminución de la capacidad para enfocar, concentrarse y orientarse hacia un objeto."
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "explicacion_pares": [
+      "«Hipoprosexia»: disminución de la capacidad de enfocar y mantener la concentración. Se reconoce por: puede atender, pero con mucha dificultad para concentrarse.",
+      "«Hiperprosexia o hiperconcentración»: focalización excesiva de la atención en un solo estímulo o tarea. Se reconoce por: atención 'pegada' a una sola actividad, ignorando todo lo demás.",
+      "«Pseudoaprosexias»: aparente falta de atención (parece aprosexia) cuando en realidad la atención está dirigida al medio externo. Se reconoce por: parece desatenta, pero sigue con atención lo que ocurre afuera."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Atención"
+  },
+  {
+    "id": "REL-007",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Paraprosexias",
+      "Distractibilidad",
+      "Fatigabilidad de la atención"
+    ],
+    "columna_b": [
+      "Desviaciones de la atención de apariencia involuntaria, con aumento de la atención espontánea e incremento psicomotriz.",
+      "Agotamiento de la atención, con escaso rendimiento y abundancia de errores.",
+      "Inestabilidad atencional; dificultad para mantener atención en un estímulo, tema o vivencia."
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "explicacion_pares": [
+      "«Paraprosexias»: desviaciones de la atención, de apariencia involuntaria, con aumento de la actividad psicomotriz. Se reconoce por: atención que salta a todo estímulo, acompañada de aumento de la actividad motora.",
+      "«Distractibilidad»: inestabilidad atencional: cuesta sostener la atención en un tema por la intromisión de otros estímulos o pensamientos. Se reconoce por: pierde el hilo por estímulos o pensamientos irrelevantes.",
+      "«Fatigabilidad de la atención»: agotamiento progresivo de la atención, con menor rendimiento y más errores. Se reconoce por: el rendimiento cae a medida que pasa el tiempo."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Atención"
+  },
+  {
+    "id": "REL-008",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Apatía de la atención",
+      "Perplejidad de la atención",
+      "Hipomnesia de fijación o anterógrada"
+    ],
+    "columna_b": [
+      "Incapacidad para sintetizar el contenido atendido y comprender acciones y circunstancias.",
+      "Deficiencia de memoria referida a hechos ocurridos recientemente.",
+      "Considerable falta de atención e interés por acontecimientos del medio."
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "explicacion_pares": [
+      "«Apatía de la atención»: falta marcada de atención e interés por los acontecimientos del medio. Se reconoce por: indiferencia incluso ante estímulos atractivos.",
+      "«Perplejidad de la atención»: incapacidad para sintetizar lo atendido y comprender acciones y circunstancias. Se reconoce por: percibe lo que pasa pero no logra entenderlo.",
+      "«Hipomnesia de fijación o anterógrada»: disminución de la memoria para hechos recientes (cuesta fijar lo nuevo). Se reconoce por: olvida lo ocurrido hace minutos o poco tiempo."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Atención"
+  },
+  {
+    "id": "REL-009",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Hipomnesia de evocación o retrógrada",
+      "Amnesia de fijación",
+      "Amnesia de conservación"
+    ],
+    "columna_b": [
+      "Pérdida de recuerdos que ya estaban almacenados.",
+      "Incapacidad para consolidar nuevos recuerdos.",
+      "Incapacidad para recordar el pasado o recuperar información almacenada anteriormente."
+    ],
+    "pares_correctos": [
+      2,
+      1,
+      0
+    ],
+    "explicacion_pares": [
+      "«Hipomnesia de evocación o retrógrada»: disminución de la capacidad de recordar el pasado o recuperar lo ya almacenado. Se reconoce por: cuesta recordar hechos antiguos (el pasado).",
+      "«Amnesia de fijación»: incapacidad total para consolidar recuerdos nuevos. Se reconoce por: no forma recuerdos nuevos (lo que vive se pierde enseguida).",
+      "«Amnesia de conservación»: pérdida de recuerdos que ya estaban guardados. Se reconoce por: desaparecen recuerdos que sí habían sido fijados."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Memoria"
+  },
+  {
+    "id": "REL-010",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Amnesia global",
+      "Amnesia lacunar",
+      "Amnesia selectiva episódica"
+    ],
+    "columna_b": [
+      "Pérdida de recuerdos delimitada en el tiempo.",
+      "Olvido de un acontecimiento específico de la vida.",
+      "Pérdida de todos los recuerdos del pasado."
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "explicacion_pares": [
+      "«Amnesia global»: pérdida de todos o casi todos los recuerdos del pasado. Se reconoce por: se pierde el pasado completo.",
+      "«Amnesia lacunar»: pérdida de recuerdos limitada a un período concreto de tiempo. Se reconoce por: un 'hueco' en el tiempo, con recuerdos intactos antes y después.",
+      "«Amnesia selectiva episódica»: olvido de un acontecimiento específico de la vida. Se reconoce por: olvida un episodio puntual."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Memoria"
+  },
+  {
+    "id": "REL-011",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Amnesia selectiva semántica",
+      "Amnesia de evocación",
+      "Pseudoamnesia"
+    ],
+    "columna_b": [
+      "El recuerdo no se pierde, pero es muy difícil traerlo a la memoria.",
+      "Sensación de haber perdido la memoria sin pérdida objetiva.",
+      "Pérdida de conocimientos o ciertos tipos de conocimientos."
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "explicacion_pares": [
+      "«Amnesia selectiva semántica»: pérdida de conocimientos o de ciertos tipos de conocimiento. Se reconoce por: pierde saberes, no un episodio de su vida.",
+      "«Amnesia de evocación»: dificultad para traer a la conciencia un recuerdo que no se ha perdido. Se reconoce por: el recuerdo existe, pero no se logra recuperar en el momento.",
+      "«Pseudoamnesia»: sensación de haber perdido la memoria sin pérdida objetiva. Se reconoce por: dice que olvida, pero las pruebas muestran memoria conservada."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Memoria"
+  },
+  {
+    "id": "REL-012",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Hipermnesia",
+      "Pseudohipermnesias",
+      "Ecmnesia"
+    ],
+    "columna_b": [
+      "Evocación repetitiva de recuerdos, por ejemplo relacionados con la patología del paciente.",
+      "Sensación de estar en el pasado y revivir vivencias con gran implicación emocional.",
+      "Aumento exagerado de los recuerdos."
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "explicacion_pares": [
+      "«Hipermnesia»: aumento exagerado de los recuerdos. Se reconoce por: recuerdo excesivamente detallado y abundante.",
+      "«Pseudohipermnesias»: evocación repetitiva de recuerdos, por ejemplo ligados a la patología del paciente. Se reconoce por: siempre vuelve al mismo recuerdo, de forma repetitiva.",
+      "«Ecmnesia»: sensación de estar en el pasado, con pérdida de la orientación en el presente. Se reconoce por: vive 'como si' estuviera en otra época de su vida."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Memoria"
+  },
+  {
+    "id": "REL-013",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Paramnesias",
+      "Ilusión",
+      "Pseudoalucinación"
+    ],
+    "columna_b": [
+      "Percepción errónea de un objeto que se encuentra dentro del campo sensorial.",
+      "Percepción errónea situada fuera del campo perceptual del sujeto.",
+      "Deformidad de los recuerdos."
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "explicacion_pares": [
+      "«Paramnesias»: deformidad de los recuerdos. Se reconoce por: el recuerdo existe pero está distorsionado.",
+      "«Ilusión»: percepción errónea de un objeto real presente en el campo sensorial. Se reconoce por: hay un objeto real (la rama) mal interpretado.",
+      "«Pseudoalucinación»: percepción anómala vivida en el espacio interno, sin la 'corporeidad' de una percepción real. Se reconoce por: la voz se vive dentro de la mente, no en el mundo exterior."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Memoria"
+  },
+  {
+    "id": "REL-014",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Alucinosis",
+      "Alucinación negativa",
+      "Alucinación liliputiense"
+    ],
+    "columna_b": [
+      "La persona no percibe un estímulo que sí existe.",
+      "Los objetos se perciben diminutos o más pequeños de lo normal.",
+      "La persona es consciente de que lo que percibe no existe."
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "explicacion_pares": [
+      "«Alucinosis»: alucinación en la que la persona es consciente de que lo que percibe no existe. Se reconoce por: ve o escucha algo irreal y lo reconoce como irreal.",
+      "«Alucinación negativa»: no percibir un estímulo que sí existe. Se reconoce por: el objeto está ahí y la persona no lo percibe.",
+      "«Alucinación liliputiense»: alucinaciones de seres o cosas diminutas. Se reconoce por: las figuras son pequeñísimas."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Percepción"
+  },
+  {
+    "id": "REL-015",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Alucinación guliveriana",
+      "Pensamientos intrusos",
+      "Ideación autolítica o suicida"
+    ],
+    "columna_b": [
+      "Los objetos se perciben enormes o más grandes de lo normal.",
+      "Pensamientos sobre lesionarse físicamente o matarse.",
+      "Ideas repetitivas, intrusivas, no deseadas, no intencionadas y difíciles de controlar."
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "explicacion_pares": [
+      "«Alucinación guliveriana»: alucinaciones de seres o cosas gigantes. Se reconoce por: la figura es enorme.",
+      "«Pensamientos intrusos»: ideas repetitivas y no deseadas que irrumpen en la mente y son difíciles de controlar. Se reconoce por: ideas que aparecen sin quererlas y no se pueden controlar.",
+      "«Ideación autolítica o suicida»: pensamientos de hacerse daño o de quitarse la vida. Se reconoce por: los pensamientos se dirigen a la propia muerte o a lesionarse; siempre exige evaluar el riesgo."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Percepción"
+  },
+  {
+    "id": "REL-016",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Idea sobrevalorada",
+      "Idea fija",
+      "Idea fóbica"
+    ],
+    "columna_b": [
+      "Fenómeno real y lógico que aparece persistentemente en la conciencia contra la voluntad.",
+      "Miedo o temor que el paciente reconoce como infundado pero no puede apartar.",
+      "Exceso de valoración o importancia de un asunto que realmente no la tiene."
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "explicacion_pares": [
+      "«Idea sobrevalorada»: idea a la que se da una importancia desmedida, pero que sigue siendo comprensible y no es delirante. Se reconoce por: le da demasiado peso a un asunto, aunque la idea no es absurda.",
+      "«Idea fija»: idea lógica y real que se impone de forma persistente en la conciencia contra la voluntad de la persona. Se reconoce por: idea razonable de la que no puede librarse.",
+      "«Idea fóbica»: miedo que la persona reconoce como infundado pero que no logra apartar. Se reconoce por: sabe que su miedo es exagerado, pero igual lo siente."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "REL-017",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Idea hipocondríaca",
+      "Idea delirante",
+      "Delirio de persecución"
+    ],
+    "columna_b": [
+      "Pensamiento irreal, ilógico, morboso, pertinaz e irreductible.",
+      "Creencia de vigilancia, seguimiento o persecución de la persona.",
+      "Molestias corporales interpretadas como posibles signos de enfermedad."
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "explicacion_pares": [
+      "«Idea hipocondríaca»: interpretación de molestias corporales como posibles signos de enfermedad. Se reconoce por: molestias del cuerpo leídas como señal de enfermedad.",
+      "«Idea delirante»: creencia falsa, ilógica y rígida, sostenida con total convicción, que no se corrige con argumentos. Se reconoce por: convicción irreal e inamovible, incluso frente a la evidencia.",
+      "«Delirio de persecución»: creencia delirante de ser vigilado, seguido o perseguido. Se reconoce por: cree que lo vigilan o lo persiguen."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "REL-018",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Delirio de influencia",
+      "Delirio de grandeza",
+      "Delirio de referencia"
+    ],
+    "columna_b": [
+      "Exaltación de cualidades personales; puede creerse gran personaje o inventor famoso.",
+      "Creencia de una fuerza externa imaginaria que controla el pensamiento.",
+      "Creencia de que otras personas hablan, se ríen o se burlan del paciente."
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "explicacion_pares": [
+      "«Delirio de influencia»: creencia delirante de que una fuerza externa controla el propio pensamiento o la conducta. Se reconoce por: siente que una fuerza externa lo controla.",
+      "«Delirio de grandeza»: creencia delirante de tener cualidades, poder o una identidad extraordinarios. Se reconoce por: se cree un gran personaje o un inventor famoso.",
+      "«Delirio de referencia»: creencia delirante de que otras personas hablan, se ríen o se burlan de uno. Se reconoce por: interpreta lo que hacen o dicen otros como dirigido a él."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "REL-019",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Delirio celotípico",
+      "Delirio de autorreproche",
+      "Delirio nihilista"
+    ],
+    "columna_b": [
+      "Creencia de haber cometido un delito o falta grave inexistente, con culpa y arrepentimiento.",
+      "Sensación de estar muerto o de haber dejado de existir; puede extenderse a personas o cosas.",
+      "Creencia delirante de que la pareja engaña al sujeto."
+    ],
+    "pares_correctos": [
+      2,
+      0,
+      1
+    ],
+    "explicacion_pares": [
+      "«Delirio celotípico»: creencia delirante de que la pareja es infiel. Se reconoce por: convicción de que la pareja lo engaña, sin pruebas.",
+      "«Delirio de autorreproche»: creencia delirante de haber cometido una falta grave inexistente, con culpa y arrepentimiento. Se reconoce por: se acusa de una culpa que no existe.",
+      "«Delirio nihilista»: creencia delirante de estar muerto o haber dejado de existir, que puede extenderse a otras personas o cosas. Se reconoce por: dice que él (u otros) está muerto o ya no existe."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "REL-020",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Delirio de negación",
+      "Disomnias",
+      "Parasomnias"
+    ],
+    "columna_b": [
+      "Anomalías que se producen en fase REM y NO REM del sueño.",
+      "Creencia de que todo alrededor está muerto, vacío o no existe, incluso el tiempo y uno mismo.",
+      "Categoría relacionada con duración, intensidad y cantidad del sueño."
+    ],
+    "pares_correctos": [
+      1,
+      2,
+      0
+    ],
+    "explicacion_pares": [
+      "«Delirio de negación»: creencia delirante de que todo alrededor está muerto, vacío o no existe, incluso el tiempo y uno mismo. Se reconoce por: niega la existencia del mundo, del tiempo y de sí mismo.",
+      "«Disomnias»: alteraciones de la cantidad, la calidad o el horario del sueño (insomnio, hipersomnia, alteraciones del ritmo). Se reconoce por: el problema es cuánto, cuándo o qué tan bien se duerme.",
+      "«Parasomnias»: fenómenos o conductas anormales que ocurren durante el sueño (pesadillas, terrores nocturnos, sonambulismo). Se reconoce por: algo anormal ocurre mientras la persona duerme."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Pensamiento"
+  },
+  {
+    "id": "REL-021",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Síndromes cerebrales orgánicos crónicos",
+      "Síndrome oligofrénico",
+      "Síndrome demencial"
+    ],
+    "columna_b": [
+      "Capacidades intelectuales muy disminuidas, pensamiento concreto y respuestas afectivas infantiles.",
+      "Alteraciones de vigilia o sensopercepciones ausentes o despreciables; sobresalen afectación intelectual y del carácter.",
+      "Deterioro de capacidades intelectuales y desorganización de la personalidad, dentro de los síndromes orgánicos crónicos."
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "explicacion_pares": [
+      "«Síndromes cerebrales orgánicos crónicos»: cuadros por daño cerebral donde la vigilia y la percepción casi no se alteran, y sobresalen el deterioro intelectual y los cambios del carácter. Se reconoce por: deterioro intelectual y del carácter con vigilia conservada.",
+      "«Síndrome oligofrénico»: capacidades intelectuales muy disminuidas, pensamiento concreto y respuestas afectivas infantiles. Se reconoce por: déficit intelectual desde siempre, pensamiento concreto y reacciones infantiles.",
+      "«Síndrome demencial»: deterioro de las capacidades intelectuales con desorganización de la personalidad. Se reconoce por: deterioro progresivo de memoria, orientación y autocuidado en un adulto mayor."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Síndromes"
+  },
+  {
+    "id": "REL-022",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Síndrome amnésico-confabulatorio",
+      "Síndrome apatoabúlico",
+      "Síndrome esquizofrénico"
+    ],
+    "columna_b": [
+      "Predominan apatía y abulia, con pérdida de la motivación y de la iniciativa para actuar.",
+      "Alteración de la memoria reciente acompañada de confabulación (relatos inventados que rellenan los vacíos de memoria).",
+      "Incluye apatía, disociación ideoafectiva, hipobulia y alteración de necesidades y hábitos."
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "explicacion_pares": [
+      "«Síndrome amnésico-confabulatorio»: alteración de la memoria reciente acompañada de confabulaciones. Se reconoce por: olvido de lo reciente + relatos inventados que cree ciertos.",
+      "«Síndrome apatoabúlico»: predominio de apatía y abulia, con alteración de la motivación y la actividad. Se reconoce por: indiferencia total y falta de iniciativa, sin tristeza ni alegría.",
+      "«Síndrome esquizofrénico»: conjunto de síntomas con aislamiento, descuido, bloqueo del pensamiento, alucinaciones, incongruencia afectiva y pérdida de iniciativa. Se reconoce por: combinación de aislamiento, voces, pensamiento interrumpido, incongruencia afectiva y pérdida de iniciativa."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Síndromes"
+  },
+  {
+    "id": "REL-023",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Síndrome delirante",
+      "Síndrome maníaco",
+      "Síndrome depresivo"
+    ],
+    "columna_b": [
+      "Vigilia algo aumentada, atención hipervigilante, pensamiento acelerado, fuga de ideas, hipertimia, labilidad, hiperbulia e hipersociabilidad.",
+      "Se organiza alrededor de ideas delirantes, que son el eje del cuadro.",
+      "Aspecto descuidado, atención hiperconcentrada, memoria disminuida, hipotimia, ansiedad, hipobulia, hipoquinesia, insomnio y anorexia."
+    ],
+    "pares_correctos": [
+      1,
+      0,
+      2
+    ],
+    "explicacion_pares": [
+      "«Síndrome delirante»: cuadro organizado alrededor de ideas delirantes. Se reconoce por: las ideas delirantes son el eje del cuadro.",
+      "«Síndrome maníaco»: cuadro de ánimo exaltado con pensamiento acelerado, fuga de ideas, hiperactividad e hipersociabilidad. Se reconoce por: ánimo exaltado, ideas aceleradas e hiperactividad social.",
+      "«Síndrome depresivo»: cuadro de tristeza con descuido personal, lentitud, ansiedad, insomnio y falta de apetito. Se reconoce por: tristeza con lentitud, descuido, insomnio y anorexia."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Síndromes"
+  },
+  {
+    "id": "REL-024",
+    "instruccion": "Relacione cada elemento de la columna A con su definición en la columna B.",
+    "columna_a": [
+      "Síndrome afectivo ansioso",
+      "Síndrome estuporoso",
+      "Síndrome hipercinético"
+    ],
+    "columna_b": [
+      "Atención discretamente hipervigilante, ansiedad, irritabilidad, pensamiento acelerado, hiperbulia, insomnio vespertino y manifestaciones vegetativas.",
+      "Aumento de actividad motora y agitación psicomotora; incluye agitación catatónica, excitación maníaca, excitación histérica y furor epiléptico.",
+      "Inmovilidad y mutismo con grado variable de claridad de conciencia; puede ser histriónico, situacional, depresivo, catatónico u orgánico."
+    ],
+    "pares_correctos": [
+      0,
+      2,
+      1
+    ],
+    "explicacion_pares": [
+      "«Síndrome afectivo ansioso»: conjunto de angustia, inquietud, pensamiento acelerado, insomnio y síntomas vegetativos. Se reconoce por: angustia, sudoración, pensamientos acelerados y temor a que pase algo malo.",
+      "«Síndrome estuporoso»: inmovilidad y mutismo con grado variable de claridad de conciencia. Se reconoce por: inmovilidad y mutismo estando despierto.",
+      "«Síndrome hipercinético»: aumento excesivo de la actividad motora y agitación psicomotora. Se reconoce por: exceso de actividad motora, inquietud e impulsividad."
+    ],
+    "justificacion": "Fíjese en el dato clave de cada término: es lo que lo distingue de los que se le parecen.",
+    "tema": "Síndromes"
+  }
+]
