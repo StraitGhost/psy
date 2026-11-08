@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:convert';
 import '../../core/theme/app_colors.dart';
 import '../../models/profile.dart';
 import '../../services/learning_progress_service.dart';
+import '../../services/profile_data_service.dart';
 import 'widgets/question_hero.dart';
 import 'widgets/question_layout.dart';
 import 'widgets/question_header.dart';
@@ -21,6 +21,17 @@ import 'widgets/next_button_widget.dart';
 import 'widgets/game_result_screen.dart';
 
 enum QuestionType { trueFalse, multipleChoice, matching, ordering, fillBlank }
+
+/// Convierte cualquier valor de Firestore (int, double, String) a int.
+int _safeInt(dynamic v) {
+  if (v == null) return 0;
+  if (v is int) return v;
+  if (v is num) return v.toInt();
+  if (v is String) {
+    return int.tryParse(v) ?? double.tryParse(v)?.toInt() ?? 0;
+  }
+  return 0;
+}
 
 class GameQuestion {
   const GameQuestion({
@@ -109,6 +120,8 @@ class _GameScreenState extends State<GameScreen> {
   @override
   void initState() {
     super.initState();
+    // Asegura que todo el progreso se lea/escriba en ESTE perfil
+    ProfileDataService.setActive(widget.userProfile.id);
     _loadQuestions();
   }
 
@@ -143,16 +156,16 @@ class _GameScreenState extends State<GameScreen> {
   }
 
   Future<void> _loadQuestions() async {
-    final userUid = FirebaseAuth.instance.currentUser?.uid;
+    final profileRef = ProfileDataService.refFor(widget.userProfile.id);
     int currentLevel = 0;
 
-    if (userUid != null) {
+    if (profileRef != null) {
       try {
-        final doc = await FirebaseFirestore.instance.collection('usuarios').doc(userUid).get();
+        final doc = await profileRef.get();
         if (doc.exists) {
-          final data = doc.data()!;
-          final correct = (data['correctAnswers'] ?? 0) as int;
-          final wrong = (data['wrongAnswers'] ?? 0) as int;
+          final data = doc.data() ?? <String, dynamic>{};
+          final correct = _safeInt(data['correctAnswers']);
+          final wrong = _safeInt(data['wrongAnswers']);
           currentLevel = _calculateLevel(correct, wrong);
         }
       } catch (e) {
@@ -385,11 +398,10 @@ class _GameScreenState extends State<GameScreen> {
   }
 
   Future<void> _finishGame() async {
-    debugPrint('🚀 1. _finishGame INICIADO');
-    final userUid = FirebaseAuth.instance.currentUser?.uid;
-    debugPrint('👤 2. UID del usuario: $userUid');
+    // Progreso de ESTE perfil: usuarios/{uid}/perfiles/{profileId}
+    final profileRef = ProfileDataService.refFor(widget.userProfile.id);
 
-    if (userUid == null) {
+    if (profileRef == null) {
       debugPrint('❌ ERROR: No hay usuario logueado.');
       return;
     }
@@ -401,45 +413,49 @@ class _GameScreenState extends State<GameScreen> {
       gemsEarned += 20; // Bonus por completar todo perfecto
     }
 
-    final userRef = FirebaseFirestore.instance.collection('usuarios').doc(userUid);
-    final userDoc = await userRef.get();
-
     int newDayStreak = 1;
 
-    if (userDoc.exists) {
-      final userData = userDoc.data() as Map<String, dynamic>;
-      final int currentDayStreak = (userData['dayStreak'] ?? 0) as int;
+    try {
+      final profileDoc = await profileRef.get();
 
-      final now = DateTime.now();
-      final today = DateTime(now.year, now.month, now.day);
+      if (profileDoc.exists) {
+        final profileData = profileDoc.data() ?? <String, dynamic>{};
+        final int currentDayStreak = _safeInt(profileData['dayStreak']);
 
-      DateTime? lastLessonDate;
-      if (userData['lastLessonDate'] != null && userData['lastLessonDate'] is Timestamp) {
-        final date = (userData['lastLessonDate'] as Timestamp).toDate();
-        lastLessonDate = DateTime(date.year, date.month, date.day);
-      }
+        final now = DateTime.now();
+        final today = DateTime(now.year, now.month, now.day);
 
-      if (lastLessonDate == null) {
-        newDayStreak = 1;
-      } else {
-        final differenceInDays = today.difference(lastLessonDate).inDays;
-        if (differenceInDays == 0) {
-          newDayStreak = currentDayStreak;
-        } else if (differenceInDays == 1) {
-          newDayStreak = currentDayStreak + 1;
-        } else {
+        DateTime? lastLessonDate;
+        final rawDate = profileData['lastLessonDate'];
+        if (rawDate is Timestamp) {
+          final date = rawDate.toDate();
+          lastLessonDate = DateTime(date.year, date.month, date.day);
+        }
+
+        if (lastLessonDate == null) {
           newDayStreak = 1;
+        } else {
+          final differenceInDays = today.difference(lastLessonDate).inDays;
+          if (differenceInDays == 0) {
+            newDayStreak = currentDayStreak < 1 ? 1 : currentDayStreak;
+          } else if (differenceInDays == 1) {
+            newDayStreak = currentDayStreak + 1;
+          } else {
+            newDayStreak = 1;
+          }
         }
       }
+    } catch (e) {
+      debugPrint('Error leyendo racha del perfil: $e');
     }
 
     if (newDayStreak > 1) {
       gemsEarned += (newDayStreak * 5);
     }
 
-    debugPrint('📊 3. Datos calculados -> Gemas: +$gemsEarned, Racha: $newDayStreak, ¿Perfecto?: $isPerfectRun');
+    debugPrint('📊 Perfil ${widget.userProfile.id} -> Gemas: +$gemsEarned, Racha: $newDayStreak, ¿Perfecto?: $isPerfectRun');
 
-    Map<String, dynamic> updateData = {
+    final Map<String, dynamic> updateData = {
       'dayStreak': newDayStreak,
       'lastLessonDate': Timestamp.fromDate(DateTime.now()),
       'gems': FieldValue.increment(gemsEarned),
@@ -458,15 +474,14 @@ class _GameScreenState extends State<GameScreen> {
     }
 
     try {
-      await userRef.set(updateData, SetOptions(merge: true));
-      debugPrint('✅ 4. ¡GUARDADO EN FIREBASE EXITOSO!');
+      await profileRef.set(updateData, SetOptions(merge: true));
+      debugPrint('✅ Guardado en el perfil ${widget.userProfile.id}');
     } catch (e) {
-      debugPrint('❌ 4. ERROR FATAL AL GUARDAR EN FIREBASE: $e');
+      debugPrint('❌ ERROR AL GUARDAR EN FIREBASE: $e');
     }
 
     if (mounted) {
       setState(() { _finished = true; });
-      debugPrint('🏁 5. Pantalla de resultados mostrada.');
     }
   }
 

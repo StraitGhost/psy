@@ -3,10 +3,11 @@ import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/theme/app_colors.dart';
+import '../../services/profile_data_service.dart';
+import '../../services/streak_service.dart';
 import 'pet_catalog.dart';
 import 'pet_perks.dart';
 import 'pet_stage.dart';
@@ -20,7 +21,7 @@ class _PetException implements Exception {
 }
 
 // ─────────────────────────────────────────────────────────────
-// Vista de los datos del usuario
+// Vista de los datos del perfil (usuarios/{uid}/perfiles/{id})
 // ─────────────────────────────────────────────────────────────
 class _UserView {
   final int gems;
@@ -68,11 +69,12 @@ class _UserView {
 
     DateTime? ts(dynamic v) => v is Timestamp ? v.toDate() : null;
 
-    final streak = asInt(d['dayStreak']);
+    final streak = StreakService.displayStreak(d);
     return _UserView(
       gems: asInt(d['gems']),
       streak: streak,
-      unlockStreak: math.max(streak, asInt(d['bestStreak'])),
+      unlockStreak: math.max(
+          math.max(streak, asInt(d['dayStreak'])), asInt(d['bestStreak'])),
       activeId: d['activePet'] as String?,
       pets: pets,
       cosmetics: owned,
@@ -105,12 +107,23 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
 
   final _db = FirebaseFirestore.instance;
 
-  DocumentReference<Map<String, dynamic>> get _ref =>
-      _db.collection('usuarios').doc(FirebaseAuth.instance.currentUser!.uid);
+  /// Documento del perfil activo. Solo se usa cuando `_refReady` y no es null
+  /// (la UI de acciones no se construye antes).
+  DocumentReference<Map<String, dynamic>>? _profRef;
+  bool _refReady = false;
+
+  DocumentReference<Map<String, dynamic>> get _ref => _profRef!;
 
   @override
   void initState() {
     super.initState();
+    ProfileDataService.activeRef().then((r) {
+      if (!mounted) return;
+      setState(() {
+        _profRef = r;
+        _refReady = true;
+      });
+    });
     // refresca las barras de estado cada 30 s
     _tick = Timer.periodic(const Duration(seconds: 30), (_) {
       if (mounted) setState(() {});
@@ -133,9 +146,13 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
       ..showSnackBar(
         SnackBar(
           behavior: SnackBarBehavior.floating,
-          backgroundColor: error ? AppColors.error.withValues(alpha: 0.9) : AppColors.success.withValues(alpha: 0.9),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          content: Text(msg, style: _t(14, FontWeight.w600, AppColors.textOnPrimary)),
+          backgroundColor: error
+              ? AppColors.error.withValues(alpha: 0.9)
+              : AppColors.success.withValues(alpha: 0.9),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          content: Text(msg,
+              style: _t(14, FontWeight.w600, AppColors.textOnPrimary)),
         ),
       );
   }
@@ -157,12 +174,15 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
           borderRadius: BorderRadius.circular(20),
           side: BorderSide(color: AppColors.border),
         ),
-        title: Text(title, style: _t(18, FontWeight.w800, AppColors.textPrimary)),
-        content: Text(body, style: _t(14, FontWeight.w400, AppColors.textMuted, height: 1.4)),
+        title:
+            Text(title, style: _t(18, FontWeight.w800, AppColors.textPrimary)),
+        content: Text(body,
+            style: _t(14, FontWeight.w400, AppColors.textMuted, height: 1.4)),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
-            child: Text('Cancelar', style: _t(14, FontWeight.w600, AppColors.textMuted)),
+            child: Text('Cancelar',
+                style: _t(14, FontWeight.w600, AppColors.textMuted)),
           ),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
@@ -184,7 +204,8 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
     } on _PetException catch (e) {
       _snack(e.message, error: true);
     } catch (_) {
-      _snack('No se pudo completar la acción. Inténtalo de nuevo.', error: true);
+      _snack('No se pudo completar la acción. Inténtalo de nuevo.',
+          error: true);
     } finally {
       if (mounted) setState(() => _busy = false);
     }
@@ -253,8 +274,12 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
             p = p.copyWith(happiness: p.happiness + 8, xp: p.xp + 2);
             break;
           case 'alimentar':
-            if (p.hunger >= 95) throw _PetException('${p.name} no tiene hambre ahora.');
-            if (gems < _feedCost) throw _PetException('Necesitas $_feedCost gemas para alimentar.');
+            if (p.hunger >= 95) {
+              throw _PetException('${p.name} no tiene hambre ahora.');
+            }
+            if (gems < _feedCost) {
+              throw _PetException('Necesitas $_feedCost gemas para alimentar.');
+            }
             gems -= _feedCost;
             p = p.copyWith(
               hunger: p.hunger + 30,
@@ -263,7 +288,9 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
             );
             break;
           case 'jugar':
-            if (p.energy < 15) throw _PetException('${p.name} está muy cansado. Déjalo dormir.');
+            if (p.energy < 15) {
+              throw _PetException('${p.name} está muy cansado. Déjalo dormir.');
+            }
             p = p.copyWith(
               energy: p.energy - 15,
               hunger: p.hunger - 8,
@@ -272,7 +299,9 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
             );
             break;
           case 'dormir':
-            if (p.energy >= 95) throw _PetException('${p.name} no tiene sueño.');
+            if (p.energy >= 95) {
+              throw _PetException('${p.name} no tiene sueño.');
+            }
             p = p.copyWith(
               energy: p.energy + 40,
               hunger: p.hunger - 5,
@@ -297,7 +326,8 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
       });
 
       if (levelsGained > 0) {
-        _snack('🎉 ¡Tu mascota subió de nivel! +${_levelUpGems * levelsGained} gemas');
+        _snack(
+            '🎉 ¡Tu mascota subió de nivel! +${_levelUpGems * levelsGained} gemas');
       }
     });
   }
@@ -316,7 +346,8 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
         final snap = await tx.get(_ref);
         final data = snap.data() ?? <String, dynamic>{};
         final gems = asInt(data['gems']);
-        final streak = math.max(asInt(data['dayStreak']), asInt(data['bestStreak']));
+        final streak =
+            math.max(asInt(data['dayStreak']), asInt(data['bestStreak']));
         final pets = data['pets'];
 
         if (pets is Map && pets.containsKey(s.id)) {
@@ -363,7 +394,8 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
         final snap = await tx.get(_ref);
         final data = snap.data() ?? <String, dynamic>{};
         final gems = asInt(data['gems']);
-        final streak = math.max(asInt(data['dayStreak']), asInt(data['bestStreak']));
+        final streak =
+            math.max(asInt(data['dayStreak']), asInt(data['bestStreak']));
         final owned = data['ownedCosmetics'];
 
         if (owned is List && owned.contains(c.id)) {
@@ -411,7 +443,8 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
           borderRadius: BorderRadius.circular(20),
           side: BorderSide(color: AppColors.border),
         ),
-        title: Text('Nombre de tu mascota', style: _t(18, FontWeight.w800, AppColors.textPrimary)),
+        title: Text('Nombre de tu mascota',
+            style: _t(18, FontWeight.w800, AppColors.textPrimary)),
         content: TextField(
           controller: ctrl,
           maxLength: 14,
@@ -419,18 +452,22 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
           style: _t(16, FontWeight.w600, AppColors.textPrimary),
           decoration: InputDecoration(
             counterStyle: _t(11, FontWeight.w400, AppColors.textMuted),
-            enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.border)),
-            focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.primary)),
+            enabledBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: AppColors.border)),
+            focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: AppColors.primary)),
           ),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx),
-            child: Text('Cancelar', style: _t(14, FontWeight.w600, AppColors.textMuted)),
+            child: Text('Cancelar',
+                style: _t(14, FontWeight.w600, AppColors.textMuted)),
           ),
           TextButton(
             onPressed: () => Navigator.pop(ctx, ctrl.text.trim()),
-            child: Text('Guardar', style: _t(14, FontWeight.w800, AppColors.primary)),
+            child: Text('Guardar',
+                style: _t(14, FontWeight.w800, AppColors.primary)),
           ),
         ],
       ),
@@ -457,7 +494,8 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
             .decayed(DateTime.now());
         final species = speciesById(id)!;
         if (!PetPerks.isActive(pet)) {
-          throw _PetException('${pet.name} está descuidado. Aliméntalo y juega con él primero.');
+          throw _PetException(
+              '${pet.name} está descuidado. Aliméntalo y juega con él primero.');
         }
         final perks = speciesPerks[id] ?? const <Perk>[];
         final now = DateTime.now();
@@ -535,23 +573,31 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
                 ),
               ),
               const SizedBox(height: 16),
-              Text('¿Para qué sirven las mascotas?', style: _t(20, FontWeight.w800, AppColors.textPrimary)),
+              Text('¿Para qué sirven las mascotas?',
+                  style: _t(20, FontWeight.w800, AppColors.textPrimary)),
               const SizedBox(height: 10),
               Text(
                 'Cuídalas (alimentar, jugar y dormir) y te ayudarán mientras estudias:',
-                style: _t(14, FontWeight.w400, AppColors.textMuted, height: 1.4),
+                style:
+                    _t(14, FontWeight.w400, AppColors.textMuted, height: 1.4),
               ),
               const SizedBox(height: 12),
-              _infoLine('🎁', 'Regalo diario', 'Una vez al día te traen gemas. Mientras más rara y de más nivel, más gemas.'),
-              _infoLine('⚡', 'Poder de su especie', 'Más XP, más gemas, escudos y más, según la mascota.'),
-              _infoLine('📈', 'Suben de nivel', 'Con cada nivel su poder y su regalo crecen (hasta el nivel 20) y ganas +10 💎.'),
-              _infoLine('❤️', 'Hay que cuidarlas', 'Si tienen mucha hambre o están tristes, pierden sus poderes hasta que las cuides.'),
+              _infoLine('🎁', 'Regalo diario',
+                  'Una vez al día te traen gemas. Mientras más rara y de más nivel, más gemas.'),
+              _infoLine('⚡', 'Poder de su especie',
+                  'Más XP, más gemas, escudos y más, según la mascota.'),
+              _infoLine('📈', 'Suben de nivel',
+                  'Con cada nivel su poder y su regalo crecen (hasta el nivel 20) y ganas +10 💎.'),
+              _infoLine('❤️', 'Hay que cuidarlas',
+                  'Si tienen mucha hambre o están tristes, pierden sus poderes hasta que las cuides.'),
               const SizedBox(height: 18),
-              Text('Rangos', style: _t(18, FontWeight.w800, AppColors.primary)),
+              Text('Rangos',
+                  style: _t(18, FontWeight.w800, AppColors.primary)),
               const SizedBox(height: 4),
               Text(
                 'Mientras mayor es la rareza, más fuerte es el regalo y el poder.',
-                style: _t(13, FontWeight.w400, AppColors.textMuted, height: 1.4),
+                style:
+                    _t(13, FontWeight.w400, AppColors.textMuted, height: 1.4),
               ),
               const SizedBox(height: 12),
               for (final r in Rarity.values) _rarityBlock(r),
@@ -574,9 +620,12 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: _t(14, FontWeight.w800, AppColors.textPrimary)),
+                Text(title,
+                    style: _t(14, FontWeight.w800, AppColors.textPrimary)),
                 const SizedBox(height: 2),
-                Text(body, style: _t(13, FontWeight.w400, AppColors.textMuted, height: 1.35)),
+                Text(body,
+                    style: _t(13, FontWeight.w400, AppColors.textMuted,
+                        height: 1.35)),
               ],
             ),
           ),
@@ -631,7 +680,9 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
                         ),
                         for (final pk in speciesPerks[s.id] ?? const <Perk>[])
                           Text('${pk.emoji} ${pk.rangeText}',
-                              style: _t(12, FontWeight.w500, AppColors.textMuted, height: 1.35)),
+                              style: _t(12, FontWeight.w500,
+                                  AppColors.textMuted,
+                                  height: 1.35)),
                       ],
                     ),
                   ),
@@ -682,7 +733,9 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
       decoration: BoxDecoration(
         color: AppColors.surfaceCard,
         borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: (active ? AppColors.success : AppColors.error).withValues(alpha: 0.45)),
+        border: Border.all(
+            color: (active ? AppColors.success : AppColors.error)
+                .withValues(alpha: 0.45)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -717,7 +770,12 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
                   const SizedBox(width: 10),
                   Expanded(
                     child: Text(pk.label(pk.at(lvl)),
-                        style: _t(13.5, FontWeight.w700, active ? AppColors.textPrimary : AppColors.textMuted)),
+                        style: _t(
+                            13.5,
+                            FontWeight.w700,
+                            active
+                                ? AppColors.textPrimary
+                                : AppColors.textMuted)),
                   ),
                 ],
               ),
@@ -727,21 +785,27 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
             style: _t(11.5, FontWeight.w500, AppColors.textMuted),
           ),
           btn(
-            claimedToday ? 'Regalo de hoy reclamado ✓' : '🎁 Reclamar regalo diario +$gift 💎',
+            claimedToday
+                ? 'Regalo de hoy reclamado ✓'
+                : '🎁 Reclamar regalo diario +$gift 💎',
             active && !claimedToday && !_busy,
             claimedToday,
             () => _claim('daily'),
           ),
           if (hasWeekly)
             btn(
-              weeklyLeft <= Duration.zero ? '🛡️ Reclamar escudo gratis' : '🛡️ ${wait(weeklyLeft)}',
+              weeklyLeft <= Duration.zero
+                  ? '🛡️ Reclamar escudo gratis'
+                  : '🛡️ ${wait(weeklyLeft)}',
               active && weeklyLeft <= Duration.zero && !_busy,
               weeklyLeft > Duration.zero,
               () => _claim('weekly'),
             ),
           if (hasMonthly)
             btn(
-              monthlyLeft <= Duration.zero ? '❄️ Reclamar congelador gratis' : '❄️ ${wait(monthlyLeft)}',
+              monthlyLeft <= Duration.zero
+                  ? '❄️ Reclamar congelador gratis'
+                  : '❄️ ${wait(monthlyLeft)}',
               active && monthlyLeft <= Duration.zero && !_busy,
               monthlyLeft > Duration.zero,
               () => _claim('monthly'),
@@ -754,7 +818,7 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
   // ───────── build ─────────
   @override
   Widget build(BuildContext context) {
-    final uid = FirebaseAuth.instance.currentUser?.uid;
+    final ref = _profRef;
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -768,39 +832,48 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
         ),
         child: SafeArea(
           bottom: false,
-          child: uid == null
-              ? Center(child: Text('No hay usuario', style: _t(15, FontWeight.w600, AppColors.textPrimary)))
-              : StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
-                  stream: _db.collection('usuarios').doc(uid).snapshots(),
-                  builder: (context, snap) {
-                    if (snap.hasError) {
-                      return Center(
-                        child: Text('No pudimos cargar tus mascotas.',
-                            style: _t(15, FontWeight.w600, AppColors.textPrimary)),
-                      );
-                    }
-                    if (!snap.hasData) {
-                      return Center(child: CircularProgressIndicator(color: AppColors.primary));
-                    }
-                    final u = _UserView.from(snap.data!.data() ?? {});
-                    return Column(
-                      children: [
-                        _topBar(u),
-                        _tabBar(),
-                        Expanded(
-                          child: TabBarView(
-                            controller: _tabs,
-                            children: [
-                              _petTab(u),
-                              _adoptTab(u),
-                              _cosmeticsTab(u),
-                            ],
-                          ),
-                        ),
-                      ],
-                    );
-                  },
-                ),
+          child: !_refReady
+              ? Center(
+                  child: CircularProgressIndicator(color: AppColors.primary))
+              : ref == null
+                  ? Center(
+                      child: Text('No hay perfil activo',
+                          style: _t(15, FontWeight.w600,
+                              AppColors.textPrimary)))
+                  : StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+                      stream: ref.snapshots(),
+                      builder: (context, snap) {
+                        if (snap.hasError) {
+                          return Center(
+                            child: Text('No pudimos cargar tus mascotas.',
+                                style: _t(15, FontWeight.w600,
+                                    AppColors.textPrimary)),
+                          );
+                        }
+                        if (!snap.hasData) {
+                          return Center(
+                              child: CircularProgressIndicator(
+                                  color: AppColors.primary));
+                        }
+                        final u = _UserView.from(snap.data!.data() ?? {});
+                        return Column(
+                          children: [
+                            _topBar(u),
+                            _tabBar(),
+                            Expanded(
+                              child: TabBarView(
+                                controller: _tabs,
+                                children: [
+                                  _petTab(u),
+                                  _adoptTab(u),
+                                  _cosmeticsTab(u),
+                                ],
+                              ),
+                            ),
+                          ],
+                        );
+                      },
+                    ),
         ),
       ),
     );
@@ -812,10 +885,12 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
       child: Row(
         children: [
           IconButton(
-            icon: Icon(Icons.arrow_back_rounded, color: AppColors.textPrimary, size: 26),
+            icon: Icon(Icons.arrow_back_rounded,
+                color: AppColors.textPrimary, size: 26),
             onPressed: () => Navigator.pop(context),
           ),
-          Text('Mis Mascotas', style: _t(20, FontWeight.w800, AppColors.textPrimary)),
+          Text('Mis Mascotas',
+              style: _t(20, FontWeight.w800, AppColors.textPrimary)),
           const SizedBox(width: 8),
           _InfoDot(onTap: _showInfo),
           const Spacer(),
@@ -825,7 +900,10 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
             color: AppColors.warning,
           ),
           const SizedBox(width: 8),
-          _Chip(icon: Icons.diamond_rounded, text: '${u.gems}', color: AppColors.primary),
+          _Chip(
+              icon: Icons.diamond_rounded,
+              text: '${u.gems}',
+              color: AppColors.primary),
         ],
       ),
     );
@@ -886,17 +964,20 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
               Text(
                 'Adopta un perro o un gato gratis y empieza a cuidarlo.',
                 textAlign: TextAlign.center,
-                style: _t(14, FontWeight.w400, AppColors.textMuted, height: 1.4),
+                style:
+                    _t(14, FontWeight.w400, AppColors.textMuted, height: 1.4),
               ),
               const SizedBox(height: 20),
               FilledButton(
                 style: FilledButton.styleFrom(
                   backgroundColor: AppColors.primary,
-                  padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
                   shape: const StadiumBorder(),
                 ),
                 onPressed: () => _tabs.animateTo(1),
-                child: Text('Adoptar mascota', style: _t(15, FontWeight.w800, AppColors.textOnPrimary)),
+                child: Text('Adoptar mascota',
+                    style: _t(15, FontWeight.w800, AppColors.textOnPrimary)),
               ),
             ],
           ),
@@ -930,7 +1011,9 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                             color: p.id == pet.id
-                                ? speciesById(p.id)!.color.withValues(alpha: 0.25)
+                                ? speciesById(p.id)!
+                                    .color
+                                    .withValues(alpha: 0.25)
                                 : AppColors.surfaceCard,
                             borderRadius: BorderRadius.circular(16),
                             border: Border.all(
@@ -942,7 +1025,8 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
                           ),
                           child: Text(
                             '${speciesById(p.id)!.emoji} ${p.name}',
-                            style: _t(14, FontWeight.w700, AppColors.textPrimary),
+                            style:
+                                _t(14, FontWeight.w700, AppColors.textPrimary),
                           ),
                         ),
                       ),
@@ -972,23 +1056,30 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
                             Flexible(
                               child: Text(pet.name,
                                   overflow: TextOverflow.ellipsis,
-                                  style: _t(20, FontWeight.w800, AppColors.textPrimary)),
+                                  style: _t(20, FontWeight.w800,
+                                      AppColors.textPrimary)),
                             ),
                             const SizedBox(width: 6),
-                            Icon(Icons.edit_rounded, size: 15, color: AppColors.textMuted),
+                            Icon(Icons.edit_rounded,
+                                size: 15, color: AppColors.textMuted),
                           ],
                         ),
                       ),
                     ),
-                    _Pill(text: species.rarity.label, color: species.rarity.color),
+                    _Pill(
+                        text: species.rarity.label,
+                        color: species.rarity.color),
                     const SizedBox(width: 8),
-                    _Pill(text: '${pet.moodEmoji} ${pet.moodLabel}', color: AppColors.success),
+                    _Pill(
+                        text: '${pet.moodEmoji} ${pet.moodLabel}',
+                        color: AppColors.success),
                   ],
                 ),
                 const SizedBox(height: 12),
                 Row(
                   children: [
-                    Text('Nivel ${lvl.level}', style: _t(13, FontWeight.w800, AppColors.warning)),
+                    Text('Nivel ${lvl.level}',
+                        style: _t(13, FontWeight.w800, AppColors.warning)),
                     const SizedBox(width: 10),
                     Expanded(
                       child: ClipRRect(
@@ -996,13 +1087,15 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
                         child: LinearProgressIndicator(
                           value: lvl.progress,
                           minHeight: 8,
-                          backgroundColor: AppColors.surface.withValues(alpha: 0.1),
+                          backgroundColor:
+                              AppColors.surface.withValues(alpha: 0.1),
                           valueColor: AlwaysStoppedAnimation(AppColors.warning),
                         ),
                       ),
                     ),
                     const SizedBox(width: 10),
-                    Text('${lvl.into}/${lvl.need} XP', style: _t(11, FontWeight.w600, AppColors.textMuted)),
+                    Text('${lvl.into}/${lvl.need} XP',
+                        style: _t(11, FontWeight.w600, AppColors.textMuted)),
                   ],
                 ),
               ],
@@ -1026,11 +1119,23 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
           const SizedBox(height: 12),
 
           // stats
-          _StatBar(label: 'Hambre', icon: Icons.restaurant_rounded, value: pet.hunger, color: AppColors.warning),
+          _StatBar(
+              label: 'Hambre',
+              icon: Icons.restaurant_rounded,
+              value: pet.hunger,
+              color: AppColors.warning),
           const SizedBox(height: 10),
-          _StatBar(label: 'Felicidad', icon: Icons.favorite_rounded, value: pet.happiness, color: const Color(0xFFFF5C8A)),
+          _StatBar(
+              label: 'Felicidad',
+              icon: Icons.favorite_rounded,
+              value: pet.happiness,
+              color: const Color(0xFFFF5C8A)),
           const SizedBox(height: 10),
-          _StatBar(label: 'Energía', icon: Icons.bolt_rounded, value: pet.energy, color: AppColors.info),
+          _StatBar(
+              label: 'Energía',
+              icon: Icons.bolt_rounded,
+              value: pet.energy,
+              color: AppColors.info),
           const SizedBox(height: 20),
 
           _perksCard(u, pet, species),
@@ -1128,7 +1233,10 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(22),
               gradient: LinearGradient(
-                colors: [s.color.withValues(alpha: lockedByStreak ? 0.06 : 0.18), AppColors.surfaceCard],
+                colors: [
+                  s.color.withValues(alpha: lockedByStreak ? 0.06 : 0.18),
+                  AppColors.surfaceCard
+                ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -1160,38 +1268,48 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
                     children: [
                       Row(
                         children: [
-                          Text(s.name, style: _t(17, FontWeight.w800, AppColors.textPrimary)),
+                          Text(s.name,
+                              style: _t(17, FontWeight.w800,
+                                  AppColors.textPrimary)),
                           const SizedBox(width: 8),
                           _Pill(text: s.rarity.label, color: s.rarity.color),
                         ],
                       ),
                       const SizedBox(height: 4),
                       Text(s.description,
-                          style: _t(12.5, FontWeight.w400, AppColors.textMuted, height: 1.35)),
+                          style: _t(12.5, FontWeight.w400, AppColors.textMuted,
+                              height: 1.35)),
                       const SizedBox(height: 6),
                       for (final pk in speciesPerks[s.id] ?? const <Perk>[])
                         Text('${pk.emoji} ${pk.rangeText}',
-                            style: _t(11.5, FontWeight.w700, s.color, height: 1.35)),
+                            style: _t(11.5, FontWeight.w700, s.color,
+                                height: 1.35)),
                       Text('🎁 Regalo diario: ${s.rarity.dailyBase}+ 💎',
-                          style: _t(11.5, FontWeight.w600, AppColors.textMuted, height: 1.35)),
+                          style: _t(11.5, FontWeight.w600, AppColors.textMuted,
+                              height: 1.35)),
                       const SizedBox(height: 10),
                       Row(
                         children: [
                           if (!owned && s.price > 0) ...[
-                            Icon(Icons.diamond_rounded, color: AppColors.primary, size: 16),
+                            Icon(Icons.diamond_rounded,
+                                color: AppColors.primary, size: 16),
                             const SizedBox(width: 4),
-                            Text('${s.price}', style: _t(15, FontWeight.w800, AppColors.textPrimary)),
+                            Text('${s.price}',
+                                style: _t(15, FontWeight.w800,
+                                    AppColors.textPrimary)),
                             if (!canAfford && !lockedByStreak) ...[
                               const SizedBox(width: 8),
                               Text('Te faltan ${s.price - u.gems}',
-                                  style: _t(10, FontWeight.w600, AppColors.error)),
+                                  style: _t(
+                                      10, FontWeight.w600, AppColors.error)),
                             ],
                           ],
                           if (lockedByStreak && !owned)
                             Flexible(
                               child: Text(
                                 'Tu racha: ${u.unlockStreak}/${s.requiredStreak}',
-                                style: _t(11, FontWeight.w600, AppColors.warning),
+                                style:
+                                    _t(11, FontWeight.w600, AppColors.warning),
                               ),
                             ),
                           const Spacer(),
@@ -1251,8 +1369,12 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
                       backgroundColor: AppColors.surfaceCard,
                       selectedColor: AppColors.primary,
                       side: BorderSide(color: AppColors.border),
-                      labelStyle: _t(13, FontWeight.w700,
-                          _slotFilter == f ? AppColors.textOnPrimary : AppColors.textMuted),
+                      labelStyle: _t(
+                          13,
+                          FontWeight.w700,
+                          _slotFilter == f
+                              ? AppColors.textOnPrimary
+                              : AppColors.textMuted),
                       showCheckmark: false,
                     ),
                   ),
@@ -1304,7 +1426,8 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
                     borderRadius: BorderRadius.circular(18),
                     color: AppColors.surfaceCard,
                     border: Border.all(
-                      color: c.rarity.color.withValues(alpha: equipped ? 0.95 : 0.35),
+                      color: c.rarity.color
+                          .withValues(alpha: equipped ? 0.95 : 0.35),
                       width: equipped ? 1.6 : 1,
                     ),
                   ),
@@ -1314,14 +1437,16 @@ class _PetScreenState extends State<PetScreen> with TickerProviderStateMixin {
                         child: Opacity(
                           opacity: locked && !owned ? 0.3 : 1,
                           child: Center(
-                            child: Text(c.emoji, style: const TextStyle(fontSize: 44)),
+                            child: Text(c.emoji,
+                                style: const TextStyle(fontSize: 44)),
                           ),
                         ),
                       ),
                       Text(c.name,
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
-                          style: _t(14, FontWeight.w800, AppColors.textPrimary)),
+                          style:
+                              _t(14, FontWeight.w800, AppColors.textPrimary)),
                       const SizedBox(height: 4),
                       _Pill(text: c.rarity.label, color: c.rarity.color),
                       const SizedBox(height: 10),
@@ -1416,7 +1541,10 @@ class _StatBar extends StatelessWidget {
       children: [
         Icon(icon, color: c, size: 20),
         const SizedBox(width: 10),
-        SizedBox(width: 76, child: Text(label, style: _t(13, FontWeight.w700, AppColors.textPrimary))),
+        SizedBox(
+            width: 76,
+            child: Text(label,
+                style: _t(13, FontWeight.w700, AppColors.textPrimary))),
         Expanded(
           child: ClipRRect(
             borderRadius: BorderRadius.circular(6),
@@ -1474,7 +1602,8 @@ class _ActionButton extends StatelessWidget {
               const SizedBox(height: 4),
               Text(label, style: _t(11, FontWeight.w800, color)),
               if (sub != null)
-                Text(sub!, style: _t(10, FontWeight.w600, AppColors.textMuted)),
+                Text(sub!,
+                    style: _t(10, FontWeight.w600, AppColors.textMuted)),
             ],
           ),
         ),
@@ -1505,7 +1634,9 @@ class _BuyButton extends StatelessWidget {
     final Color bg = outlined
         ? Colors.transparent
         : (enabled ? color : AppColors.surface.withValues(alpha: 0.1));
-    final Color fg = outlined ? color : (enabled ? AppColors.textOnPrimary : AppColors.textMuted);
+    final Color fg = outlined
+        ? color
+        : (enabled ? AppColors.textOnPrimary : AppColors.textMuted);
 
     return Material(
       color: bg,
@@ -1518,8 +1649,10 @@ class _BuyButton extends StatelessWidget {
         customBorder: const StadiumBorder(),
         onTap: enabled ? onTap : null,
         child: Container(
-          constraints: BoxConstraints(minWidth: compact ? 0 : 100, minHeight: 40),
-          padding: EdgeInsets.symmetric(horizontal: compact ? 8 : 18, vertical: 8),
+          constraints:
+              BoxConstraints(minWidth: compact ? 0 : 100, minHeight: 40),
+          padding:
+              EdgeInsets.symmetric(horizontal: compact ? 8 : 18, vertical: 8),
           alignment: Alignment.center,
           child: Text(label,
               maxLines: 1,

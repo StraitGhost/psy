@@ -1,18 +1,25 @@
+// lib/services/learning_progress_service.dart
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import 'package:psy/features/profile_selection/profile_data.dart';
+import 'profile_data_service.dart';
 
+/// Todo el progreso se guarda en el PERFIL ACTIVO:
+/// usuarios/{uid}/perfiles/{profileId} (+ mistakes, question_progress)
 class LearningProgressService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
-  final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  String get _uid {
-    final uid = _auth.currentUser?.uid;
-    if (uid == null) throw Exception('No hay usuario autenticado');
-    return uid;
+  Future<ProfileRef> _profileRef() async {
+    final ref = await ProfileDataService.activeRef();
+    if (ref == null) throw Exception('No hay un perfil activo');
+    return ref;
   }
 
-  DocumentReference<Map<String, dynamic>> get _userRef => _db.collection('usuarios').doc(_uid);
+  static int _int(dynamic v) {
+    if (v is num) return v.toInt();
+    if (v is String) return int.tryParse(v) ?? 0;
+    return 0;
+  }
 
   Future<void> recordAttempt({
     required String questionId,
@@ -20,37 +27,43 @@ class LearningProgressService {
     required bool isCorrect,
     required Map<String, dynamic> questionData,
   }) async {
-    final questionRef = _userRef.collection('question_progress').doc(questionId);
-    final mistakesRef = _userRef.collection('mistakes').doc(questionId);
+    final userRef = await _profileRef();
+    final questionRef = userRef.collection('question_progress').doc(questionId);
+    final mistakesRef = userRef.collection('mistakes').doc(questionId);
 
     await _db.runTransaction((transaction) async {
-      final userDoc = await transaction.get(_userRef);
+      final userDoc = await transaction.get(userRef);
 
       if (userDoc.exists) {
         final currentData = userDoc.data()!;
-        final currentCorrect = (currentData['correctAnswers'] ?? 0) as int;
-        final currentWrong = (currentData['wrongAnswers'] ?? 0) as int;
-        final currentXP = (currentData['xp'] ?? 0) as int;
-        final currentCompleted = (currentData['completedCases'] ?? 0) as int; // ✅ CLAVE
+        final currentCorrect = _int(currentData['correctAnswers']);
+        final currentWrong = _int(currentData['wrongAnswers']);
+        final currentXP = _int(currentData['xp']);
+        final currentCompleted = _int(currentData['completedCases']);
+        final currentStreak = _int(currentData['currentStreak']);
 
-        transaction.update(_userRef, {
+        transaction.update(userRef, {
           'correctAnswers': currentCorrect + (isCorrect ? 1 : 0),
           'wrongAnswers': currentWrong + (isCorrect ? 0 : 1),
           'xp': currentXP + (isCorrect ? 10 : 0),
-          'currentStreak': isCorrect ? (currentData['currentStreak'] ?? 0) + 1 : 0,
-          'completedCases': currentCompleted + (isCorrect ? 1 : 0), // ✅ AQUÍ SE INCREMENTA
+          'currentStreak': isCorrect ? currentStreak + 1 : 0,
+          'completedCases': currentCompleted + (isCorrect ? 1 : 0),
         });
       } else {
-        transaction.set(_userRef, {
-          'correctAnswers': isCorrect ? 1 : 0,
-          'wrongAnswers': isCorrect ? 0 : 1,
-          'xp': isCorrect ? 10 : 0,
-          'currentStreak': isCorrect ? 1 : 0,
-          'completedCases': isCorrect ? 1 : 0, // ✅ INICIALIZA EN 1
-          'level': 0,
-          'topicMastery': {},
-          'totalLessons': 0,
-        });
+        transaction.set(
+          userRef,
+          {
+            'correctAnswers': isCorrect ? 1 : 0,
+            'wrongAnswers': isCorrect ? 0 : 1,
+            'xp': isCorrect ? 10 : 0,
+            'currentStreak': isCorrect ? 1 : 0,
+            'completedCases': isCorrect ? 1 : 0,
+            'level': 0,
+            'topicMastery': {},
+            'totalLessons': 0,
+          },
+          SetOptions(merge: true),
+        );
       }
     });
 
@@ -87,33 +100,36 @@ class LearningProgressService {
       await mistakesRef.delete();
     }
 
-    await _updateTopicMastery(tema);
-    debugPrint('✅ Progreso actualizado en usuarios/$_uid - Tema: $tema - Correcta: $isCorrect');
+    await _updateTopicMastery(userRef, tema);
+    debugPrint('✅ Progreso actualizado en ${userRef.path} - Tema: $tema - Correcta: $isCorrect');
   }
 
-  Stream<List<Map<String, dynamic>>> getMistakes() {
-    return _userRef
+  Stream<List<Map<String, dynamic>>> getMistakes() async* {
+    final ref = await _profileRef();
+    yield* ref
         .collection('mistakes')
         .orderBy('failedAt', descending: true)
         .snapshots()
         .map((snapshot) => snapshot.docs.map((doc) => doc.data()).toList());
   }
 
-  Stream<int> getMistakesCount() {
-    return _userRef
+  Stream<int> getMistakesCount() async* {
+    final ref = await _profileRef();
+    yield* ref
         .collection('mistakes')
         .snapshots()
         .map((snapshot) => snapshot.docs.length);
   }
 
   Future<void> clearMistake(String questionId) async {
-    await _userRef.collection('mistakes').doc(questionId).delete();
+    final ref = await _profileRef();
+    await ref.collection('mistakes').doc(questionId).delete();
     debugPrint('✅ Error eliminado: $questionId');
   }
 
-  Future<void> _updateTopicMastery(String tema) async {
+  Future<void> _updateTopicMastery(ProfileRef userRef, String tema) async {
     try {
-      final questionsRef = _userRef.collection('question_progress');
+      final questionsRef = userRef.collection('question_progress');
       final snapshot = await questionsRef.where('tema', isEqualTo: tema).get();
 
       int totalAttempts = 0;
@@ -121,13 +137,13 @@ class LearningProgressService {
 
       for (var doc in snapshot.docs) {
         final data = doc.data();
-        totalAttempts += (data['attempts'] ?? 0) as int;
-        totalCorrect += (data['correctAnswers'] ?? 0) as int;
+        totalAttempts += _int(data['attempts']);
+        totalCorrect += _int(data['correctAnswers']);
       }
 
       final mastery = totalAttempts > 0 ? (totalCorrect / totalAttempts).clamp(0.0, 1.0) : 0.0;
 
-      await _userRef.update({'topicMastery.$tema': mastery});
+      await userRef.update({'topicMastery.$tema': mastery});
       debugPrint('📊 Tema "$tema": $totalCorrect/$totalAttempts = ${(mastery * 100).round()}%');
     } catch (e) {
       debugPrint('❌ Error actualizando topicMastery: $e');
@@ -135,20 +151,22 @@ class LearningProgressService {
   }
 
   Future<void> updateLevel(String newLevel, int totalLessons) async {
-    await _userRef.update({
+    final ref = await _profileRef();
+    await ref.set({
       'level': newLevel,
       'totalLessons': totalLessons,
       'lastLevelExam': FieldValue.serverTimestamp(),
-    });
+    }, SetOptions(merge: true));
   }
 
   Future<bool> canTakeLevelExam() async {
-    final doc = await _userRef.get();
+    final ref = await _profileRef();
+    final doc = await ref.get();
     if (!doc.exists) return true;
 
     final data = doc.data()!;
     final lastExam = data['lastLevelExam'] as Timestamp?;
-    final totalLessons = (data['totalLessons'] ?? 0) as int;
+    final totalLessons = _int(data['totalLessons']);
 
     if (lastExam == null) return true;
 
@@ -156,15 +174,16 @@ class LearningProgressService {
     return daysSinceExam >= 7 || totalLessons >= 100;
   }
 
-  Stream<Map<String, double>> getTopicMasteryStream() {
-    return _userRef.snapshots().map((doc) {
+  Stream<Map<String, double>> getTopicMasteryStream() async* {
+    final ref = await _profileRef();
+    yield* ref.snapshots().map((doc) {
       if (doc.exists) {
         final data = doc.data()!;
         final masteryMap = data['topicMastery'] as Map<String, dynamic>? ?? {};
         return masteryMap.map((key, value) =>
             MapEntry(key, (value is num ? value.toDouble() : 0.0).clamp(0.0, 1.0)));
       }
-      return {};
+      return <String, double>{};
     });
   }
 }

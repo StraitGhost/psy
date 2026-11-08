@@ -13,6 +13,7 @@ import '../../models/avatar_model.dart';
 import '../../services/avatar_service.dart';
 import '../../services/achievement_service.dart';
 import '../../services/profile_service.dart';
+import '../../services/streak_service.dart';
 import '../achievements/achievements_screen.dart';
 import '../achievements/models/achievement_model.dart';
 import '../profile_selection/profile_selection_screen.dart';
@@ -187,12 +188,16 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
       (doc) {
         if (!doc.exists || !mounted) return;
         final data = doc.data() ?? <String, dynamic>{};
-        final dayStreak = _asInt(data['dayStreak']);
 
         setState(() {
           _gems = _asInt(data['gems']);
-          _streakDays =
-              dayStreak > 0 ? dayStreak : _asInt(data['currentStreak']);
+
+          // Racha del PERFIL activo (no la de la raíz)
+          final mine = StreakService.findProfile(data, widget.profile.id);
+          if (mine != null) {
+            _streakDays = StreakService.displayStreak(mine);
+          }
+
           final fromDoc = _avatarFromDoc(data);
           if (fromDoc != null && _avatarIndex == null) {
             final asInt = int.tryParse(fromDoc);
@@ -203,7 +208,6 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
             }
           }
         });
-
       },
       onError: (e) => debugPrint('Error cargando datos de usuario: $e'),
     );
@@ -541,24 +545,24 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
     final stats = ListenableBuilder(
       listenable: _service,
       builder: (context, _) => Container(
-      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
-      decoration: BoxDecoration(
-        color: AppColors.primary.withValues(alpha: 0.07),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppColors.primary.withValues(alpha: 0.25)),
-      ),
-      child: IntrinsicHeight(
-        child: Row(
-          children: [
-            _buildStat(Icons.bar_chart_rounded, 'Nivel', '${_service.level}'),
-            _buildStatDivider(),
-            _buildStat(
-                Icons.local_fire_department, 'Racha', '$_streakDays días'),
-            _buildStatDivider(),
-            _buildStat(Icons.diamond_rounded, 'Gemas', '$_gems'),
-          ],
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
+        decoration: BoxDecoration(
+          color: AppColors.primary.withValues(alpha: 0.07),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: AppColors.primary.withValues(alpha: 0.25)),
         ),
-      ),
+        child: IntrinsicHeight(
+          child: Row(
+            children: [
+              _buildStat(Icons.bar_chart_rounded, 'Nivel', '${_service.level}'),
+              _buildStatDivider(),
+              _buildStat(
+                  Icons.local_fire_department, 'Racha', '$_streakDays días'),
+              _buildStatDivider(),
+              _buildStat(Icons.diamond_rounded, 'Gemas', '$_gems'),
+            ],
+          ),
+        ),
       ),
     );
 
@@ -690,8 +694,7 @@ class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
                         const SizedBox(height: 12),
                         _buildModeSelector(),
                         const SizedBox(height: 24),
-                        _subHeader(
-                            Icons.smart_toy_outlined, 'Temas'),
+                        _subHeader(Icons.smart_toy_outlined, 'Temas'),
                         const SizedBox(height: 4),
                         Text(
                           'Desplázate dentro del cuadro para ver todos los temas',

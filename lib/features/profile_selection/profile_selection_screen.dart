@@ -1,16 +1,69 @@
 // lib/features/profile_selection/profile_selection_screen.dart
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import '../../core/theme/app_colors.dart';
 import '../../models/profile.dart';
 import '../../models/avatar_model.dart';
 import '../../services/profile_service.dart';
+import '../../services/profile_data_service.dart';
 import '../../services/avatar_service.dart';
+import '../../services/streak_service.dart';
 import '../home/home_screen.dart';
 import 'profile_creation_screen.dart';
 import '../auth/login_screen.dart';
 import '../../widgets/loading_transition.dart';
 
+// ─────────────────────────────────────────────────────────────
+// Helpers
+// ─────────────────────────────────────────────────────────────
+
+/// Límite total de casos (igual que en el home: "0 / 12").
+const int _kTotalCases = 12;
+
+/// 999 -> "999", 1200 -> "1.2K", 8889 -> "8.9K", 15000 -> "15K", 2500000 -> "2.5M"
+String _compactNumber(int n) {
+  if (n < 1000) return '$n';
+
+  double value;
+  String suffix;
+  if (n >= 1000000000) {
+    value = n / 1000000000;
+    suffix = 'B';
+  } else if (n >= 1000000) {
+    value = n / 1000000;
+    suffix = 'M';
+  } else {
+    value = n / 1000;
+    suffix = 'K';
+  }
+
+  final text = value >= 100
+      ? value.toStringAsFixed(0)
+      : value.toStringAsFixed(1).replaceAll(RegExp(r'\.0$'), '');
+  return '$text$suffix';
+}
+
+String _streakLabel(int days) =>
+    '${_compactNumber(days)} ${days == 1 ? 'día' : 'días'}';
+
+/// Casos completados = módulos terminados con todo correcto.
+/// El juego los guarda en: completedModules.{módulo}.allCorrect == true
+int _completedModulesCount(Map<String, dynamic> data) {
+  final raw = data['completedModules'];
+  if (raw is! Map) return 0;
+
+  int count = 0;
+  for (final entry in raw.values) {
+    if (entry is Map && entry['allCorrect'] == true) count++;
+  }
+  if (count > _kTotalCases) count = _kTotalCases;
+  return count;
+}
+
+// ─────────────────────────────────────────────────────────────
+// Pantalla
+// ─────────────────────────────────────────────────────────────
 class ProfileSelectionScreen extends StatefulWidget {
   const ProfileSelectionScreen({super.key});
 
@@ -43,15 +96,15 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
 
   Future<void> _selectProfile(UserProfile profile) async {
     await ProfileService.selectProfile(profile.id);
-    
+
     if (mounted) {
       Navigator.of(context).pushReplacement(
         PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) => 
-            LoadingTransition(
-              message: 'Entrando a ${profile.name}...',
-              child: HomeScreen(profile: profile),
-            ),
+          pageBuilder: (context, animation, secondaryAnimation) =>
+              LoadingTransition(
+            message: 'Entrando a ${profile.name}...',
+            child: HomeScreen(profile: profile),
+          ),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return FadeTransition(
               opacity: animation,
@@ -71,8 +124,8 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
 
   void _createNewProfile() {
     Navigator.push(
-      context, 
-      MaterialPageRoute(builder: (context) => const ProfileCreationScreen())
+      context,
+      MaterialPageRoute(builder: (context) => const ProfileCreationScreen()),
     ).then((_) => _loadData());
   }
 
@@ -110,7 +163,8 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
             style: ElevatedButton.styleFrom(backgroundColor: AppColors.error),
             child: Text(
               'Salir',
-              style: TextStyle(color: AppColors.textOnPrimary, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                  color: AppColors.textOnPrimary, fontWeight: FontWeight.w600),
             ),
           ),
         ],
@@ -121,6 +175,7 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
 
     final navigator = Navigator.of(context);
     await FirebaseAuth.instance.signOut();
+    ProfileDataService.clearActive();
 
     navigator.pushAndRemoveUntil(
       MaterialPageRoute(builder: (_) => const LoginScreen()),
@@ -149,16 +204,22 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Icon(Icons.psychology, color: AppColors.textOnPrimary, size: 40),
+                  Icon(Icons.psychology,
+                      color: AppColors.textOnPrimary, size: 40),
                   const SizedBox(height: 12),
                   Text(
-                    'PsyCase', 
-                    style: TextStyle(color: AppColors.textOnPrimary, fontSize: 24, fontWeight: FontWeight.w700),
+                    'PsyCase',
+                    style: TextStyle(
+                        color: AppColors.textOnPrimary,
+                        fontSize: 24,
+                        fontWeight: FontWeight.w700),
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'Simulador de Psicopatología', 
-                    style: TextStyle(color: AppColors.textOnPrimary.withValues(alpha: 0.7), fontSize: 13),
+                    'Simulador de Psicopatología',
+                    style: TextStyle(
+                        color: AppColors.textOnPrimary.withValues(alpha: 0.7),
+                        fontSize: 13),
                   ),
                 ],
               ),
@@ -167,7 +228,6 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
               child: ListView(
                 padding: const EdgeInsets.symmetric(vertical: 8),
                 children: [
-                  // ✅ ELIMINADO: Opción "Ver Datos"
                   Divider(color: AppColors.border, height: 1),
                   ListTile(
                     leading: Icon(Icons.logout, color: AppColors.error),
@@ -203,27 +263,36 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
                 children: [
                   Builder(
                     builder: (context) => IconButton(
-                      icon: Icon(Icons.menu, color: AppColors.textPrimary, size: 28),
+                      icon: Icon(Icons.menu,
+                          color: AppColors.textPrimary, size: 28),
                       onPressed: () => Scaffold.of(context).openDrawer(),
                     ),
                   ),
                   const SizedBox(width: 12),
                   Container(
-                    width: 50, height: 50,
+                    width: 50,
+                    height: 50,
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [AppColors.primary, AppColors.secondary]),
+                      gradient: LinearGradient(
+                          colors: [AppColors.primary, AppColors.secondary]),
                       borderRadius: const BorderRadius.all(Radius.circular(14)),
                     ),
-                    child: Icon(Icons.psychology, color: AppColors.textOnPrimary, size: 28),
+                    child: Icon(Icons.psychology,
+                        color: AppColors.textOnPrimary, size: 28),
                   ),
                   const SizedBox(width: 12),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('PsyCase', style: TextStyle(color: AppColors.textPrimary, fontSize: 28, fontWeight: FontWeight.w700)),
+                      Text('PsyCase',
+                          style: TextStyle(
+                              color: AppColors.textPrimary,
+                              fontSize: 28,
+                              fontWeight: FontWeight.w700)),
                       Text(
                         'Simulador de Psicopatología',
-                        style: TextStyle(color: AppColors.textMuted, fontSize: 14),
+                        style: TextStyle(
+                            color: AppColors.textMuted, fontSize: 14),
                       ),
                     ],
                   ),
@@ -247,14 +316,17 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
                     icon: Icon(Icons.add, color: AppColors.primary),
                     label: Text(
                       'Nuevo perfil',
-                      style: TextStyle(color: AppColors.primary, fontWeight: FontWeight.w600),
+                      style: TextStyle(
+                          color: AppColors.primary,
+                          fontWeight: FontWeight.w600),
                     ),
                   ),
                 ],
               ),
               const SizedBox(height: 24),
               if (_loading)
-                Center(child: CircularProgressIndicator(color: AppColors.primary))
+                Center(
+                    child: CircularProgressIndicator(color: AppColors.primary))
               else if (_profiles.isEmpty)
                 Expanded(
                   child: Center(
@@ -262,9 +334,13 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          width: 100, height: 100,
-                          decoration: BoxDecoration(color: AppColors.surfaceCard, shape: BoxShape.circle),
-                          child: Icon(Icons.person_add, size: 50, color: AppColors.primary),
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                              color: AppColors.surfaceCard,
+                              shape: BoxShape.circle),
+                          child: Icon(Icons.person_add,
+                              size: 50, color: AppColors.primary),
                         ),
                         const SizedBox(height: 24),
                         Text(
@@ -278,18 +354,22 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
                         const SizedBox(height: 8),
                         Text(
                           'Crea tu primer perfil para comenzar',
-                          style: TextStyle(color: AppColors.textMuted, fontSize: 14),
+                          style: TextStyle(
+                              color: AppColors.textMuted, fontSize: 14),
                         ),
                         const SizedBox(height: 24),
                         ElevatedButton.icon(
-                          onPressed: _createNewProfile, 
+                          onPressed: _createNewProfile,
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.primary,
-                            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                          ), 
-                          icon: const Icon(Icons.add), 
-                          label: Text('Crear perfil', style: TextStyle(color: AppColors.textOnPrimary)),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 24, vertical: 12),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12)),
+                          ),
+                          icon: const Icon(Icons.add),
+                          label: Text('Crear perfil',
+                              style: TextStyle(color: AppColors.textOnPrimary)),
                         ),
                       ],
                     ),
@@ -298,15 +378,16 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
               else
                 Expanded(
                   child: GridView.builder(
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3, 
-                      mainAxisSpacing: 20, 
-                      crossAxisSpacing: 20, 
-                      childAspectRatio: 0.85
-                    ),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3,
+                            mainAxisSpacing: 20,
+                            crossAxisSpacing: 20,
+                            childAspectRatio: 0.85),
                     itemCount: _profiles.length,
                     itemBuilder: (context, index) {
                       return _ProfileCard(
+                        key: ValueKey(_profiles[index].id),
                         profile: _profiles[index],
                         avatarImage: _getAvatarImage(_profiles[index]),
                         onTap: () => _selectProfile(_profiles[index]),
@@ -345,14 +426,16 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
             ),
           ),
           ElevatedButton(
-            onPressed: () => Navigator.pop(context, true), 
+            onPressed: () => Navigator.pop(context, true),
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.error,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            ), 
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12)),
+            ),
             child: Text(
               'Eliminar',
-              style: TextStyle(color: AppColors.textOnPrimary, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                  color: AppColors.textOnPrimary, fontWeight: FontWeight.w600),
             ),
           ),
         ],
@@ -367,29 +450,32 @@ class _ProfileSelectionScreenState extends State<ProfileSelectionScreen> {
 
 // ═══════════════════════════════════════════════════════════════
 // WIDGETS DE TARJETA DE PERFIL
-// ══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════════
 
 class _ProfileCard extends StatefulWidget {
   final UserProfile profile;
   final String avatarImage;
   final VoidCallback onTap;
   final VoidCallback onDelete;
-  
+
   const _ProfileCard({
-    required this.profile, 
-    required this.avatarImage, 
-    required this.onTap, 
-    required this.onDelete
+    super.key,
+    required this.profile,
+    required this.avatarImage,
+    required this.onTap,
+    required this.onDelete,
   });
 
   @override
   State<_ProfileCard> createState() => _ProfileCardState();
 }
 
-class _ProfileCardState extends State<_ProfileCard> with SingleTickerProviderStateMixin {
+class _ProfileCardState extends State<_ProfileCard>
+    with SingleTickerProviderStateMixin {
   bool _isPressed = false;
   late AnimationController _animationController;
   late Animation<double> _scaleAnimation;
+  late final Stream<DocumentSnapshot<Map<String, dynamic>>> _dataStream;
 
   @override
   void initState() {
@@ -401,6 +487,16 @@ class _ProfileCardState extends State<_ProfileCard> with SingleTickerProviderSta
     _scaleAnimation = Tween<double>(begin: 1.0, end: 1.05).animate(
       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
+    _dataStream = _buildStream();
+  }
+
+  /// Datos de progreso de ESTE perfil: usuarios/{uid}/perfiles/{profileId}
+  Stream<DocumentSnapshot<Map<String, dynamic>>> _buildStream() {
+    final ref = ProfileDataService.refFor(widget.profile.id);
+    if (ref == null) {
+      return const Stream<DocumentSnapshot<Map<String, dynamic>>>.empty();
+    }
+    return ref.snapshots();
   }
 
   @override
@@ -417,9 +513,6 @@ class _ProfileCardState extends State<_ProfileCard> with SingleTickerProviderSta
 
   @override
   Widget build(BuildContext context) {
-    final completedCases = (widget.profile.progress['completedCases'] as List?)?.length ?? 0;
-    final streakDays = widget.profile.dayStreak;
-    
     return GestureDetector(
       onTap: _handleTap,
       child: AnimatedBuilder(
@@ -429,12 +522,11 @@ class _ProfileCardState extends State<_ProfileCard> with SingleTickerProviderSta
             scale: _scaleAnimation.value,
             child: Container(
               decoration: BoxDecoration(
-                color: AppColors.surfaceCard, 
-                borderRadius: BorderRadius.circular(20), 
+                color: AppColors.surfaceCard,
+                borderRadius: BorderRadius.circular(20),
                 border: Border.all(
-                  color: _isPressed ? AppColors.primary : AppColors.border,
-                  width: _isPressed ? 3 : 1
-                ),
+                    color: _isPressed ? AppColors.primary : AppColors.border,
+                    width: _isPressed ? 3 : 1),
                 boxShadow: _isPressed
                     ? [
                         BoxShadow(
@@ -455,21 +547,21 @@ class _ProfileCardState extends State<_ProfileCard> with SingleTickerProviderSta
                           children: [
                             AnimatedContainer(
                               duration: const Duration(milliseconds: 200),
-                              width: 80, 
+                              width: 80,
                               height: 80,
                               decoration: BoxDecoration(
-                                color: _isPressed 
+                                color: _isPressed
                                     ? AppColors.primary.withValues(alpha: 0.2)
-                                    : AppColors.primary.withValues(alpha: 0.1), 
+                                    : AppColors.primary.withValues(alpha: 0.1),
                                 shape: BoxShape.circle,
                                 border: Border.all(
-                                  color: AppColors.primary, 
-                                  width: _isPressed ? 3 : 2
-                                ),
+                                    color: AppColors.primary,
+                                    width: _isPressed ? 3 : 2),
                                 boxShadow: _isPressed
                                     ? [
                                         BoxShadow(
-                                          color: AppColors.primary.withValues(alpha: 0.6),
+                                          color: AppColors.primary
+                                              .withValues(alpha: 0.6),
                                           blurRadius: 15,
                                           spreadRadius: 3,
                                         ),
@@ -478,11 +570,12 @@ class _ProfileCardState extends State<_ProfileCard> with SingleTickerProviderSta
                               ),
                               child: ClipOval(
                                 child: Image.asset(
-                                  widget.avatarImage, 
-                                  width: 80, 
-                                  height: 80, 
-                                  fit: BoxFit.cover, 
-                                  errorBuilder: (context, error, stackTrace) => Icon(
+                                  widget.avatarImage,
+                                  width: 80,
+                                  height: 80,
+                                  fit: BoxFit.cover,
+                                  errorBuilder: (context, error, stackTrace) =>
+                                      Icon(
                                     Icons.person,
                                     size: 48,
                                     color: AppColors.textMuted,
@@ -492,49 +585,83 @@ class _ProfileCardState extends State<_ProfileCard> with SingleTickerProviderSta
                             ),
                             const SizedBox(height: 16),
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 12),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 12),
                               child: Text(
-                                widget.profile.name, 
+                                widget.profile.name,
                                 style: TextStyle(
-                                  color: _isPressed ? AppColors.primary : AppColors.textPrimary, 
-                                  fontSize: 18, 
-                                  fontWeight: _isPressed ? FontWeight.w800 : FontWeight.w700
-                                ), 
+                                    color: _isPressed
+                                        ? AppColors.primary
+                                        : AppColors.textPrimary,
+                                    fontSize: 18,
+                                    fontWeight: _isPressed
+                                        ? FontWeight.w800
+                                        : FontWeight.w700),
                                 textAlign: TextAlign.center,
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ),
                             const SizedBox(height: 16),
-                            Container(
-                              margin: const EdgeInsets.symmetric(horizontal: 16),
-                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                              decoration: BoxDecoration(
-                                color: AppColors.background,
-                                borderRadius: BorderRadius.circular(12),
-                                border: Border.all(
-                                  color: _isPressed ? AppColors.primary : AppColors.border,
-                                  width: _isPressed ? 2 : 1
-                                ),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                children: [
-                                  _StatItem(
-                                    icon: Icons.check_circle_outline, 
-                                    label: 'Casos', 
-                                    value: '$completedCases', 
-                                    highlight: _isPressed,
+
+                            // CASOS Y RACHA DE ESTE PERFIL (en tiempo real)
+                            StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+                              stream: _dataStream,
+                              builder: (context, snap) {
+                                int streakDays = 0;
+                                int completedCases = 0;
+
+                                if (snap.hasData && snap.data!.exists) {
+                                  final data = snap.data!.data() ??
+                                      <String, dynamic>{};
+                                  streakDays = StreakService.displayStreak(data);
+                                  completedCases =
+                                      _completedModulesCount(data);
+                                }
+
+                                return Container(
+                                  margin: const EdgeInsets.symmetric(
+                                      horizontal: 16),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 12, vertical: 10),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.background,
+                                    borderRadius: BorderRadius.circular(12),
+                                    border: Border.all(
+                                        color: _isPressed
+                                            ? AppColors.primary
+                                            : AppColors.border,
+                                        width: _isPressed ? 2 : 1),
                                   ),
-                                  Container(width: 1, height: 24, color: AppColors.border),
-                                  _StatItem(
-                                    icon: Icons.local_fire_department, 
-                                    label: 'Racha', 
-                                    value: '$streakDays días',
-                                    highlight: _isPressed,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Flexible(
+                                        child: _StatItem(
+                                          icon: Icons.check_circle_outline,
+                                          label: 'Casos',
+                                          value:
+                                              '$completedCases / $_kTotalCases',
+                                          highlight: _isPressed,
+                                        ),
+                                      ),
+                                      Container(
+                                          width: 1,
+                                          height: 24,
+                                          color: AppColors.border),
+                                      Flexible(
+                                        child: _StatItem(
+                                          icon: Icons.local_fire_department,
+                                          label: 'Racha',
+                                          value: _streakLabel(streakDays),
+                                          highlight: _isPressed,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
+                                );
+                              },
                             ),
                           ],
                         ),
@@ -543,9 +670,10 @@ class _ProfileCardState extends State<_ProfileCard> with SingleTickerProviderSta
                         width: double.infinity,
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: AppColors.surface, 
-                          borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20))
-                        ),
+                            color: AppColors.surface,
+                            borderRadius: const BorderRadius.only(
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20))),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -568,15 +696,16 @@ class _ProfileCardState extends State<_ProfileCard> with SingleTickerProviderSta
                             ),
                             const SizedBox(width: 6),
                             GestureDetector(
-                              onTap: widget.onDelete, 
+                              onTap: widget.onDelete,
                               child: Text(
-                                'Eliminar', 
+                                'Eliminar',
                                 style: TextStyle(
-                                  color: _isPressed ? AppColors.textMuted : AppColors.error, 
-                                  fontSize: 12, 
-                                  fontWeight: FontWeight.w600
-                                )
-                              )
+                                    color: _isPressed
+                                        ? AppColors.textMuted
+                                        : AppColors.error,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w600),
+                              ),
                             ),
                           ],
                         ),
@@ -591,7 +720,8 @@ class _ProfileCardState extends State<_ProfileCard> with SingleTickerProviderSta
                       ),
                       child: Center(
                         child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 8),
                           decoration: BoxDecoration(
                             color: AppColors.primary,
                             borderRadius: BorderRadius.circular(20),
@@ -636,10 +766,10 @@ class _StatItem extends StatelessWidget {
   final String label;
   final String value;
   final bool highlight;
-  
+
   const _StatItem({
-    required this.icon, 
-    required this.label, 
+    required this.icon,
+    required this.label,
     required this.value,
     this.highlight = false,
   });
@@ -647,33 +777,37 @@ class _StatItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              icon, 
-              size: 14, 
-              color: AppColors.primary
-            ),
-            const SizedBox(width: 4),
-            Text(
-              label, 
-              style: TextStyle(
-                color: highlight ? AppColors.primary : AppColors.textMuted, 
-                fontSize: 11,
-                fontWeight: highlight ? FontWeight.w600 : FontWeight.normal,
-              )
-            ),
-          ],
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(icon, size: 14, color: AppColors.primary),
+              const SizedBox(width: 4),
+              Text(
+                label,
+                style: TextStyle(
+                  color: highlight ? AppColors.primary : AppColors.textMuted,
+                  fontSize: 11,
+                  fontWeight: highlight ? FontWeight.w600 : FontWeight.normal,
+                ),
+              ),
+            ],
+          ),
         ),
         const SizedBox(height: 4),
-        Text(
-          value, 
-          style: TextStyle(
-            color: highlight ? AppColors.primary : AppColors.textPrimary, 
-            fontSize: 14, 
-            fontWeight: highlight ? FontWeight.w800 : FontWeight.w700
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            value,
+            maxLines: 1,
+            style: TextStyle(
+              color: highlight ? AppColors.primary : AppColors.textPrimary,
+              fontSize: 14,
+              fontWeight: highlight ? FontWeight.w800 : FontWeight.w700,
+            ),
           ),
         ),
       ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../core/theme/app_colors.dart';
 import '../profile_selection/profile_selection_screen.dart';
@@ -14,9 +15,13 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final _email = TextEditingController();
   final _pass = TextEditingController();
+  final _emailFocus = FocusNode();
+  final _passFocus = FocusNode();
+
   bool _loading = false;
   bool _hide = true;
   bool _checkingSession = true;
+  bool _remember = true; // ✅ Nueva opción
 
   @override
   void initState() {
@@ -28,6 +33,8 @@ class _LoginScreenState extends State<LoginScreen> {
   void dispose() {
     _email.dispose();
     _pass.dispose();
+    _emailFocus.dispose();
+    _passFocus.dispose();
     super.dispose();
   }
 
@@ -50,11 +57,21 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Future<void> _login() async {
+    // ✅ Permite ejecutar desde Enter aunque el foco esté en el TextField
+    _emailFocus.unfocus();
+    _passFocus.unfocus();
+
     if (_email.text.trim().isEmpty || _pass.text.isEmpty) {
       return _error('Completa todos los campos');
     }
+
     setState(() => _loading = true);
     try {
+      // ✅ Configurar persistencia según el checkbox
+      await FirebaseAuth.instance.setPersistence(
+        _remember ? Persistence.LOCAL : Persistence.SESSION,
+      );
+
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: _email.text.trim(),
         password: _pass.text,
@@ -156,21 +173,61 @@ class _LoginScreenState extends State<LoginScreen> {
             Text('Inicia sesión para acceder a tus perfiles',
                 textAlign: TextAlign.center, style: TextStyle(color: AppColors.textMuted, fontSize: 14)),
             const SizedBox(height: 32),
-            _field(_email, 'Correo electrónico', Icons.mail_outline_rounded, type: TextInputType.emailAddress),
+            _field(
+              _email,
+              'Correo electrónico',
+              Icons.mail_outline_rounded,
+              focusNode: _emailFocus,
+              type: TextInputType.emailAddress,
+              textInputAction: TextInputAction.next, // ✅ Pasa al siguiente campo
+              onSubmitted: (_) => FocusScope.of(context).requestFocus(_passFocus),
+            ),
             const SizedBox(height: 16),
             _field(
               _pass,
               'Contraseña',
               Icons.lock_outline_rounded,
+              focusNode: _passFocus,
               obscure: _hide,
               enableSuggestions: false,
               autocorrect: false,
+              textInputAction: TextInputAction.done, // ✅ Muestra "Listo/Go" en el teclado
+              onSubmitted: (_) => _login(), // ✅ Ejecuta login al presionar Enter
               suffix: IconButton(
                 icon: Icon(_hide ? Icons.visibility_off_outlined : Icons.visibility_outlined, color: AppColors.textMuted, size: 20),
                 onPressed: () => setState(() => _hide = !_hide),
               ),
             ),
-            const SizedBox(height: 28),
+            const SizedBox(height: 12),
+
+            // ✅ Checkbox "Mantener sesión iniciada"
+            Row(
+              children: [
+                SizedBox(
+                  width: 22,
+                  height: 22,
+                  child: Checkbox(
+                    value: _remember,
+                    onChanged: (v) => setState(() => _remember = v ?? true),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                    activeColor: AppColors.primary,
+                    side: BorderSide(color: AppColors.border, width: 1.5),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () => setState(() => _remember = !_remember),
+                    child: Text(
+                      'Mantener sesión iniciada',
+                      style: TextStyle(color: AppColors.textMuted, fontSize: 13.5),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 22),
             _button(),
             const SizedBox(height: 8),
             TextButton(
@@ -182,14 +239,28 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       );
 
-  Widget _field(TextEditingController c, String label, IconData icon,
-      {bool obscure = false, TextInputType? type, Widget? suffix, bool enableSuggestions = true, bool autocorrect = true}) {
+  Widget _field(
+    TextEditingController c,
+    String label,
+    IconData icon, {
+    FocusNode? focusNode,
+    bool obscure = false,
+    TextInputType? type,
+    TextInputAction? textInputAction,
+    ValueChanged<String>? onSubmitted,
+    Widget? suffix,
+    bool enableSuggestions = true,
+    bool autocorrect = true,
+  }) {
     OutlineInputBorder b(Color col, [double w = 1]) => OutlineInputBorder(
         borderRadius: BorderRadius.circular(16), borderSide: BorderSide(color: col, width: w));
     return TextField(
       controller: c,
+      focusNode: focusNode,
       obscureText: obscure,
       keyboardType: type,
+      textInputAction: textInputAction,
+      onSubmitted: onSubmitted,
       enableSuggestions: enableSuggestions,
       autocorrect: autocorrect,
       cursorColor: AppColors.primary,

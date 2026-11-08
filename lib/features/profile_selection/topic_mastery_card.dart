@@ -8,7 +8,7 @@ import 'profile_data.dart';
 
 class TopicMasteryCard extends StatelessWidget {
   final UserStats stats;
-  
+
   const TopicMasteryCard({super.key, required this.stats});
 
   @override
@@ -20,8 +20,7 @@ class TopicMasteryCard extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, c) {
           final wide = c.maxWidth >= 700;
-          
-          // ✅ CAMBIO: Usar AppColors.primary para que el radar refleje el tema del agente
+
           final radar = AspectRatio(
             aspectRatio: wide ? 1.1 : 1.0,
             child: CustomPaint(
@@ -29,10 +28,10 @@ class TopicMasteryCard extends StatelessWidget {
                 labels: [for (final t in topics) t.name],
                 values: [for (final t in topics) (stats.mastery[t.id] ?? 0) / 100],
                 grid: AppColors.border,
-                fill: AppColors.primary.withValues(alpha: 0.25), // ✅ Dinámico
-                line: AppColors.primary,                         // ✅ Dinámico
+                fill: AppColors.primary.withValues(alpha: 0.25),
+                line: AppColors.primary,
                 labelColor: AppColors.textPrimary,
-                pctColor: AppColors.primary,                     // ✅ Dinámico
+                pctColor: AppColors.primary,
               ),
             ),
           );
@@ -86,7 +85,10 @@ class TopicMasteryCard extends StatelessWidget {
             child: Text(
               t.name,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.textPrimary),
+              style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.textPrimary),
             ),
           ),
           SizedBox(
@@ -97,7 +99,7 @@ class TopicMasteryCard extends StatelessWidget {
               style: TextStyle(
                 fontSize: 13.5,
                 fontWeight: FontWeight.w800,
-                color: pct > 0 ? AppColors.primary : AppColors.textMuted, // ✅ Dinámico
+                color: pct > 0 ? AppColors.primary : AppColors.textMuted,
               ),
             ),
           ),
@@ -110,7 +112,7 @@ class TopicMasteryCard extends StatelessWidget {
                 value: (pct / 100).clamp(0.0, 1.0),
                 minHeight: 7,
                 backgroundColor: AppColors.border,
-                valueColor: AlwaysStoppedAnimation(AppColors.primary), // ✅ Dinámico
+                valueColor: AlwaysStoppedAnimation(AppColors.primary),
               ),
             ),
           ),
@@ -181,11 +183,9 @@ class _RadarPainter extends CustomPainter {
       i == 0 ? data.moveTo(o.dx, o.dy) : data.lineTo(o.dx, o.dy);
     }
     data.close();
-    
-    // Relleno del radar con el color del agente
+
     canvas.drawPath(data, Paint()..color = fill);
-    
-    // Línea del radar con el color del agente
+
     canvas.drawPath(
       data,
       Paint()
@@ -194,10 +194,10 @@ class _RadarPainter extends CustomPainter {
         ..strokeJoin = StrokeJoin.round
         ..color = line,
     );
-    
-    // Puntos del radar con el color del agente
+
     for (var i = 0; i < n; i++) {
-      canvas.drawCircle(pt(i, values[i].clamp(0.0, 1.0)), 4.5, Paint()..color = line);
+      canvas.drawCircle(
+          pt(i, values[i].clamp(0.0, 1.0)), 4.5, Paint()..color = line);
     }
 
     // Etiquetas
@@ -210,11 +210,19 @@ class _RadarPainter extends CustomPainter {
         text: TextSpan(children: [
           TextSpan(
             text: labels[i],
-            style: TextStyle(fontSize: 11.5, color: labelColor, fontWeight: FontWeight.w500, height: 1.25),
+            style: TextStyle(
+                fontSize: 11.5,
+                color: labelColor,
+                fontWeight: FontWeight.w500,
+                height: 1.25),
           ),
           TextSpan(
             text: '\n${(values[i] * 100).round()}%',
-            style: TextStyle(fontSize: 11.5, color: pctColor, fontWeight: FontWeight.w800, height: 1.25),
+            style: TextStyle(
+                fontSize: 11.5,
+                color: pctColor,
+                fontWeight: FontWeight.w800,
+                height: 1.25),
           ),
         ]),
       )..layout();

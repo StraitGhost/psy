@@ -52,6 +52,8 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
 
+  flutter_launcher_icons: ^0.13.1
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -93,3 +95,13 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_launcher_icons:
+  android: true
+  ios: true
+  # Ruta a tu imagen de ícono (debe ser PNG, idealmente 1024x1024 px)
+  # Como ya tienes declarada la carpeta assets/images/, puedes usarla:
+  image_path: "assets/images/icono_psy.png" 
+  
+  # Opcional: Para íconos adaptativos en Android (recomendado para Android 8.0+)
+  adaptive_icon_background: "#FFFFFF" # Color de fondo o ruta a una imagen
+  # adaptive_icon_foreground: "assets/images/icono_psy_foreground.png"

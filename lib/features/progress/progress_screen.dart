@@ -1,11 +1,13 @@
+// lib/features/progress/progress_screen.dart
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/theme_preferences.dart';
 import '../../models/profile.dart';
+import '../../services/profile_data_service.dart';
+import '../../services/streak_service.dart';
 
 // ─────────────────────────────────────────────────────────────
 // Colores FIJOS de logros y rachas (NO cambian con el agente)
@@ -53,8 +55,10 @@ const _levelNames = [
 const _levelThresholds = [0.0, 0.50, 0.60, 0.70, 0.80, 0.95];
 const _dailyGoal = 10;
 
-int _asInt(dynamic v) => v is num ? v.toInt() : 0;
-double _asDouble(dynamic v) => v is num ? v.toDouble() : 0.0;
+int _asInt(dynamic v) =>
+    v is num ? v.toInt() : int.tryParse('${v ?? ''}') ?? 0;
+double _asDouble(dynamic v) =>
+    v is num ? v.toDouble() : double.tryParse('${v ?? ''}') ?? 0.0;
 
 Map<String, double> _parseMastery(dynamic raw) {
   if (raw is! Map) return {};
@@ -77,22 +81,16 @@ class _Data {
     required this.daily,
   });
 
-  // ✅ CORREGIDO: Búsqueda robusta de campos en nivel raíz o dentro de 'progress'
+  /// [m] es el documento usuarios/{uid}/perfiles/{profileId}
   factory _Data.fromMap(Map<String, dynamic> m) {
-    // 1. Buscar dayStreak (nombre correcto en tu Firebase), con fallback a currentStreak
-    final streak = _asInt(m['dayStreak']) > 0 
-        ? _asInt(m['dayStreak']) 
-        : _asInt(m['currentStreak']);
-        
-    // 2. Buscar dailyActivity en nivel raíz o dentro de progress
-    final rawDaily = m['dailyActivity'] ?? (m['progress'] is Map ? m['progress']['dailyActivity'] : null);
+    // Racha real del perfil (0 si se rompió y no tiene protectores)
+    final streak = StreakService.displayStreak(m);
+
+    final rawDaily = m['dailyActivity'];
     final daily = <String, int>{};
     if (rawDaily is Map) {
       rawDaily.forEach((k, v) => daily[k.toString()] = _asInt(v));
     }
-    
-    // 3. Buscar topicMastery en nivel raíz o dentro de progress
-    final rawMastery = m['topicMastery'] ?? (m['progress'] is Map ? m['progress']['topicMastery'] : null);
 
     return _Data(
       correct: _asInt(m['correctAnswers']),
@@ -100,7 +98,7 @@ class _Data {
       xp: _asInt(m['xp']),
       streak: streak,
       bestStreak: math.max(_asInt(m['bestStreak']), streak),
-      mastery: _parseMastery(rawMastery),
+      mastery: _parseMastery(m['topicMastery']),
       daily: daily,
     );
   }
@@ -135,7 +133,8 @@ class ProgressScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final uid = FirebaseAuth.instance.currentUser?.uid;
+    // Datos de ESTE perfil: usuarios/{uid}/perfiles/{profileId}
+    final ref = ProfileDataService.refFor(userProfile.id);
 
     return ValueListenableBuilder<String>(
       valueListenable: ThemePreferences.instance.themeMode,
@@ -156,16 +155,13 @@ class ProgressScreen extends StatelessWidget {
                 children: [
                   _buildTopBar(context),
                   Expanded(
-                    child: uid == null
+                    child: ref == null
                         ? _buildMessage(
                             Icons.lock_outline_rounded,
                             'No hay usuario logueado',
                             'Inicia sesión para ver tu progreso.')
-                        : StreamBuilder<DocumentSnapshot>(
-                            stream: FirebaseFirestore.instance
-                                .collection('usuarios')
-                                .doc(uid)
-                                .snapshots(),
+                        : StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+                            stream: ref.snapshots(),
                             builder: (context, snap) {
                               if (snap.hasError) {
                                 return _buildMessage(
@@ -187,9 +183,8 @@ class ProgressScreen extends StatelessWidget {
                                   'Responde algunas preguntas para ver tu progreso aquí.',
                                 );
                               }
-                              final map = snap.data!.data()
-                                      as Map<String, dynamic>? ??
-                                  {};
+                              final map =
+                                  snap.data!.data() ?? <String, dynamic>{};
                               final d = _Data.fromMap(map);
                               return LayoutBuilder(
                                 builder: (_, c) =>

@@ -1,8 +1,8 @@
 // lib/features/home/home_screen.dart
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:psy/features/profile_selection/profile_data.dart';
+import 'package:psy/services/profile_data_service.dart';
 import '../../core/theme/app_colors.dart';
 import '../../models/profile.dart';
 import '../../services/achievement_service.dart';
@@ -22,7 +22,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // ✅ CORREGIDO: Se eliminó '_selectedIndex' porque no se usaba en la UI
   late UserProfile _profile;
   bool _isSidebarOpen = false;
 
@@ -58,16 +57,15 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _initAchievements() {
+    // Asegura que todo el progreso se lea/escriba en ESTE perfil
+    ProfileDataService.setActive(_profile.id);
+
     final ach = AchievementService.instance;
     ach.recordDailyVisit();
 
-    final uid = FirebaseAuth.instance.currentUser?.uid;
-    if (uid != null) {
-      _profileSub = FirebaseFirestore.instance
-          .collection('usuarios')
-          .doc(uid)
-          .snapshots()
-          .listen((snap) {
+    final ref = ProfileDataService.refFor(_profile.id);
+    if (ref != null) {
+      _profileSub = ref.snapshots().listen((snap) {
         final data = snap.data();
         if (data != null) ach.syncFromProfile(data);
       });
@@ -126,14 +124,12 @@ class _HomeScreenState extends State<HomeScreen> {
               Text(
                 achievement.title,
                 textAlign: TextAlign.center,
-                // ✅ CORREGIDO: Se quitó 'const' porque AppColors.textPrimary ahora es dinámico
                 style: TextStyle(color: AppColors.textPrimary, fontSize: 16, fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 4),
               Text(
                 achievement.description,
                 textAlign: TextAlign.center,
-                // ✅ CORREGIDO: Se quitó 'const' porque AppColors.textMuted ahora es dinámico
                 style: TextStyle(color: AppColors.textMuted, fontSize: 13),
               ),
               const SizedBox(height: 16),
@@ -176,12 +172,11 @@ class _HomeScreenState extends State<HomeScreen> {
   void _closeSidebar() => setState(() => _isSidebarOpen = false);
 
   Future<void> _handleMenuSelection(int index) async {
-    // ✅ CORREGIDO: Se eliminó la asignación a _selectedIndex
     _closeSidebar();
 
     if (index == 1) {
       await Navigator.push(context, MaterialPageRoute(builder: (_) => MistakesScreen(userProfile: _profile)));
-      if (mounted) setState(() => _isSidebarOpen = false); // Aseguramos que el sidebar se cierre
+      if (mounted) setState(() => _isSidebarOpen = false);
     } else if (index == 2) {
       await Navigator.push(context, MaterialPageRoute(builder: (_) => ProgressScreen(userProfile: _profile)));
       if (mounted) setState(() => _isSidebarOpen = false);

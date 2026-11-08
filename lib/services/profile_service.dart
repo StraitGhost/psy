@@ -1,13 +1,22 @@
+// lib/services/profile_service.dart
 import 'package:flutter/foundation.dart';
 import '../models/profile.dart';
 import 'storage_service.dart';
+import 'profile_data_service.dart';
 
 class ProfileService {
   // Obtener todos los perfiles desde Firestore
   static Future<List<UserProfile>> getAllProfiles() async {
     try {
       final profilesData = await StorageService.getProfiles();
-      return profilesData.map((data) => UserProfile.fromJson(data)).toList();
+      final profiles =
+          profilesData.map((data) => UserProfile.fromJson(data)).toList();
+
+      // Primera vez: los datos viejos de la cuenta pasan al perfil 1
+      await ProfileDataService.migrateIfNeeded(
+          profiles.map((p) => p.id).toList());
+
+      return profiles;
     } catch (e) {
       debugPrint('Error obteniendo perfiles: $e');
       return [];
@@ -19,7 +28,7 @@ class ProfileService {
     try {
       final profiles = await getAllProfiles();
       final index = profiles.indexWhere((p) => p.id == profile.id);
-      
+
       if (index != -1) {
         profiles[index] = profile;
       } else {
@@ -36,8 +45,6 @@ class ProfileService {
   }
 
   // Actualizar solo la información editable del perfil
-  // (carrera, objetivo, nivel de experiencia y mensaje personal).
-  // El resto de datos del perfil (progreso, racha, avatar...) no se toca.
   static Future<void> updateProfileInfo(
     String profileId, {
     String? career,
@@ -86,40 +93,40 @@ class ProfileService {
       personalMessage: personalMessage,
       colorStyle: colorStyle,
       createdAt: DateTime.now(),
-      progress: _createInitialProgress(),
     );
-    
+
     await saveProfile(profile);
+
+    // Dispara la migración (si este es el primer perfil adopta los datos
+    // viejos de la cuenta) y crea su documento de datos propio.
+    await getAllProfiles();
+    await ProfileDataService.initProfile(profile.id);
+
     debugPrint('Perfil creado: ${profile.name}');
     return profile;
   }
 
-  // Crear estructura de progreso inicial
-  static Map<String, dynamic> _createInitialProgress() {
-    return {
-      'completedCases': <String>[],
-      'masteredConcepts': <String>[],
-      'studyTime': 0,
-      'correctAnswers': 0,
-      'wrongAnswers': 0,
-      'currentCaseId': null,
-    };
-  }
-
-  // Eliminar un perfil
+  // Eliminar un perfil (y todos sus datos)
   static Future<void> deleteProfile(String profileId) async {
     try {
       final profiles = await getAllProfiles();
       profiles.removeWhere((p) => p.id == profileId);
-      
+
       final profilesJson = profiles.map((p) => p.toJson()).toList();
       await StorageService.saveProfiles(profilesJson);
-      
+
+      try {
+        await ProfileDataService.deleteProfileData(profileId);
+      } catch (e) {
+        debugPrint('No se pudieron borrar los datos del perfil: $e');
+      }
+
       final currentId = await StorageService.getCurrentProfile();
       if (currentId == profileId) {
         await StorageService.removeData('current_profile_id');
+        ProfileDataService.clearActive();
       }
-      
+
       debugPrint('Perfil eliminado: $profileId');
     } catch (e) {
       debugPrint('Error eliminando perfil: $e');
@@ -132,12 +139,14 @@ class ProfileService {
     try {
       final currentId = await StorageService.getCurrentProfile();
       if (currentId == null) return null;
-      
+
       final profiles = await getAllProfiles();
-      return profiles.firstWhere(
+      final profile = profiles.firstWhere(
         (p) => p.id == currentId,
         orElse: () => throw Exception('Perfil no encontrado'),
       );
+      ProfileDataService.setActive(profile.id);
+      return profile;
     } catch (e) {
       debugPrint('Error obteniendo perfil actual: $e');
       return null;
@@ -147,12 +156,14 @@ class ProfileService {
   // Seleccionar un perfil como activo
   static Future<void> selectProfile(String profileId) async {
     await StorageService.saveCurrentProfile(profileId);
+    ProfileDataService.setActive(profileId);
     debugPrint('Perfil seleccionado: $profileId');
   }
 
   // Cerrar sesion (quitar perfil activo)
   static Future<void> logout() async {
     await StorageService.removeData('current_profile_id');
+    ProfileDataService.clearActive();
     debugPrint('Sesion cerrada');
   }
 
@@ -163,7 +174,6 @@ class ProfileService {
     for (var profile in profiles) {
       debugPrint('  - ${profile.name} (${profile.id})');
       debugPrint('    Carrera: ${profile.career ?? "N/A"}');
-      debugPrint('    Progreso: ${profile.progress}');
     }
   }
 }

@@ -1,9 +1,10 @@
 // lib/features/home/widgets/home_body.dart
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../models/profile.dart';
+import '../../../services/profile_data_service.dart';
+import '../../../services/streak_service.dart';
 import '../../../widgets/sidebar.dart';
 import '../../../widgets/top_bar.dart';
 import '../../../widgets/hero_banner.dart';
@@ -43,6 +44,14 @@ class HomeBody extends StatefulWidget {
 class _HomeBodyState extends State<HomeBody> {
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
+  late final Stream<DocumentSnapshot<Map<String, dynamic>>>? _dataStream;
+
+  @override
+  void initState() {
+    super.initState();
+    // Datos de ESTE perfil: usuarios/{uid}/perfiles/{profileId}
+    _dataStream = ProfileDataService.refFor(widget.profile.id)?.snapshots();
+  }
 
   @override
   void dispose() {
@@ -71,13 +80,20 @@ class _HomeBodyState extends State<HomeBody> {
 
   String _getLevelName(int level) {
     switch (level) {
-      case 0: return 'Principiante';
-      case 1: return 'Intermedio';
-      case 2: return 'Avanzado';
-      case 3: return 'Experto';
-      case 4: return 'Experto Avanzado';
-      case 5: return 'Maestro';
-      default: return 'Principiante';
+      case 0:
+        return 'Principiante';
+      case 1:
+        return 'Intermedio';
+      case 2:
+        return 'Avanzado';
+      case 3:
+        return 'Experto';
+      case 4:
+        return 'Experto Avanzado';
+      case 5:
+        return 'Maestro';
+      default:
+        return 'Principiante';
     }
   }
 
@@ -87,7 +103,8 @@ class _HomeBodyState extends State<HomeBody> {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppColors.warning.withValues(alpha: 0.3), width: 1),
+        border: Border.all(
+            color: AppColors.warning.withValues(alpha: 0.3), width: 1),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.2),
@@ -101,26 +118,36 @@ class _HomeBodyState extends State<HomeBody> {
         children: [
           Row(
             children: [
-              const Icon(Icons.local_fire_department, color: Colors.orange, size: 28),
+              const Icon(Icons.local_fire_department,
+                  color: Colors.orange, size: 28),
               const SizedBox(width: 8),
               Text(
                 'Tu racha actual',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.textPrimary),
               ),
             ],
           ),
           const SizedBox(height: 12),
           Row(
             children: [
-              const Text('🔥 ', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+              const Text('🔥 ',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
               Text(
                 '$dayStreak días',
-                style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.orange),
+                style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.orange),
               ),
               const SizedBox(width: 12),
               Expanded(
                 child: Text(
-                  dayStreak > 0 ? '¡Sigue así, no la rompas!' : '¡Completa una lección hoy!',
+                  dayStreak > 0
+                      ? '¡Sigue así, no la rompas!'
+                      : '¡Completa una lección hoy!',
                   style: TextStyle(fontSize: 14, color: AppColors.textMuted),
                 ),
               ),
@@ -132,15 +159,21 @@ class _HomeBodyState extends State<HomeBody> {
               Expanded(
                 child: ElevatedButton.icon(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (_) => const StreakShopScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => const StreakShopScreen()));
                   },
                   icon: const Icon(Icons.shopping_cart, size: 20),
-                  label: const Text('Tienda de racha', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
+                  label: const Text('Tienda de racha',
+                      style:
+                          TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.orange,
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(vertical: 14),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12)),
                   ),
                 ),
               ),
@@ -148,15 +181,19 @@ class _HomeBodyState extends State<HomeBody> {
               Expanded(
                 child: ElevatedButton.icon(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (_) => const PetScreen()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => const PetScreen()));
                   },
                   icon: const Icon(Icons.pets, size: 20),
-                  label: const Text('Mascota', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
+                  label: const Text('Mascota',
+                      style:
+                          TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.deepPurple,
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(vertical: 14),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12)),
                   ),
                 ),
               ),
@@ -170,7 +207,6 @@ class _HomeBodyState extends State<HomeBody> {
   @override
   Widget build(BuildContext context) {
     final isWide = MediaQuery.of(context).size.width > 1200;
-    final userUid = FirebaseAuth.instance.currentUser?.uid;
 
     return Row(
       children: [
@@ -184,37 +220,46 @@ class _HomeBodyState extends State<HomeBody> {
                   onItemSelected: widget.onMenuSelection,
                   menuItems: widget.menuItems,
                   menuIcons: widget.menuIcons,
-                  profile: widget.profile, // ✅ ¡AQUÍ ESTÁ EL CAMBIO CLAVE!
+                  profile: widget.profile,
                 )
               : const SizedBox.shrink(),
         ),
         Expanded(
-          child: StreamBuilder<DocumentSnapshot>(
-            stream: userUid != null
-                ? FirebaseFirestore.instance.collection('usuarios').doc(userUid).snapshots()
-                : const Stream.empty(),
+          child: StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+            stream: _dataStream,
             builder: (context, snapshot) {
-              if (snapshot.hasError) {
+              if (_dataStream == null) {
                 return Center(
-                  child: Text('Error al cargar: ${snapshot.error}', style: const TextStyle(color: Colors.red)),
+                  child: Text('No hay sesión activa',
+                      style: TextStyle(color: AppColors.textPrimary)),
                 );
               }
 
-              if (snapshot.connectionState == ConnectionState.waiting && !snapshot.hasData) {
+              if (snapshot.hasError) {
+                return Center(
+                  child: Text('Error al cargar: ${snapshot.error}',
+                      style: const TextStyle(color: Colors.red)),
+                );
+              }
+
+              if (snapshot.connectionState == ConnectionState.waiting &&
+                  !snapshot.hasData) {
                 return const Center(child: CircularProgressIndicator());
               }
 
               Map<String, dynamic> userData = {};
               if (snapshot.hasData && snapshot.data!.exists) {
-                userData = snapshot.data!.data() as Map<String, dynamic>;
+                userData = snapshot.data!.data() ?? <String, dynamic>{};
               }
 
               final correctAnswers = _safeInt(userData['correctAnswers']);
               final wrongAnswers = _safeInt(userData['wrongAnswers']);
               final totalAnswers = correctAnswers + wrongAnswers;
-              final accuracy = totalAnswers > 0 ? ((correctAnswers / totalAnswers) * 100).round() : 0;
+              final accuracy = totalAnswers > 0
+                  ? ((correctAnswers / totalAnswers) * 100).round()
+                  : 0;
               final xp = _safeInt(userData['xp']);
-              
+
               int completedCases = 0;
               if (userData['completedModules'] is Map) {
                 final modules = userData['completedModules'] as Map;
@@ -222,39 +267,29 @@ class _HomeBodyState extends State<HomeBody> {
                   return m is Map && m['allCorrect'] == true;
                 }).length;
               }
-              
+
               final studyTime = _safeInt(userData['studyTime'] ?? (xp ~/ 2));
-              
-              Map<String, double> topicMasteryMap = {};
+
+              // topicMastery: nombre del tema -> fracción 0..1
+              final Map<String, double> topicMasteryMap = {};
               if (userData['topicMastery'] is Map) {
                 final rawMap = userData['topicMastery'] as Map;
                 rawMap.forEach((key, value) {
-                  if (key is String && value is num) {
-                    topicMasteryMap[key] = value.toDouble();
+                  final d = value is num
+                      ? value.toDouble()
+                      : double.tryParse('${value ?? ''}');
+                  if (key is String && d != null) {
+                    topicMasteryMap[key] = d;
                   }
                 });
               }
-              
-              final currentStreak = _safeInt(userData['dayStreak']);
+
+              // Racha real del perfil (0 si pasó más de 1 día sin lección)
+              final currentStreak = StreakService.displayStreak(userData);
               final gems = _safeInt(userData['gems']);
-              final streakFreezes = _safeInt(userData['streakFreezes']);
 
-              final updatedProfile = UserProfile(
-                id: widget.profile.id,
-                name: widget.profile.name,
-                avatarIndex: widget.profile.avatarIndex,
-                avatarConfig: widget.profile.avatarConfig,
-                career: widget.profile.career,
-                objective: widget.profile.objective,
-                experienceLevel: widget.profile.experienceLevel,
-                personalMessage: widget.profile.personalMessage,
-                colorStyle: widget.profile.colorStyle,
-                createdAt: widget.profile.createdAt,
-                progress: widget.profile.progress,
-                streakFreezes: streakFreezes,
-              );
-
-              final currentLevel = _calculateLevel(correctAnswers, wrongAnswers);
+              final currentLevel =
+                  _calculateLevel(correctAnswers, wrongAnswers);
               final levelName = _getLevelName(currentLevel);
 
               return SingleChildScrollView(
@@ -265,31 +300,38 @@ class _HomeBodyState extends State<HomeBody> {
                     Row(
                       children: [
                         IconButton(
-                          icon: Icon(widget.isSidebarOpen ? Icons.close : Icons.menu, color: AppColors.textPrimary, size: 28),
+                          icon: Icon(
+                              widget.isSidebarOpen ? Icons.close : Icons.menu,
+                              color: AppColors.textPrimary,
+                              size: 28),
                           onPressed: widget.onToggleSidebar,
                         ),
                         const SizedBox(width: 12),
-                        
                         Expanded(
                           child: TopBar(
-                            profile: updatedProfile,
+                            // TopBar lee los congeladores de perfiles/{id}
+                            profile: widget.profile,
                             searchController: _searchController,
-                            onSearchChanged: (value) => setState(() => _searchQuery = value),
+                            onSearchChanged: (value) =>
+                                setState(() => _searchQuery = value),
                           ),
                         ),
-                        
                         const SizedBox(width: 12),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 8),
                           decoration: BoxDecoration(
                             color: AppColors.warning.withValues(alpha: 0.15),
                             borderRadius: BorderRadius.circular(20),
-                            border: Border.all(color: AppColors.warning.withValues(alpha: 0.4)),
+                            border: Border.all(
+                                color:
+                                    AppColors.warning.withValues(alpha: 0.4)),
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              const Icon(Icons.diamond, color: Colors.amber, size: 18),
+                              const Icon(Icons.diamond,
+                                  color: Colors.amber, size: 18),
                               const SizedBox(width: 6),
                               Text(
                                 '$gems',
@@ -328,7 +370,8 @@ class _HomeBodyState extends State<HomeBody> {
                                 const SizedBox(height: 28),
                                 const HomeSectionTitle(
                                   title: 'Módulos de aprendizaje',
-                                  subtitle: 'Explora las diferentes áreas de la Psicopatología.',
+                                  subtitle:
+                                      'Explora las diferentes áreas de la Psicopatología.',
                                 ),
                                 const SizedBox(height: 16),
                                 ModulesGrid(
@@ -343,9 +386,17 @@ class _HomeBodyState extends State<HomeBody> {
                             width: 360,
                             child: Column(
                               children: [
-                                ProgressPanel(completedCases: completedCases, totalCases: 12, topicMastery: topicMasteryMap),
+                                ProgressPanel(
+    profileId: widget.profile.id,
+    completedCases: completedCases,
+    totalCases: 12,
+    topicMastery: topicMasteryMap),
                                 const SizedBox(height: 20),
-                                LevelPanel(correctAnswers: correctAnswers, wrongAnswers: wrongAnswers, currentLevel: currentLevel, levelName: levelName),
+                                LevelPanel(
+                                    correctAnswers: correctAnswers,
+                                    wrongAnswers: wrongAnswers,
+                                    currentLevel: currentLevel,
+                                    levelName: levelName),
                                 const SizedBox(height: 20),
                                 _buildStreakPanel(currentStreak),
                               ],
@@ -359,18 +410,35 @@ class _HomeBodyState extends State<HomeBody> {
                         children: [
                           const HeroBanner(),
                           const SizedBox(height: 24),
-                          StatsRow(completedCases: completedCases, totalCases: 12, accuracy: accuracy, errors: wrongAnswers, studyTimeMinutes: studyTime, profileId: widget.profile.id),
+                          StatsRow(
+                              completedCases: completedCases,
+                              totalCases: 12,
+                              accuracy: accuracy,
+                              errors: wrongAnswers,
+                              studyTimeMinutes: studyTime,
+                              profileId: widget.profile.id),
                           const SizedBox(height: 24),
-                          const HomeSectionTitle(title: 'Módulos de aprendizaje', subtitle: 'Explora las áreas de la Psicopatología.'),
+                          const HomeSectionTitle(
+                              title: 'Módulos de aprendizaje',
+                              subtitle:
+                                  'Explora las áreas de la Psicopatología.'),
                           const SizedBox(height: 16),
                           ModulesGrid(
                             currentUserProfile: widget.profile,
                             searchQuery: _searchQuery,
                           ),
                           const SizedBox(height: 24),
-                          ProgressPanel(completedCases: completedCases, totalCases: 12, topicMastery: topicMasteryMap),
+                          ProgressPanel(
+    profileId: widget.profile.id,
+    completedCases: completedCases,
+    totalCases: 12,
+    topicMastery: topicMasteryMap),
                           const SizedBox(height: 20),
-                          LevelPanel(correctAnswers: correctAnswers, wrongAnswers: wrongAnswers, currentLevel: currentLevel, levelName: levelName),
+                          LevelPanel(
+                              correctAnswers: correctAnswers,
+                              wrongAnswers: wrongAnswers,
+                              currentLevel: currentLevel,
+                              levelName: levelName),
                           const SizedBox(height: 20),
                           _buildStreakPanel(currentStreak),
                         ],
