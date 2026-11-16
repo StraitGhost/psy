@@ -179,7 +179,7 @@
     "afirmacion": "Pica: Ingestión de sustancias no apropiadas para la alimentación, como cal, tierra, arena o plastilina.",
     "respuesta_correcta": true,
     "justificacion": "Verdadero. «Pica»: ingestión persistente de sustancias que no son alimentos. Se reconoce por: come cosas que no son comida (tierra, papel, arena).",
-    "tema": "Apetito e ingesta"
+    "tema": "Apetito"
   },
   {
     "id": "VF-027",
@@ -278,5 +278,68 @@
     "respuesta_correcta": true,
     "justificacion": "Verdadero. «Síndrome psicopático»: patrón inadaptativo de conducta con impulsividad, baja tolerancia a la frustración y conflictos en las relaciones. Se reconoce por: impulsividad, gratificación inmediata y relaciones conflictivas.",
     "tema": "Síndromes"
+  },
+  {
+    "id": "VF-041",
+    "afirmacion": "Hiperfagia: Aumento excesivo del apetito y de la ingesta de alimentos.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Hiperfagia»: aumento exagerado del apetito que lleva a consumir cantidades excesivas de alimentos. Se reconoce por: hambre constante y consumo de más alimentos de lo habitual.",
+    "tema": "Apetito"
+  },
+  {
+    "id": "VF-042",
+    "afirmacion": "Anorexia: Aumento intenso del apetito que provoca una ingesta excesiva de alimentos.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa definición corresponde a «Hiperfagia»: aumento excesivo del apetito. «Anorexia», en cambio, es pérdida o disminución del apetito; se reconoce por: falta de ganas de comer o rechazo de los alimentos.",
+    "tema": "Apetito"
+  },
+  {
+    "id": "VF-043",
+    "afirmacion": "Hiporexia: Disminución parcial del apetito, aunque la persona todavía conserva cierto deseo de comer.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Hiporexia»: reducción del apetito sin que necesariamente desaparezca por completo. Se reconoce por: la persona come menos porque tiene menos hambre de lo habitual.",
+    "tema": "Apetito"
+  },
+  {
+    "id": "VF-044",
+    "afirmacion": "Polifagia: Disminución del consumo de alimentos debido a la ausencia de apetito.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa descripción corresponde a una disminución del apetito. «Polifagia», en cambio, es aumento anormal del hambre y de la ingesta de alimentos; se reconoce por: necesidad frecuente de comer incluso después de haber ingerido alimentos.",
+    "tema": "Apetito"
+  },
+  {
+    "id": "VF-045",
+    "afirmacion": "Potomanía: Deseo compulsivo de beber grandes cantidades de líquidos, especialmente agua.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Potomanía»: necesidad compulsiva de consumir grandes cantidades de líquidos, generalmente agua, sin que exista necesariamente una necesidad fisiológica que lo justifique. Se reconoce por: beber agua de manera excesiva y repetitiva.",
+    "tema": "Apetito"
+  },
+  {
+    "id": "VF-046",
+    "afirmacion": "Dipsomanía: Rechazo persistente a consumir líquidos por ausencia de sed.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa descripción se relaciona con una disminución del deseo de beber. «Dipsomanía», en su uso clásico, es una necesidad periódica e irresistible de consumir bebidas alcohólicas; se reconoce por: episodios de consumo compulsivo de alcohol.",
+    "tema": "Apetito"
+  },
+  {
+    "id": "VF-047",
+    "afirmacion": "Sitiofobia: Rechazo o temor a ingerir alimentos, que puede relacionarse con ideas delirantes o miedo a sufrir algún daño al comer.",
+    "respuesta_correcta": true,
+    "justificacion": "Verdadero. «Sitiofobia»: rechazo a alimentarse por temor o creencias que hacen que la persona evite comer. Se reconoce por: se niega a ingerir alimentos porque cree que le harán daño o que están contaminados.",
+    "tema": "Apetito"
+  },
+  {
+    "id": "VF-048",
+    "afirmacion": "Pica: Consumo excesivo de alimentos habituales debido a un aumento normal del hambre.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. Esa descripción se relaciona con un aumento del apetito. «Pica», en cambio, es la ingestión persistente de sustancias que no son alimentos y que no tienen valor nutritivo, como tierra, papel o tiza; se reconoce por: consumir sustancias que normalmente no se comen.",
+    "tema": "Apetito"
+  },
+  {
+    "id": "VF-049",
+    "afirmacion": "Hiporexia y anorexia significan exactamente lo mismo, porque ambas indican la desaparición completa del apetito.",
+    "respuesta_correcta": false,
+    "justificacion": "Falso. «Hiporexia» significa disminución del apetito, mientras que «anorexia» indica pérdida o ausencia del apetito. Se diferencian porque: en la hiporexia todavía existe cierto deseo de comer, aunque sea menor.",
+    "tema": "Apetito"
   }
 ]

@@ -985,7 +985,7 @@
       "✘ No es «Síndrome de obnubilación»: cuadro de vigilia baja: paciente tranquilo y lento, con atención y memoria disminuidas. La descripción habla de mezcla sabores raros pero sí come alimentos, y eso corresponde a «Malacia».",
       "✔ Correcto. «Malacia»: hábito de combinar sabores que habitualmente no se combinan. La descripción apunta a: mezcla sabores raros pero sí come alimentos."
     ],
-    "tema": "Apetito e ingesta"
+    "tema": "Apetito"
   },
   {
     "id": "MC-053",
@@ -1004,7 +1004,7 @@
       "✔ Correcto. «Coprofagia»: deseo o conducta de ingerir heces. La descripción apunta a: ingiere o desea ingerir heces.",
       "✘ No es «Síndrome de delirium»: cuadro agudo con agitación, orientación fluctuante, alucinaciones visuales y táctiles, ansiedad y terror. La descripción habla de ingiere o desea ingerir heces, y eso corresponde a «Coprofagia»."
     ],
-    "tema": "Apetito e ingesta"
+    "tema": "Apetito"
   },
   {
     "id": "MC-054",
@@ -1518,5 +1518,195 @@
       "✘ No es «Desorientación autopsíquica o en persona»: no saber quién es uno mismo ni reconocer a personas conocidas. La descripción habla de impulsividad, gratificación inmediata y relaciones conflictivas, y eso corresponde a «Síndrome psicopático»."
     ],
     "tema": "Síndromes"
+  },
+  {
+    "id": "MC-081",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Disminución parcial del apetito, aunque la persona todavía conserva cierto deseo de comer.",
+    "opciones": [
+      "Hiperfagia",
+      "Hiporexia",
+      "Pica",
+      "Potomanía"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Hiporexia»: disminución del apetito sin que desaparezca completamente. Se reconoce por: la persona tiene menos hambre y come menos de lo habitual.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Hiperfagia»: aumento excesivo del apetito y de la ingesta de alimentos. La descripción habla de una disminución del apetito, no de un aumento.",
+      "✔ Correcto. «Hiporexia»: disminución parcial del apetito. Se reconoce por: la persona todavía conserva cierto deseo de comer.",
+      "✘ No es «Pica»: ingestión persistente de sustancias que no son alimentos, como tierra, papel o arena. La descripción habla de una disminución del apetito.",
+      "✘ No es «Potomanía»: consumo compulsivo de grandes cantidades de líquidos, generalmente agua. La descripción habla del apetito por alimentos."
+    ],
+    "tema": "Apetito"
+  },
+  {
+    "id": "MC-082",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Aumento exagerado del hambre que lleva a consumir cantidades excesivas de alimentos.",
+    "opciones": [
+      "Anorexia",
+      "Sitiofobia",
+      "Hiperfagia",
+      "Hiporexia"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Hiperfagia»: aumento excesivo del apetito que provoca una ingesta elevada de alimentos. Se reconoce por: hambre frecuente y consumo de más comida de lo habitual.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Anorexia»: pérdida o disminución del apetito. La descripción habla de un aumento exagerado del hambre.",
+      "✘ No es «Sitiofobia»: rechazo o temor a ingerir alimentos. La descripción habla de comer en exceso, no de evitar la comida.",
+      "✔ Correcto. «Hiperfagia»: aumento exagerado del apetito y de la ingesta de alimentos. Se reconoce por: hambre excesiva y consumo elevado de comida.",
+      "✘ No es «Hiporexia»: disminución parcial del apetito. La descripción habla de un aumento del hambre."
+    ],
+    "tema": "Apetito"
+  },
+  {
+    "id": "MC-083",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Ingestión persistente de sustancias que no son alimentos y que carecen de valor nutritivo, como tierra, papel o tiza.",
+    "opciones": [
+      "Pica",
+      "Potomanía",
+      "Hiporexia",
+      "Anorexia"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Pica»: alteración caracterizada por ingerir sustancias que no son alimentos y que no tienen valor nutritivo. Se reconoce por: consumir tierra, arena, papel o sustancias similares.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Pica»: ingestión persistente de sustancias no alimenticias. Se reconoce por: comer tierra, papel, arena o tiza.",
+      "✘ No es «Potomanía»: necesidad compulsiva de beber grandes cantidades de líquidos, especialmente agua. La descripción habla de ingerir sustancias sólidas no alimenticias.",
+      "✘ No es «Hiporexia»: disminución parcial del apetito. La descripción habla de consumir sustancias que no son alimentos.",
+      "✘ No es «Anorexia»: pérdida o disminución del apetito. La descripción habla de ingestión de sustancias no alimenticias."
+    ],
+    "tema": "Apetito"
+  },
+  {
+    "id": "MC-084",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Pérdida o ausencia del deseo de comer, que provoca una disminución de la ingesta de alimentos.",
+    "opciones": [
+      "Hiperfagia",
+      "Polifagia",
+      "Anorexia",
+      "Pica"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Anorexia»: pérdida o ausencia del apetito. Se reconoce por: falta de ganas de comer o rechazo de los alimentos.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Hiperfagia»: aumento exagerado del apetito y de la ingesta de alimentos. La descripción habla de pérdida del apetito.",
+      "✘ No es «Polifagia»: aumento anormal del hambre y de la necesidad de comer. La descripción habla de una disminución del deseo de comer.",
+      "✔ Correcto. «Anorexia»: pérdida o ausencia del apetito. Se reconoce por: falta de deseo de ingerir alimentos.",
+      "✘ No es «Pica»: ingestión persistente de sustancias que no son alimentos. La descripción habla de ausencia del apetito."
+    ],
+    "tema": "Apetito"
+  },
+  {
+    "id": "MC-085",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Necesidad compulsiva de consumir grandes cantidades de líquidos, especialmente agua, sin que exista necesariamente una necesidad fisiológica.",
+    "opciones": [
+      "Dipsomanía",
+      "Potomanía",
+      "Sitiofobia",
+      "Hiporexia"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Potomanía»: consumo compulsivo y excesivo de líquidos, generalmente agua. Se reconoce por: beber agua constantemente y en cantidades muy elevadas.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Dipsomanía»: necesidad periódica e irresistible de consumir bebidas alcohólicas. La descripción habla del consumo excesivo de agua.",
+      "✔ Correcto. «Potomanía»: consumo compulsivo de grandes cantidades de líquidos, especialmente agua. Se reconoce por: beber agua de forma excesiva y repetitiva.",
+      "✘ No es «Sitiofobia»: rechazo o temor a ingerir alimentos. La descripción habla del consumo excesivo de líquidos.",
+      "✘ No es «Hiporexia»: disminución parcial del apetito. La descripción habla de una alteración del consumo de líquidos."
+    ],
+    "tema": "Apetito"
+  },
+  {
+    "id": "MC-086",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Rechazo a ingerir alimentos debido al temor de que estos puedan causar daño, estar contaminados o provocar consecuencias negativas.",
+    "opciones": [
+      "Hiperfagia",
+      "Pica",
+      "Sitiofobia",
+      "Polifagia"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Sitiofobia»: rechazo o temor a ingerir alimentos, que puede relacionarse con ideas delirantes o miedo a sufrir algún daño al comer. Se reconoce por: la persona se niega a comer porque cree que los alimentos pueden perjudicarla.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Hiperfagia»: aumento exagerado del apetito y de la ingesta de alimentos. La descripción habla de rechazo a comer.",
+      "✘ No es «Pica»: ingestión persistente de sustancias no alimenticias. La descripción habla de evitar los alimentos.",
+      "✔ Correcto. «Sitiofobia»: rechazo o temor a ingerir alimentos por miedo a sufrir algún daño. Se reconoce por: la persona evita comer porque cree que los alimentos son peligrosos.",
+      "✘ No es «Polifagia»: aumento anormal del hambre y del consumo de alimentos. La descripción habla de rechazo a ingerir comida."
+    ],
+    "tema": "Apetito"
+  },
+  {
+    "id": "MC-087",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Episodios periódicos e irresistibles de consumo compulsivo de bebidas alcohólicas.",
+    "opciones": [
+      "Potomanía",
+      "Dipsomanía",
+      "Pica",
+      "Anorexia"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Dipsomanía»: término clásico que describe episodios periódicos de deseo irresistible de consumir bebidas alcohólicas. Se reconoce por: episodios de consumo compulsivo de alcohol.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Potomanía»: consumo compulsivo de grandes cantidades de líquidos, generalmente agua. La descripción habla específicamente de bebidas alcohólicas.",
+      "✔ Correcto. «Dipsomanía»: necesidad periódica e irresistible de consumir alcohol. Se reconoce por: episodios de consumo compulsivo de bebidas alcohólicas.",
+      "✘ No es «Pica»: ingestión persistente de sustancias que no son alimentos. La descripción habla del consumo de bebidas alcohólicas.",
+      "✘ No es «Anorexia»: pérdida o ausencia del apetito. La descripción habla de episodios de consumo compulsivo de alcohol."
+    ],
+    "tema": "Apetito"
+  },
+  {
+    "id": "MC-088",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Aumento anormal del hambre y de la necesidad de comer, incluso después de haber ingerido alimentos.",
+    "opciones": [
+      "Polifagia",
+      "Hiporexia",
+      "Sitiofobia",
+      "Anorexia"
+    ],
+    "respuesta_correcta": 0,
+    "justificacion": "La respuesta es «Polifagia»: aumento excesivo del hambre y de la ingesta de alimentos. Se reconoce por: sensación persistente de hambre y necesidad frecuente de comer.",
+    "retroalimentacion_opciones": [
+      "✔ Correcto. «Polifagia»: aumento anormal del hambre y del consumo de alimentos. Se reconoce por: necesidad frecuente de comer incluso después de haber ingerido comida.",
+      "✘ No es «Hiporexia»: disminución parcial del apetito. La descripción habla de un aumento anormal del hambre.",
+      "✘ No es «Sitiofobia»: rechazo o temor a ingerir alimentos. La descripción habla de una necesidad excesiva de comer.",
+      "✘ No es «Anorexia»: pérdida o ausencia del apetito. La descripción habla de un aumento del hambre."
+    ],
+    "tema": "Apetito"
+  },
+  {
+    "id": "MC-089",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Disminución del apetito en la que la persona come menos de lo habitual, pero no pierde completamente el deseo de alimentarse.",
+    "opciones": [
+      "Anorexia",
+      "Hiperfagia",
+      "Hiporexia",
+      "Pica"
+    ],
+    "respuesta_correcta": 2,
+    "justificacion": "La respuesta es «Hiporexia»: reducción parcial del apetito. Se reconoce por: la persona conserva el deseo de comer, pero consume menos alimentos de lo habitual.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Anorexia»: pérdida o ausencia del apetito. La descripción indica que todavía existe cierto deseo de comer.",
+      "✘ No es «Hiperfagia»: aumento exagerado del apetito y de la ingesta de alimentos. La descripción habla de una disminución del consumo.",
+      "✔ Correcto. «Hiporexia»: disminución parcial del apetito sin pérdida completa del deseo de comer. Se reconoce por: comer menos de lo habitual.",
+      "✘ No es «Pica»: ingestión persistente de sustancias que no son alimentos. La descripción habla de una disminución del apetito."
+    ],
+    "tema": "Apetito"
+  },
+  {
+    "id": "MC-090",
+    "pregunta": "¿Cuál opción corresponde a la siguiente descripción? Consumo persistente de sustancias sin valor alimenticio, como arena, hielo, cabello o papel, en lugar de limitarse a alimentos habituales.",
+    "opciones": [
+      "Polifagia",
+      "Pica",
+      "Potomanía",
+      "Dipsomanía"
+    ],
+    "respuesta_correcta": 1,
+    "justificacion": "La respuesta es «Pica»: alteración caracterizada por el consumo persistente de sustancias que no son alimentos. Se reconoce por: ingerir materiales como arena, papel, cabello o hielo de manera repetitiva.",
+    "retroalimentacion_opciones": [
+      "✘ No es «Polifagia»: aumento anormal del hambre y del consumo de alimentos. La descripción habla de sustancias que no son alimentos.",
+      "✔ Correcto. «Pica»: ingestión persistente de sustancias no alimenticias. Se reconoce por: consumir repetidamente arena, papel, cabello o hielo.",
+      "✘ No es «Potomanía»: consumo compulsivo de grandes cantidades de líquidos, especialmente agua. La descripción habla de sustancias no alimenticias.",
+      "✘ No es «Dipsomanía»: episodios periódicos de consumo compulsivo de bebidas alcohólicas. La descripción habla de ingerir sustancias no alimenticias."
+    ],
+    "tema": "Apetito"
   }
 ]
