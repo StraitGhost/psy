@@ -203,7 +203,7 @@ class _GameScreenState extends State<GameScreen> {
   bool _temaCoincide(String preguntaTema, String modulo) {
     const todosLosTemas = <String>{
       'Conciencia', 'Orientación', 'Atención', 'Memoria', 'Percepción',
-      'Pensamiento', 'Sueño', 'Apetito e ingesta', 'Sexualidad', 'Síndromes'
+      'Pensamiento', 'Sueño', 'Apetito', 'Sexualidad', 'Síndromes'
     };
 
     if (todosLosTemas.contains(modulo)) {
